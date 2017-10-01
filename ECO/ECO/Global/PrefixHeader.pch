@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  HunterSmart
+//
+//  Created by Never on 2017/3/5.
+//  Copyright © 2017年 Never. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Header.h"
+//#import "Tools.h"
+#import "AppDelegate.h"
+#import "MBProgressHUD.h"
+#import "SDCycleScrollView.h"
+#import <MJExtension.h>
+#import "UIImageView+WebCache.h"
+#endif /* PrefixHeader_pch */
