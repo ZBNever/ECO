@@ -31,6 +31,9 @@
 		CA6DB7751F80D58F00B66C4D /* HomeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6DB76E1F80D58F00B66C4D /* HomeDataModel.m */; };
 		CA6DB7761F80D58F00B66C4D /* HomeCategoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6DB76F1F80D58F00B66C4D /* HomeCategoriesModel.m */; };
 		CA6DB7771F80D58F00B66C4D /* HomeBannersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6DB7701F80D58F00B66C4D /* HomeBannersModel.m */; };
+		CA6DB7801F80E6A900B66C4D /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6DB77F1F80E6A800B66C4D /* HomeData.json */; };
+		CA6DB7831F81285600B66C4D /* CategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6DB7821F81285600B66C4D /* CategoriesView.m */; };
+		CA6DB7851F8128CE00B66C4D /* CategoriesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6DB7841F8128CE00B66C4D /* CategoriesView.xib */; };
 		CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6AB1F7E9526008368F0 /* AppDelegate.m */; };
 		CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B01F7E9526008368F0 /* Main.storyboard */; };
 		CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B31F7E9526008368F0 /* Assets.xcassets */; };
@@ -66,7 +69,6 @@
 		CA6DB75B1F80D1E000B66C4D /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		CA6DB75C1F80D1E000B66C4D /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		CA6DB75D1F80D1E000B66C4D /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
-		CA6DB7611F80D3E000B66C4D /* HomePage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomePage.json; sourceTree = "<group>"; };
 		CA6DB76C1F80D58F00B66C4D /* HomeHotProductsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHotProductsModel.m; sourceTree = "<group>"; };
 		CA6DB76D1F80D58F00B66C4D /* HomeBannersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBannersModel.h; sourceTree = "<group>"; };
 		CA6DB76E1F80D58F00B66C4D /* HomeDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDataModel.m; sourceTree = "<group>"; };
@@ -75,6 +77,10 @@
 		CA6DB7711F80D58F00B66C4D /* HomeHotProductsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHotProductsModel.h; sourceTree = "<group>"; };
 		CA6DB7721F80D58F00B66C4D /* HomeCategoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCategoriesModel.h; sourceTree = "<group>"; };
 		CA6DB7731F80D58F00B66C4D /* HomeDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDataModel.h; sourceTree = "<group>"; };
+		CA6DB77F1F80E6A800B66C4D /* HomeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeData.json; sourceTree = "<group>"; };
+		CA6DB7811F81285600B66C4D /* CategoriesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoriesView.h; sourceTree = "<group>"; };
+		CA6DB7821F81285600B66C4D /* CategoriesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoriesView.m; sourceTree = "<group>"; };
+		CA6DB7841F8128CE00B66C4D /* CategoriesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesView.xib; sourceTree = "<group>"; };
 		CA97B6A71F7E9525008368F0 /* ECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA97B6AA1F7E9526008368F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA97B6AB1F7E9526008368F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 		CA97B6B91F7E9526008368F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA97B6E31F7E9777008368F0 /* TabbarBeyondClick.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarBeyondClick.pch; sourceTree = "<group>"; };
 		CA97B6E41F7E9777008368F0 /* AppStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStyle.h; sourceTree = "<group>"; };
+		CAD936DE1F8A27DB004BEDC4 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
 		D64493FE7795CC3A36F42528 /* libPods-ECO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03B5045F91DC07E4754DBCC /* Pods-ECO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECO/Pods-ECO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +133,7 @@
 				CA6DB74B1F80C69D00B66C4D /* 1_selected@2x.png */,
 				CA6DB74A1F80C69C00B66C4D /* 2_normal.png */,
 				CA6DB74E1F80C69D00B66C4D /* 2_selected.png */,
+				CAD936DE1F8A27DB004BEDC4 /* line@2x.png */,
 				CA6DB7451F80C69C00B66C4D /* 3_normal@2x.png */,
 				CA6DB7471F80C69C00B66C4D /* 3_selected@2x.png */,
 				CA6DB74D1F80C69D00B66C4D /* 4_normal.png */,
@@ -139,7 +147,7 @@
 		CA6DB7601F80D3E000B66C4D /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				CA6DB7611F80D3E000B66C4D /* HomePage.json */,
+				CA6DB77F1F80E6A800B66C4D /* HomeData.json */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -294,6 +302,9 @@
 				CA6DB75D1F80D1E000B66C4D /* HomeCell.h */,
 				CA6DB75C1F80D1E000B66C4D /* HomeCell.m */,
 				CA6DB75B1F80D1E000B66C4D /* HomeCell.xib */,
+				CA6DB7811F81285600B66C4D /* CategoriesView.h */,
+				CA6DB7821F81285600B66C4D /* CategoriesView.m */,
+				CA6DB7841F8128CE00B66C4D /* CategoriesView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6DB7851F8128CE00B66C4D /* CategoriesView.xib in Resources */,
 				CA6DB7331F809DC800B66C4D /* LaunchScreen.storyboard in Resources */,
 				CA6DB7571F80C69D00B66C4D /* 4_normal.png in Resources */,
 				CA6DB7541F80C69D00B66C4D /* 2_normal.png in Resources */,
@@ -367,6 +379,7 @@
 				CA6DB7511F80C69D00B66C4D /* 3_selected@2x.png in Resources */,
 				CA6DB74F1F80C69D00B66C4D /* 3_normal@2x.png in Resources */,
 				CA6DB7521F80C69D00B66C4D /* 5_normal.png in Resources */,
+				CA6DB7801F80E6A900B66C4D /* HomeData.json in Resources */,
 				CA6DB7351F809EE400B66C4D /* HB-0215@2x.png in Resources */,
 				CA6DB7551F80C69D00B66C4D /* 1_selected@2x.png in Resources */,
 				CA6DB7561F80C69D00B66C4D /* 1_normal.png in Resources */,
@@ -445,6 +458,7 @@
 				CA6DB7401F80C5FF00B66C4D /* ViewControllerB.m in Sources */,
 				CA6DB7771F80D58F00B66C4D /* HomeBannersModel.m in Sources */,
 				CA6DB7411F80C5FF00B66C4D /* ViewControllerD.m in Sources */,
+				CA6DB7831F81285600B66C4D /* CategoriesView.m in Sources */,
 				CA6DB75F1F80D1E000B66C4D /* HomeCell.m in Sources */,
 				CA6DB7441F80C5FF00B66C4D /* ViewControllerA.m in Sources */,
 			);

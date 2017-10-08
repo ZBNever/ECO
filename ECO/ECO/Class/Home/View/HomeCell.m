@@ -18,10 +18,6 @@
 
 - (void)refresAihuishouhUI:(HomeHotProductsModel *)model{
     
-//    NSURL *imageUrl = [NSURL URLWithString:model.imgUrl];
-//    NSData *data = [NSData dataWithContentsOfURL:imageUrl];
-//    UIImage *image = [UIImage imageWithData:data];
-    
     [self.cellImageView sd_setImageWithURL:[NSURL URLWithString:model.imgUrl] placeholderImage:nil];
     self.cellLab.text = model.name;
     

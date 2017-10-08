@@ -9,6 +9,8 @@
 #import "ViewControllerA.h"
 #import "SDCycleScrollView.h"
 #import "HomeCell.h"
+#import "CategoriesView.h"
+
 #import "HomeDataModel.h"
 #import "HomeBannersModel.h"
 #import "HomeCategoriesModel.h"
@@ -23,6 +25,8 @@
 @property (nonatomic, strong) NSMutableArray *dataArr;
 
 @property (nonatomic, strong) NSMutableArray *bannerImgArr;
+
+@property (nonatomic, strong) NSArray *categoriesArr;
 @end
 
 @implementation ViewControllerA
@@ -43,18 +47,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"首页";
     [self initCollectionView];
     [self loadData];
 }
 
 - (void)loadData{
     
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"HomePage.json" ofType:nil];
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"HomeData.json" ofType:nil];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
     NSMutableDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
     
     NSArray *bannerArr = [HomeBannersModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"][@"banners"]];
-    NSArray *categoriesArr = [HomeCategoriesModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"][@"categories"]];
+    self.categoriesArr = [HomeCategoriesModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"][@"categories"]];
     NSArray *hotProductsArr = [HomeHotProductsModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"][@"hotProducts"]];
     
     for (HomeBannersModel *bannerModel in bannerArr) {
@@ -72,7 +77,7 @@
     self.cycleScrollView.autoScrollTimeInterval = 4.0;
     self.cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
     self.cycleScrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
-    [self.view addSubview:self.cycleScrollView];
+//    [self.view addSubview:self.cycleScrollView];
     
 }
 - (void)initCollectionView{
@@ -88,25 +93,48 @@
     
     //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"CategoriesView" bundle:nil] forCellWithReuseIdentifier:@"CategoriesView"];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    
     [self.view addSubview:self.collectionView];
 }
 
 #pragma mark - UICollectionViewDataSource
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     
-    return self.dataArr.count;
+    return 2;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    if (section == 0 ) {
+        return 1;
+    }else{
+        
+        return self.dataArr.count;
+    }
+
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    HomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.deleteBtn.tag = indexPath.row + 100;
-    cell.cellImageView.tag = indexPath.row + 1000;
-    cell.cellLab.tag = indexPath.row + 2000;
-//    cell.delegate = self;
-    [cell refresAihuishouhUI:self.dataArr[indexPath.row]];
-    return cell;
+    if (indexPath.section == 0) {
+        
+        CategoriesView *view = [collectionView dequeueReusableCellWithReuseIdentifier:@"CategoriesView" forIndexPath:indexPath];
+        
+        [view refreshUI:self.categoriesArr];
+        
+        return view;
+    }else{
+        HomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        cell.deleteBtn.tag = indexPath.row + 100;
+        cell.cellImageView.tag = indexPath.row + 1000;
+        cell.cellLab.tag = indexPath.row + 2000;
+        //    cell.delegate = self;
+        [cell refresAihuishouhUI:self.dataArr[indexPath.row ]];
+        return cell;
+        
+    }
+    
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
@@ -116,12 +144,27 @@
         [self SDCycleScrollView];
         [headerView addSubview:self.cycleScrollView];
         return headerView;
+
     }
     return nil;
 }
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    
+    if (section == 0) {
+        return CGSizeMake(0, screen_width*(200/375.0));
+    }else{
+        
+        return CGSizeMake(0, 0);
+    }
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake(screen_width/2.0-6, screen_width/2.0-6);
+    if (indexPath.section == 0) {
+        return CGSizeMake(screen_width, 300);
+    }else{
+        return CGSizeMake(screen_width/2.0-6, screen_width/2.0-6);
+    }
 }
 
 - (UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)sectio{
@@ -129,10 +172,6 @@
     return UIEdgeInsetsMake(5, 4, 0, 4);
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-    
-    return CGSizeMake(0, screen_width*(200/375.0));
-}
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     //    HomeCell *cell = (HomeCell *)[collectionView cellForItemAtIndexPath:self.index];
@@ -174,5 +213,11 @@
         _bannerImgArr = [[NSMutableArray alloc] init];
     }
     return _bannerImgArr;
+}
+- (NSArray *)categoriesArr{
+    if (!_categoriesArr) {
+        _categoriesArr = [[NSArray alloc] init];
+    }
+    return _categoriesArr;
 }
 @end

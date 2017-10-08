@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smart2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-ey-3Km">
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-ey-3Km">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                     </imageView>
                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客厅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUl-op-HP5">
@@ -32,19 +32,6 @@
                         <nil key="highlightedColor"/>
                         <color key="shadowColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOR-PW-UqG">
-                        <rect key="frame" x="160" y="0.0" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="CUn-o3-Luf"/>
-                            <constraint firstAttribute="width" constant="40" id="kZB-37-6xJ"/>
-                        </constraints>
-                        <state key="normal" title="delete" image="delete">
-                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                        <connections>
-                            <action selector="deleteBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Sdd-NH-CPW"/>
-                        </connections>
-                    </button>
                 </subviews>
             </view>
             <constraints>
@@ -53,22 +40,15 @@
                 <constraint firstAttribute="trailing" secondItem="cpK-ey-3Km" secondAttribute="trailing" id="6F5-na-FeS"/>
                 <constraint firstAttribute="trailing" secondItem="ZUl-op-HP5" secondAttribute="trailing" id="6Mc-2Q-ZWk"/>
                 <constraint firstAttribute="bottom" secondItem="ZUl-op-HP5" secondAttribute="bottom" id="8PQ-mw-gMA"/>
-                <constraint firstAttribute="trailing" secondItem="IOR-PW-UqG" secondAttribute="trailing" id="YjO-Hb-LNd"/>
                 <constraint firstAttribute="bottom" secondItem="cpK-ey-3Km" secondAttribute="bottom" id="ZN0-aO-a3o"/>
                 <constraint firstItem="cpK-ey-3Km" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mBE-KX-uCm"/>
-                <constraint firstItem="IOR-PW-UqG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wI3-pu-lhA"/>
             </constraints>
             <size key="customSize" width="200" height="200"/>
             <connections>
                 <outlet property="cellImageView" destination="cpK-ey-3Km" id="fNr-vy-8Nf"/>
                 <outlet property="cellLab" destination="ZUl-op-HP5" id="043-HA-SDc"/>
-                <outlet property="deleteBtn" destination="IOR-PW-UqG" id="FnX-N4-vtY"/>
             </connections>
             <point key="canvasLocation" x="109" y="129"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="delete" width="40" height="40"/>
-        <image name="smart2.jpg" width="488" height="342"/>
-    </resources>
 </document>

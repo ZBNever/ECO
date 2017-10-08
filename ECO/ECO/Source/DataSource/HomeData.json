@@ -1,0 +1,245 @@
+{
+  "data": {
+    "cityId": 256,
+    "banners": [
+      {
+        "id": "59c0d6b1df46c600105416dc",
+        "url": "https://activity.aihuishou.com/iphone-m/index.html#/iphone-m?id=59b66800df46c6001187553d&utm_source=AHS&utm_medium=App_banner&utm_campaign=appledacu",
+        "imgUrl": "https://sr.aihuishou.com/cms/image/636414356651673270867880169.png",
+        "name": "回收换新季"
+      },
+      {
+        "id": "59ccc938df46c600117f8714",
+        "url": "http://m.aihuishou.com/m/index.html#/help/recycleflow",
+        "imgUrl": "https://sr.aihuishou.com/cms/image/6364221866226208301393122685.png",
+        "name": "回收交易流程"
+      },
+      {
+        "id": "588201795c40450001ccd16f",
+        "url": "https://m.aihuishou.com/Help/Backup.html?name=Backup&utm_source=m_banner&utm_medium=m_banner&utm_campaign=backup",
+        "imgUrl": "http://oss-cn-hangzhou.aliyuncs.com/aihuishou-internal/cms/image/636208797350121519436981413.jpg",
+        "name": "一分钟快速备份手机数据"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "手机回收",
+        "subtitle": "最高回收价8023元",
+        "imgUrl": "http://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/appgateway/images/home_img_phone.png",
+        "support": true
+      },
+      {
+        "id": 6,
+        "name": "平板回收",
+        "subtitle": "游戏卡 不必忍",
+        "imgUrl": "http://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/appgateway/images/home_img_pad.png",
+        "support": true
+      },
+      {
+        "id": 5,
+        "name": "笔记本回收",
+        "subtitle": "最高回收价10097元",
+        "imgUrl": "http://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/appgateway/images/home_img_mac.png",
+        "support": true
+      },
+      {
+        "id": 22,
+        "name": "摄影摄像回收",
+        "subtitle": "告别穷三代",
+        "imgUrl": "http://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/appgateway/images/home_img_camera.png",
+        "support": true
+      },
+      {
+        "id": 3,
+        "name": "智能数码回收",
+        "subtitle": "维修贵 快换新",
+        "imgUrl": "http://aihuishou-internal.oss-cn-hangzhou.aliyuncs.com/appgateway/images/home_img_headphone.png",
+        "support": true
+      }
+    ],
+    "priceActivity": null,
+    "hotProducts": [
+      {
+        "id": 17461,
+        "name": "苹果 iPhone 6",
+        "topPrice": 2095,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cd88aa988bac36000005",
+        "categoryId": 1,
+        "brandId": 52,
+        "totalRecycleCount": 57190
+      },
+      {
+        "id": 17726,
+        "name": "苹果 iPhone 6S",
+        "topPrice": 2650,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cd97aa988bac3600000d",
+        "categoryId": 1,
+        "brandId": 52,
+        "totalRecycleCount": 24821
+      },
+      {
+        "id": 17458,
+        "name": "苹果 iPhone 5S",
+        "topPrice": 815,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cd80aa988bac36000001",
+        "categoryId": 1,
+        "brandId": 52,
+        "totalRecycleCount": 96057
+      },
+      {
+        "id": 17462,
+        "name": "苹果 iPhone 6 Plus",
+        "topPrice": 2625,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cd90aa988bac36000009",
+        "categoryId": 1,
+        "brandId": 52,
+        "totalRecycleCount": 35526
+      },
+      {
+        "id": 17752,
+        "name": "苹果 iPhone 6S Plus",
+        "topPrice": 3120,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9befe901f937031000001",
+        "categoryId": 1,
+        "brandId": 52,
+        "totalRecycleCount": 11508
+      },
+      {
+        "id": 17488,
+        "name": "三星 Galaxy Note 3",
+        "topPrice": 480,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cdc7aa988bac36000019",
+        "categoryId": 1,
+        "brandId": 7,
+        "totalRecycleCount": 48043
+      },
+      {
+        "id": 14990,
+        "name": "小米手机4",
+        "topPrice": 345,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cde5aa988bac3600001d",
+        "categoryId": 1,
+        "brandId": 184,
+        "totalRecycleCount": 50023
+      },
+      {
+        "id": 17507,
+        "name": "小米手机3",
+        "topPrice": 175,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cdd8821580c02600001d",
+        "categoryId": 1,
+        "brandId": 184,
+        "totalRecycleCount": 65053
+      },
+      {
+        "id": 17486,
+        "name": "三星 Galaxy Note 2",
+        "topPrice": 245,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cdc0aa988bac36000015",
+        "categoryId": 1,
+        "brandId": 7,
+        "totalRecycleCount": 44816
+      },
+      {
+        "id": 17895,
+        "name": "华为 Mate8",
+        "topPrice": 1600,
+        "imgUrl": "http://static.aihuishou.com/image?file=58f9cdacaa988bac36000011",
+        "categoryId": 1,
+        "brandId": 9,
+        "totalRecycleCount": 4837
+      }
+    ],
+    "statistics": {
+      "userCount": 92339197,
+      "orderCount": 151466039,
+      "rank": 0.997
+    },
+    "comments": [
+      {
+        "id": "59ccfd70df46c6001287aec1",
+        "content": "很好",
+        "score": 5,
+        "mobile": "18783883778",
+        "commentDt": 1506606448,
+        "tags": null,
+        "images": null,
+        "productName": "华硕 R510LD",
+        "productId": 17051,
+        "pickupType": 5,
+        "shopName": "成都世豪广场店"
+      },
+      {
+        "id": "59ccf4fbdf46c6001287aebe",
+        "content": "客服很好",
+        "score": 5,
+        "mobile": "13520005929",
+        "commentDt": 1506604283,
+        "tags": null,
+        "images": null,
+        "productName": "iPad mini 4",
+        "productId": 17853,
+        "pickupType": 5,
+        "shopName": "北京新中关店"
+      },
+      {
+        "id": "59ccf2d6d939c400111f68ae",
+        "content": "可以速度快，可以快速提现！满意",
+        "score": 5,
+        "mobile": "18236959801",
+        "commentDt": 1506603734,
+        "tags": null,
+        "images": null,
+        "productName": "魅族 魅蓝 Note 2",
+        "productId": 17614,
+        "pickupType": 4,
+        "shopName": null
+      },
+      {
+        "id": "59cceee4df46c6001287aeba",
+        "content": "非常不错   服务很细心   态度特别好",
+        "score": 5,
+        "mobile": "18811316939",
+        "commentDt": 1506602724,
+        "tags": null,
+        "images": null,
+        "productName": "苹果 iPhone 6",
+        "productId": 17461,
+        "pickupType": 5,
+        "shopName": "北京圣熙8号店"
+      },
+      {
+        "id": "59ccee995c40450015758db2",
+        "content": "很棒，第二次找爱回收了，这种模式真的很棒！",
+        "score": 5,
+        "mobile": "13728662888",
+        "commentDt": 1506602649,
+        "tags": null,
+        "images": null,
+        "productName": "苹果 iPhone 6S",
+        "productId": 17726,
+        "pickupType": 5,
+        "shopName": "深圳益田假日店"
+      }
+    ],
+    "appNews": [
+      {
+        "id": "595377e1df46c6000173dffc",
+        "tag": null,
+        "title": "爱回收：拓展“互联网+电子回收”，正在进行时",
+        "url": null,
+        "text": null
+      }
+    ],
+    "supportPickupTypes": [
+      4,
+      2,
+      5,
+      1
+    ]
+  },
+  "code": 200,
+  "message": null,
+  "resultMessage": null
+}
