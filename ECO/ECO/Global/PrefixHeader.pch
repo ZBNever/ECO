@@ -16,4 +16,5 @@
 #import "SDCycleScrollView.h"
 #import <MJExtension.h>
 #import "UIImageView+WebCache.h"
+#import "AppStyle.h"
 #endif /* PrefixHeader_pch */

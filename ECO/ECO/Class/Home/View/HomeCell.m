@@ -19,8 +19,8 @@
 - (void)refresAihuishouhUI:(HomeHotProductsModel *)model{
     
     [self.cellImageView sd_setImageWithURL:[NSURL URLWithString:model.imgUrl] placeholderImage:nil];
-    self.cellLab.text = model.name;
-    
+    self.nameLab.text = model.name;
+    self.priceLab.text = [NSString stringWithFormat:@"￥%@",model.topPrice] ;
 }
 
 

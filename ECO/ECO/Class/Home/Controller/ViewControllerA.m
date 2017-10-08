@@ -10,7 +10,7 @@
 #import "SDCycleScrollView.h"
 #import "HomeCell.h"
 #import "CategoriesView.h"
-
+#import "CBSegmentView.h"
 #import "HomeDataModel.h"
 #import "HomeBannersModel.h"
 #import "HomeCategoriesModel.h"
@@ -21,6 +21,8 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
+
+@property (nonatomic, strong) CBSegmentView *sliderSegmentView;
 
 @property (nonatomic, strong) NSMutableArray *dataArr;
 
@@ -68,18 +70,47 @@
     self.dataArr = [hotProductsArr mutableCopy];
     [self.collectionView reloadData];
 }
-- (void)SDCycleScrollView{
-    //轮播图
-    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screen_width, screen_width*(200/375.0)) delegate:self placeholderImage:[UIImage imageNamed:@"HB-0215@2x.png"]];
-//    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screen_width, screen_width*(200/375.0)) shouldInfiniteLoop:YES imageNamesGroup:nil];
-    self.cycleScrollView.imageURLStringsGroup = self.bannerImgArr;
-//    self.cycleScrollView.delegate = self;
-    self.cycleScrollView.autoScrollTimeInterval = 4.0;
-    self.cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
-    self.cycleScrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
-//    [self.view addSubview:self.cycleScrollView];
+
+- (CBSegmentView *)sliderSegmentView{
+    
+    if (!_sliderSegmentView) {
+        NSArray *array=@[
+                         @"手机回收",
+                         @"平板回收",
+                         @"电脑回收",
+                         @"摄影摄像回收",
+                         @"智能数码回收",
+                         ];
+        
+        //    ② sliderStyle
+        _sliderSegmentView = [[CBSegmentView alloc] initWithFrame:CGRectMake(0, 10, screen_width, 40)];
+        //    [self.view addSubview:self.sliderSegmentView];
+        //    [self.sliderSegmentView setTitleArray:array withStyle:CBSegmentStyleSlider];
+        [_sliderSegmentView setTitleArray:array titleFont:0 titleColor:nil titleSelectedColor:[UIColor greenColor] withStyle:CBSegmentStyleSlider];
+        _sliderSegmentView.titleChooseReturn = ^(NSInteger x) {
+            NSLog(@"点击了第%ld个按钮",x+1);
+        };
+    }
+    return _sliderSegmentView;
+}
+
+- (SDCycleScrollView *)cycleScrollView{
+    
+    if (!_cycleScrollView) {
+        //轮播图
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screen_width, screen_width*(200/375.0)) delegate:self placeholderImage:[UIImage imageNamed:@"HB-0215@2x.png"]];
+        //    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screen_width, screen_width*(200/375.0)) shouldInfiniteLoop:YES imageNamesGroup:nil];
+        _cycleScrollView.imageURLStringsGroup = self.bannerImgArr;
+        //    self.cycleScrollView.delegate = self;
+        _cycleScrollView.autoScrollTimeInterval = 4.0;
+        _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+        _cycleScrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
+    }
+    return _cycleScrollView;
     
 }
+
+
 - (void)initCollectionView{
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -89,13 +120,13 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64) collectionViewLayout:layout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = [UIColor clearColor];
+    self.collectionView.backgroundColor = ViewController_BackGround;
     
     //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"CategoriesView" bundle:nil] forCellWithReuseIdentifier:@"CategoriesView"];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
-    
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"segument"];
     [self.view addSubview:self.collectionView];
 }
 
@@ -126,9 +157,9 @@
         return view;
     }else{
         HomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-        cell.deleteBtn.tag = indexPath.row + 100;
+//        cell.deleteBtn.tag = indexPath.row + 100;
         cell.cellImageView.tag = indexPath.row + 1000;
-        cell.cellLab.tag = indexPath.row + 2000;
+//        cell.cellLab.tag = indexPath.row + 2000;
         //    cell.delegate = self;
         [cell refresAihuishouhUI:self.dataArr[indexPath.row ]];
         return cell;
@@ -140,11 +171,19 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
-        [self SDCycleScrollView];
-        [headerView addSubview:self.cycleScrollView];
-        return headerView;
-
+        
+        if (indexPath.section == 0) {
+            UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
+            [headerView addSubview:self.cycleScrollView];
+            return headerView;
+        }else{
+            UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"segument" forIndexPath:indexPath];
+            headerView.backgroundColor = [UIColor whiteColor];
+            [headerView addSubview:self.sliderSegmentView];
+            return headerView;
+            
+        }
+    
     }
     return nil;
 }
@@ -154,7 +193,7 @@
         return CGSizeMake(0, screen_width*(200/375.0));
     }else{
         
-        return CGSizeMake(0, 0);
+        return CGSizeMake(0, 50);
     }
 }
 
@@ -163,7 +202,7 @@
     if (indexPath.section == 0) {
         return CGSizeMake(screen_width, 300);
     }else{
-        return CGSizeMake(screen_width/2.0-6, screen_width/2.0-6);
+        return CGSizeMake(screen_width/2.0-6, 270);
     }
 }
 
@@ -193,8 +232,8 @@
 //点击了第几张
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"第%ld张",index] message:@"暂无跳转链接" delegate:self cancelButtonTitle:@"取消" otherButtonTitles: nil];
-    [alert show];
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"第%ld张",index] message:@"暂无跳转链接" delegate:self cancelButtonTitle:@"取消" otherButtonTitles: nil];
+//    [alert show];
     
 }
 

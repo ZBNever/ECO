@@ -38,6 +38,7 @@
 		CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B01F7E9526008368F0 /* Main.storyboard */; };
 		CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B31F7E9526008368F0 /* Assets.xcassets */; };
 		CA97B6BA1F7E9526008368F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6B91F7E9526008368F0 /* main.m */; };
+		CAD936E51F8A5198004BEDC4 /* CBSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD936E31F8A5198004BEDC4 /* CBSegmentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,8 @@
 		CA97B6E31F7E9777008368F0 /* TabbarBeyondClick.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarBeyondClick.pch; sourceTree = "<group>"; };
 		CA97B6E41F7E9777008368F0 /* AppStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStyle.h; sourceTree = "<group>"; };
 		CAD936DE1F8A27DB004BEDC4 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
+		CAD936E31F8A5198004BEDC4 /* CBSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSegmentView.m; sourceTree = "<group>"; };
+		CAD936E41F8A5198004BEDC4 /* CBSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSegmentView.h; sourceTree = "<group>"; };
 		D64493FE7795CC3A36F42528 /* libPods-ECO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03B5045F91DC07E4754DBCC /* Pods-ECO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECO/Pods-ECO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,6 +253,7 @@
 		CA97B6D11F7E96F5008368F0 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				CAD936E21F8A5198004BEDC4 /* CBSegment */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -307,6 +311,15 @@
 				CA6DB7841F8128CE00B66C4D /* CategoriesView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CAD936E21F8A5198004BEDC4 /* CBSegment */ = {
+			isa = PBXGroup;
+			children = (
+				CAD936E31F8A5198004BEDC4 /* CBSegmentView.m */,
+				CAD936E41F8A5198004BEDC4 /* CBSegmentView.h */,
+			);
+			path = CBSegment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +470,7 @@
 				CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */,
 				CA6DB7401F80C5FF00B66C4D /* ViewControllerB.m in Sources */,
 				CA6DB7771F80D58F00B66C4D /* HomeBannersModel.m in Sources */,
+				CAD936E51F8A5198004BEDC4 /* CBSegmentView.m in Sources */,
 				CA6DB7411F80C5FF00B66C4D /* ViewControllerD.m in Sources */,
 				CA6DB7831F81285600B66C4D /* CategoriesView.m in Sources */,
 				CA6DB75F1F80D1E000B66C4D /* HomeCell.m in Sources */,

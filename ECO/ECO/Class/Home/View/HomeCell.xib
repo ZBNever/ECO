@@ -12,43 +12,55 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeCell">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="181" height="270"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="181" height="270"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-ey-3Km">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                    </imageView>
-                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客厅" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUl-op-HP5">
-                        <rect key="frame" x="0.0" y="160" width="200" height="40"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="5tY-rh-xTV"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="立即回收" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUl-op-HP5">
+                        <rect key="frame" x="0.0" y="230" width="181" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
-                        <color key="shadowColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="苹果 iPhone6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQG-ls-y6V">
+                        <rect key="frame" x="0.0" y="159" width="181" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="￥1920" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPH-yB-wQE">
+                        <rect key="frame" x="109" y="194" width="72" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="回收最高价" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mC-fs-4M3">
+                        <rect key="frame" x="0.0" y="194" width="107" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-ey-3Km">
+                        <rect key="frame" x="36" y="0.0" width="108" height="148"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </view>
-            <constraints>
-                <constraint firstItem="cpK-ey-3Km" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0mj-V5-oFD"/>
-                <constraint firstItem="ZUl-op-HP5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5oJ-7D-YHD"/>
-                <constraint firstAttribute="trailing" secondItem="cpK-ey-3Km" secondAttribute="trailing" id="6F5-na-FeS"/>
-                <constraint firstAttribute="trailing" secondItem="ZUl-op-HP5" secondAttribute="trailing" id="6Mc-2Q-ZWk"/>
-                <constraint firstAttribute="bottom" secondItem="ZUl-op-HP5" secondAttribute="bottom" id="8PQ-mw-gMA"/>
-                <constraint firstAttribute="bottom" secondItem="cpK-ey-3Km" secondAttribute="bottom" id="ZN0-aO-a3o"/>
-                <constraint firstItem="cpK-ey-3Km" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mBE-KX-uCm"/>
-            </constraints>
-            <size key="customSize" width="200" height="200"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <size key="customSize" width="181" height="270"/>
             <connections>
                 <outlet property="cellImageView" destination="cpK-ey-3Km" id="fNr-vy-8Nf"/>
-                <outlet property="cellLab" destination="ZUl-op-HP5" id="043-HA-SDc"/>
+                <outlet property="nameLab" destination="gQG-ls-y6V" id="jLD-xO-Bhp"/>
+                <outlet property="priceLab" destination="uPH-yB-wQE" id="YhL-Gg-7Cb"/>
             </connections>
-            <point key="canvasLocation" x="109" y="129"/>
+            <point key="canvasLocation" x="112.5" y="163"/>
         </collectionViewCell>
     </objects>
 </document>

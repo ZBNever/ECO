@@ -20,8 +20,8 @@
 @interface HomeCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *cellImageView;
-@property (weak, nonatomic) IBOutlet UILabel *cellLab;
-@property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UILabel *priceLab;
 
 @property (weak, nonatomic) id <deleteCellDelegate>delegate;
 
