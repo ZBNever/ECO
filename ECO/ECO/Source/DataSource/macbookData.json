@@ -1,0 +1,86 @@
+{
+	"data": [{
+		"id": 17718,
+		"name": "苹果 15年 13寸 MacBook Air",
+		"topPrice": 5880,
+		"imgUrl": "http://static.aihuishou.com/image?file=55e5c36744018e60300000af",
+		"categoryId": 5,
+		"brandId": 52,
+		"totalRecycleCount": 1152
+	}, {
+		"id": 6587,
+		"name": "联想ThinkPad E40",
+		"topPrice": 560,
+		"imgUrl": "http://static.aihuishou.com/image?file=53ab85006b3e92c42500071e",
+		"categoryId": 5,
+		"brandId": 105,
+		"totalRecycleCount": 1045
+	}, {
+		"id": 19474,
+		"name": "戴尔 Inspiron灵越 15 7559(游匣7000)(非触摸屏) 系列",
+		"topPrice": 3480,
+		"imgUrl": "http://static.aihuishou.com/image?file=56d930e97d1c210000000011",
+		"categoryId": 5,
+		"brandId": 51,
+		"totalRecycleCount": 29
+	}, {
+		"id": 6167,
+		"name": "惠普 g4 系列",
+		"topPrice": 920,
+		"imgUrl": "http://static.aihuishou.com/image?file=53ab84bf6b3e92c42500046a",
+		"categoryId": 5,
+		"brandId": 102,
+		"totalRecycleCount": 784
+	}, {
+		"id": 19822,
+		"name": "Alienware 15",
+		"topPrice": 9750,
+		"imgUrl": "http://static.aihuishou.com/image?file=56fb7d29b72c9e6c7f000045",
+		"categoryId": 5,
+		"brandId": 390,
+		"totalRecycleCount": 23
+	}, {
+		"id": 19961,
+		"name": "三星 905S3G 系列",
+		"topPrice": 1040,
+		"imgUrl": "http://static.aihuishou.com/image?file=56fcbce2b72c9e6c7f0001e3",
+		"categoryId": 5,
+		"brandId": 7,
+		"totalRecycleCount": 89
+	}, {
+		"id": 6061,
+		"name": "联想Y470",
+		"topPrice": 800,
+		"imgUrl": "http://static.aihuishou.com/image?file=575d34604346e938280000ae",
+		"categoryId": 5,
+		"brandId": 18,
+		"totalRecycleCount": 995
+	}, {
+		"id": 19751,
+		"name": "华硕 X550 系列",
+		"topPrice": 1760,
+		"imgUrl": "http://static.aihuishou.com/image?file=56fb3f20b29afc5410000011",
+		"categoryId": 5,
+		"brandId": 103,
+		"totalRecycleCount": 156
+	}, {
+		"id": 8796,
+		"name": "Acer E1-471G",
+		"topPrice": 800,
+		"imgUrl": "http://static.aihuishou.com/image?file=549273bbd1fc1b5c350000bd",
+		"categoryId": 5,
+		"brandId": 104,
+		"totalRecycleCount": 443
+	}, {
+		"id": 16900,
+		"name": "神舟 战神 K650",
+		"topPrice": 2460,
+		"imgUrl": "http://static.aihuishou.com/image?file=579855f4d89cceac4e000001",
+		"categoryId": 5,
+		"brandId": 106,
+		"totalRecycleCount": 81
+	}],
+	"code": 200,
+	"message": null,
+	"resultMessage": null
+}

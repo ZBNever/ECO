@@ -1,0 +1,86 @@
+{
+	"data": [{
+		"id": 10494,
+		"name": "佳能EF 24-105mm f/4L IS USM",
+		"topPrice": 2640,
+		"imgUrl": "http://static.aihuishou.com/image?file=5774a2273ef99f000000000a",
+		"categoryId": 25,
+		"brandId": 287,
+		"totalRecycleCount": 305
+	}, {
+		"id": 10501,
+		"name": "佳能EF 17-40mm f/4L USM",
+		"topPrice": 2420,
+		"imgUrl": "http://static.aihuishou.com/image?file=5462dc87135def8c2a0000b1",
+		"categoryId": 25,
+		"brandId": 287,
+		"totalRecycleCount": 157
+	}, {
+		"id": 15205,
+		"name": "尼康AF-S DX 尼克尔 18-105mm f/3.5-5.6G ED VR",
+		"topPrice": 700,
+		"imgUrl": "http://static.aihuishou.com/image?file=57ea149beeed883c25000001",
+		"categoryId": 25,
+		"brandId": 290,
+		"totalRecycleCount": 1050
+	}, {
+		"id": 15227,
+		"name": "索尼FE 28-70mm f/3.5-5.6 OSS（SEL2870）",
+		"topPrice": 960,
+		"imgUrl": "http://static.aihuishou.com/image?file=546319b6135def8c2a00129d",
+		"categoryId": 25,
+		"brandId": 17,
+		"totalRecycleCount": 82
+	}, {
+		"id": 15456,
+		"name": "佳能 60D 机身",
+		"topPrice": 1660,
+		"imgUrl": "http://static.aihuishou.com/image?file=577393073e5f6b88090000c2",
+		"categoryId": 23,
+		"brandId": 287,
+		"totalRecycleCount": 383
+	}, {
+		"id": 15591,
+		"name": "佳能 600D 机身 (EOS KISS X5)",
+		"topPrice": 1150,
+		"imgUrl": "http://static.aihuishou.com/image?file=57846d217e05ca0000000001",
+		"categoryId": 23,
+		"brandId": 287,
+		"totalRecycleCount": 609
+	}, {
+		"id": 10926,
+		"name": "尼康 D3200 机身",
+		"topPrice": 880,
+		"imgUrl": "http://static.aihuishou.com/image?file=57846e82865b916415000009",
+		"categoryId": 23,
+		"brandId": 290,
+		"totalRecycleCount": 461
+	}, {
+		"id": 11648,
+		"name": "索尼RX100",
+		"topPrice": 1160,
+		"imgUrl": "http://static.aihuishou.com/image?file=58d251a98b387fc035000009",
+		"categoryId": 24,
+		"brandId": 17,
+		"totalRecycleCount": 210
+	}, {
+		"id": 22788,
+		"name": "索尼 HDR-PJ820E",
+		"topPrice": 2080,
+		"imgUrl": "http://static.aihuishou.com/image?file=5786fae76ac9324c43000005",
+		"categoryId": 77,
+		"brandId": 17,
+		"totalRecycleCount": 1
+	}, {
+		"id": 16126,
+		"name": "索尼ILCE-5000套机（E PZ 16-50mm）",
+		"topPrice": 1000,
+		"imgUrl": "http://static.aihuishou.com/image?file=5775caeb3ef99f0000000145",
+		"categoryId": 26,
+		"brandId": 17,
+		"totalRecycleCount": 193
+	}],
+	"code": 200,
+	"message": null,
+	"resultMessage": null
+}

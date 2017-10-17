@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HotProductView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5TC-Hj-INm">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="140"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WFQ-Da-CTa">
+                    <rect key="frame" x="0.0" y="140" width="188" height="140"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YTK-oR-ibP">
+                    <rect key="frame" x="188" y="0.0" width="187" height="280"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5TC-Hj-INm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0tX-2i-DFk"/>
+                <constraint firstItem="YTK-oR-ibP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="G3d-NV-teA"/>
+                <constraint firstAttribute="trailing" secondItem="5TC-Hj-INm" secondAttribute="trailing" multiplier="2" id="Ol9-Ci-BZ3"/>
+                <constraint firstAttribute="bottom" secondItem="WFQ-Da-CTa" secondAttribute="bottom" id="Vjk-7L-cTh"/>
+                <constraint firstItem="WFQ-Da-CTa" firstAttribute="top" secondItem="5TC-Hj-INm" secondAttribute="bottom" id="a2I-uB-pQX"/>
+                <constraint firstItem="WFQ-Da-CTa" firstAttribute="width" secondItem="5TC-Hj-INm" secondAttribute="width" id="fJO-G6-CmI"/>
+                <constraint firstItem="WFQ-Da-CTa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fR2-3x-h13"/>
+                <constraint firstAttribute="trailing" secondItem="YTK-oR-ibP" secondAttribute="trailing" id="lUb-Jn-jro"/>
+                <constraint firstItem="5TC-Hj-INm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mMy-90-DTd"/>
+                <constraint firstAttribute="bottom" secondItem="5TC-Hj-INm" secondAttribute="bottom" multiplier="2" id="urr-hy-8wu"/>
+                <constraint firstAttribute="bottom" secondItem="YTK-oR-ibP" secondAttribute="bottom" id="vJ8-v6-4cc"/>
+                <constraint firstItem="YTK-oR-ibP" firstAttribute="leading" secondItem="WFQ-Da-CTa" secondAttribute="trailing" id="vYJ-UC-mpL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="firstImageView" destination="5TC-Hj-INm" id="zxl-Jn-dFQ"/>
+                <outlet property="secondImageView" destination="WFQ-Da-CTa" id="TQW-be-cZw"/>
+                <outlet property="thirdImageView" destination="YTK-oR-ibP" id="Gjb-9b-Tup"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-140"/>
+        </view>
+    </objects>
+</document>

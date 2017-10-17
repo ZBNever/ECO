@@ -13,7 +13,8 @@
 #define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 // 4.屏幕大小尺寸
-#define screen_width [UIScreen mainScreen].bounds.size.width
-#define screen_height [UIScreen mainScreen].bounds.size.height
+#define screen_width            [UIScreen mainScreen].bounds.size.width
+#define screen_height          [UIScreen mainScreen].bounds.size.height
+#define NavHeight                  64
 
 #endif /* Header_h */

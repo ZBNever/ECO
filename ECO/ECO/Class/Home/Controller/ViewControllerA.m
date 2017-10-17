@@ -36,10 +36,9 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        //设置文字带图片类型的
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"1_selected"] tag:0];
-        //设置文字，选中图片和非选中图片类型
-        self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"3_normal"] selectedImage:[UIImage imageNamed:@"3_selected"]];
+
+        
+        [BaseMethod controller:self Title:@"主页" tabBarItemImage:@"home_gray" tabBarItemSelectedImage:@"home_green"];
     }
     
     return self;
@@ -49,7 +48,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"首页";
+//    self.title = @"首页";
     [self initCollectionView];
     [self loadData];
 }
@@ -71,6 +70,15 @@
     [self.collectionView reloadData];
 }
 
+- (void)loadHotData:(NSString *)data{
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:data ofType:nil];
+    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
+    NSMutableDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    NSArray *hotProductsArr = [HomeHotProductsModel mj_objectArrayWithKeyValuesArray:jsonDic[@"data"]];
+    self.dataArr = [hotProductsArr mutableCopy];
+    [self.collectionView reloadData];
+}
+
 - (CBSegmentView *)sliderSegmentView{
     
     if (!_sliderSegmentView) {
@@ -86,9 +94,41 @@
         _sliderSegmentView = [[CBSegmentView alloc] initWithFrame:CGRectMake(0, 10, screen_width, 40)];
         //    [self.view addSubview:self.sliderSegmentView];
         //    [self.sliderSegmentView setTitleArray:array withStyle:CBSegmentStyleSlider];
-        [_sliderSegmentView setTitleArray:array titleFont:0 titleColor:nil titleSelectedColor:[UIColor greenColor] withStyle:CBSegmentStyleSlider];
+        [_sliderSegmentView setTitleArray:array titleFont:0 titleColor:[UIColor lightGrayColor] titleSelectedColor:[UIColor greenColor] withStyle:CBSegmentStyleSlider];
+        __weak typeof(self) weakSelf = self;
         _sliderSegmentView.titleChooseReturn = ^(NSInteger x) {
             NSLog(@"点击了第%ld个按钮",x+1);
+            switch (x) {
+                case 0:
+                    {
+                        [weakSelf loadHotData:@"iphoneData.json"];
+                    }
+                    break;
+                case 1:
+                {
+                    [weakSelf loadHotData:@"ipadData.json"];
+                }
+                    break;
+                case 2:
+                {
+                    [weakSelf loadHotData:@"macbookData.json"];
+                }
+                    break;
+                case 3:
+                {
+                    [weakSelf loadHotData:@"cameraData.json"];
+                }
+                    break;
+                case 4:
+                {
+                    [weakSelf loadHotData:@"otherData.json"];
+                }
+                    break;
+                default:
+                    break;
+            }
+            
+            
         };
     }
     return _sliderSegmentView;

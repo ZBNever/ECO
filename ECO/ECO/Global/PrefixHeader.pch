@@ -10,6 +10,7 @@
 #define PrefixHeader_pch
 
 #import "Header.h"
+#import "URLHeader.h"
 //#import "Tools.h"
 #import "AppDelegate.h"
 #import "MBProgressHUD.h"
@@ -17,4 +18,7 @@
 #import <MJExtension.h>
 #import "UIImageView+WebCache.h"
 #import "AppStyle.h"
+#import "BaseMethod.h"
+#import "ZBHTTPRequestManager.h"
+#import "YZDisplayViewController.h"
 #endif /* PrefixHeader_pch */

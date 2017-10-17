@@ -34,27 +34,28 @@
     UINavigationController *navA = [[UINavigationController alloc] initWithRootViewController:ctlA];
     
     ViewControllerB *ctlB = [ViewControllerB new];
+    UINavigationController *navB = [[UINavigationController alloc] initWithRootViewController:ctlB];
     ViewControllerC *ctlC = [ViewControllerC new];
     ViewControllerD *ctlD = [ViewControllerD new];
     ViewControllerE *ctlE = [ViewControllerE new];
     
     //设置背景色和标题
     ctlA.view.backgroundColor = [UIColor whiteColor];
-    navA.title = @"红色";
-    ctlB.view.backgroundColor = [UIColor greenColor];
-    ctlB.title = @"绿色";
+//    navA.title = @"红色";
+    ctlB.view.backgroundColor = [UIColor whiteColor];
+//    ctlB.title = @"绿色";
     ctlC.view.backgroundColor = [UIColor purpleColor];
-    ctlC.title = @"紫色";
+//    ctlC.title = @"紫色";
     ctlD.view.backgroundColor = [UIColor yellowColor];
-    ctlD.title = @"黄色";
+//    ctlD.title = @"黄色";
     ctlE.view.backgroundColor = [UIColor blueColor];
-    ctlE.title = @"蓝色";
+//    ctlE.title = @"蓝色";
     
     //实例化一个UITabbarController
     UITabBarController *tabCtl = [UITabBarController new];
     
     //设置管理的控制器数组
-    tabCtl.viewControllers = @[navA,ctlB,ctlC,ctlD,ctlE];
+    tabCtl.viewControllers = @[navA,navB,ctlC,ctlD,ctlE];
     
     //设置默认选中某个控制器
     tabCtl.selectedIndex = 0;

@@ -1,0 +1,86 @@
+{
+	"data": [{
+		"id": 9640,
+		"name": "iPad Mini2",
+		"topPrice": 1205,
+		"imgUrl": "http://static.aihuishou.com/image?file=53c4f881e5763ca82300006d",
+		"categoryId": 6,
+		"brandId": 52,
+		"totalRecycleCount": 11799
+	}, {
+		"id": 9641,
+		"name": "iPad Air",
+		"topPrice": 1320,
+		"imgUrl": "http://static.aihuishou.com/image?file=53c4f880e5763ca823000069",
+		"categoryId": 6,
+		"brandId": 52,
+		"totalRecycleCount": 6113
+	}, {
+		"id": 8757,
+		"name": "iPad Mini",
+		"topPrice": 645,
+		"imgUrl": "http://static.aihuishou.com/image?file=53c4f87c6830f0c41800002a",
+		"categoryId": 6,
+		"brandId": 52,
+		"totalRecycleCount": 16572
+	}, {
+		"id": 8643,
+		"name": "三星 N8000",
+		"topPrice": 360,
+		"imgUrl": "http://static.aihuishou.com/image?file=53c4f888e5763ca8230000a5",
+		"categoryId": 6,
+		"brandId": 7,
+		"totalRecycleCount": 1260
+	}, {
+		"id": 19290,
+		"name": "微软 surface pro3",
+		"topPrice": 2880,
+		"imgUrl": "http://static.aihuishou.com/image?file=569f47334872a7dc2e00040a",
+		"categoryId": 6,
+		"brandId": 272,
+		"totalRecycleCount": 352
+	}, {
+		"id": 17554,
+		"name": "华为 荣耀X1",
+		"topPrice": 300,
+		"imgUrl": "http://static.aihuishou.com/image?file=5564af5fca224ea42b0001c4",
+		"categoryId": 6,
+		"brandId": 9,
+		"totalRecycleCount": 876
+	}, {
+		"id": 15003,
+		"name": "三星 GALAXY Tab S T805C（4G版）",
+		"topPrice": 1045,
+		"imgUrl": "http://static.aihuishou.com/image?file=540451ff7437ee202f000041",
+		"categoryId": 6,
+		"brandId": 7,
+		"totalRecycleCount": 236
+	}, {
+		"id": 17944,
+		"name": "小米平板2",
+		"topPrice": 640,
+		"imgUrl": "http://static.aihuishou.com/image?file=566ce056408dfa0000000034",
+		"categoryId": 6,
+		"brandId": 184,
+		"totalRecycleCount": 997
+	}, {
+		"id": 9294,
+		"name": "微软 Surface Pro",
+		"topPrice": 575,
+		"imgUrl": "http://static.aihuishou.com/image?file=54a9fe911b21c1e01c0000b4",
+		"categoryId": 6,
+		"brandId": 272,
+		"totalRecycleCount": 120
+	}, {
+		"id": 17555,
+		"name": "华为 荣耀x2",
+		"topPrice": 485,
+		"imgUrl": "http://static.aihuishou.com/image?file=5564b34f0cb113a834000001",
+		"categoryId": 6,
+		"brandId": 9,
+		"totalRecycleCount": 949
+	}],
+	"code": 200,
+	"message": null,
+	"resultMessage": null
+}

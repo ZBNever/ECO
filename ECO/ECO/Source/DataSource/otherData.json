@@ -1,0 +1,78 @@
+{
+	"data": [{
+		"id": 25483,
+		"name": "Apple Watch",
+		"topPrice": 1600,
+		"imgUrl": "http://static.aihuishou.com/image?file=598138cf1b6e4e0000000001",
+		"categoryId": 64,
+		"brandId": 52,
+		"totalRecycleCount": 466
+	}, {
+		"id": 17907,
+		"name": "iPod Touch 6代",
+		"topPrice": 740,
+		"imgUrl": "http://static.aihuishou.com/image?file=565ff0a793f95b8431000646",
+		"categoryId": 71,
+		"brandId": 52,
+		"totalRecycleCount": 397
+	}, {
+		"id": 9197,
+		"name": "iPod Nano 7代",
+		"topPrice": 280,
+		"imgUrl": "http://static.aihuishou.com/image?file=573d98d592961b344b00004d",
+		"categoryId": 71,
+		"brandId": 52,
+		"totalRecycleCount": 106
+	}, {
+		"id": 22860,
+		"name": "Kindle Paperwhite 2",
+		"topPrice": 400,
+		"imgUrl": "http://static.aihuishou.com/image?file=578894c96dfe63f025000001",
+		"categoryId": 70,
+		"brandId": 375,
+		"totalRecycleCount": 89
+	}, {
+		"id": 22861,
+		"name": "Kindle Paperwhite 3",
+		"topPrice": 500,
+		"imgUrl": "http://static.aihuishou.com/image?file=578894edbf8b16000000002d",
+		"categoryId": 70,
+		"brandId": 375,
+		"totalRecycleCount": 96
+	}, {
+		"id": 1802,
+		"name": "索尼 PSP 3000",
+		"topPrice": 240,
+		"imgUrl": "http://static.aihuishou.com/image?file=54a9fa341b21c1e01c0000b0",
+		"categoryId": 65,
+		"brandId": 17,
+		"totalRecycleCount": 1791
+	}, {
+		"id": 17302,
+		"name": "索尼 PSV 3000",
+		"topPrice": 350,
+		"imgUrl": "http://static.aihuishou.com/image?file=54aa12ac1b21c1e01c0000c8",
+		"categoryId": 65,
+		"brandId": 17,
+		"totalRecycleCount": 10
+	}, {
+		"id": 23321,
+		"name": "极米 Z3S",
+		"topPrice": 360,
+		"imgUrl": "http://static.aihuishou.com/image?file=57bac9034121b40c34000009",
+		"categoryId": 79,
+		"brandId": 455,
+		"totalRecycleCount": 0
+	}, {
+		"id": 23319,
+		"name": "极米 Z4air",
+		"topPrice": 400,
+		"imgUrl": "http://static.aihuishou.com/image?file=57bac8014121b40c34000005",
+		"categoryId": 79,
+		"brandId": 455,
+		"totalRecycleCount": 0
+	}],
+	"code": 200,
+	"message": null,
+	"resultMessage": null
+}
