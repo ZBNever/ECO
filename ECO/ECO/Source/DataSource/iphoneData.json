@@ -1,0 +1,86 @@
+{
+	"data": [{
+		"id": 17461,
+		"name": "苹果 iPhone 6",
+		"topPrice": 1975,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cd88aa988bac36000005",
+		"categoryId": 1,
+		"brandId": 52,
+		"totalRecycleCount": 63845
+	}, {
+		"id": 17726,
+		"name": "苹果 iPhone 6S",
+		"topPrice": 2505,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cd97aa988bac3600000d",
+		"categoryId": 1,
+		"brandId": 52,
+		"totalRecycleCount": 27410
+	}, {
+		"id": 17458,
+		"name": "苹果 iPhone 5S",
+		"topPrice": 770,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cd80aa988bac36000001",
+		"categoryId": 1,
+		"brandId": 52,
+		"totalRecycleCount": 99990
+	}, {
+		"id": 17462,
+		"name": "苹果 iPhone 6 Plus",
+		"topPrice": 2510,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cd90aa988bac36000009",
+		"categoryId": 1,
+		"brandId": 52,
+		"totalRecycleCount": 39523
+	}, {
+		"id": 17752,
+		"name": "苹果 iPhone 6S Plus",
+		"topPrice": 2805,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9befe901f937031000001",
+		"categoryId": 1,
+		"brandId": 52,
+		"totalRecycleCount": 13576
+	}, {
+		"id": 17488,
+		"name": "三星 Galaxy Note 3",
+		"topPrice": 500,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cdc7aa988bac36000019",
+		"categoryId": 1,
+		"brandId": 7,
+		"totalRecycleCount": 49587
+	}, {
+		"id": 14990,
+		"name": "小米手机4",
+		"topPrice": 345,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cde5aa988bac3600001d",
+		"categoryId": 1,
+		"brandId": 184,
+		"totalRecycleCount": 51281
+	}, {
+		"id": 17507,
+		"name": "小米手机3",
+		"topPrice": 150,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cdd8821580c02600001d",
+		"categoryId": 1,
+		"brandId": 184,
+		"totalRecycleCount": 65667
+	}, {
+		"id": 17486,
+		"name": "三星 Galaxy Note 2",
+		"topPrice": 235,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cdc0aa988bac36000015",
+		"categoryId": 1,
+		"brandId": 7,
+		"totalRecycleCount": 45588
+	}, {
+		"id": 17895,
+		"name": "华为 Mate8",
+		"topPrice": 1355,
+		"imgUrl": "http://static.aihuishou.com/image?file=58f9cdacaa988bac36000011",
+		"categoryId": 1,
+		"brandId": 9,
+		"totalRecycleCount": 5570
+	}],
+	"code": 200,
+	"message": null,
+	"resultMessage": null
+}
