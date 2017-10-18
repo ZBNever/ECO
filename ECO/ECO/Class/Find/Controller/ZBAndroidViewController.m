@@ -10,7 +10,7 @@
 
 #import "YZDisplayViewHeader.h"
 
-#import "RequesCover.h"
+#import "FeThreeDotGlow.h"
 
 #import "ZBChildCell.h"
 
@@ -19,7 +19,8 @@
 static NSString *ID = @"cell";
 
 @interface ZBAndroidViewController ()
-@property (nonatomic, weak) RequesCover *cover;
+
+@property (nonatomic, strong) FeThreeDotGlow *threeDot;
 
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @end
@@ -29,6 +30,7 @@ static NSString *ID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = ViewController_BackGround;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     /****滚动完成请求数据*******/
     
     // 如果想要滚动完成或者标题点击的时候，加载数据，需要监听通知
@@ -39,12 +41,12 @@ static NSString *ID = @"cell";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadUrlData) name:YZDisplayViewClickOrScrollDidFinshNote object:self];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ZBChildCell" bundle:nil] forCellReuseIdentifier:ID];
+
     // 开发中可以搞个蒙版，一开始遮住当前界面，等请求成功，在把蒙版隐藏.
-    RequesCover *cover = [RequesCover requestCover];
-    
-    [self.view addSubview:cover];
-    
-    _cover = cover;
+    _threeDot = [[FeThreeDotGlow alloc] initWithView:self.view blur:NO];
+    [self.view addSubview:_threeDot];
+    // Start
+    [_threeDot show];
 }
 - (void)initTableView{
     
@@ -54,20 +56,9 @@ static NSString *ID = @"cell";
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+
+    self.threeDot.frame = self.view.frame;
     
-    self.cover.frame = self.view.bounds;
-    
-}
-// 加载数据
-- (void)loadData
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        NSLog(@"%@--请求数据成功",self.title);
-        
-        [self.cover removeFromSuperview];
-        
-    });
 }
 
 - (void)loadUrlData{
@@ -77,8 +68,11 @@ static NSString *ID = @"cell";
     [ZBHTTPRequestManager requestGETWithURLStr:android_URL paramDic:nil Api_key:nil finish:^(id responseObject) {
         NSLog(@"responseObject:%@",responseObject);
         self.dataArr  = [ZBProductDataModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-        //        self.dataArr = [modelArr mutableCopy];
-        [self.cover removeFromSuperview];
+        [UIView animateWithDuration:1.2 animations:^{
+            self.threeDot.alpha = 0;
+        } completion:^(BOOL finished) {
+            [self.threeDot removeFromSuperview];
+        }];
         [self.tableView reloadData];
     } enError:^(NSError *error) {
         
@@ -109,6 +103,7 @@ static NSString *ID = @"cell";
     if (cell == nil) {
         cell = [[ZBChildCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell refreshUI:self.dataArr[indexPath.row]];
     

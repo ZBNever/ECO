@@ -21,6 +21,8 @@
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
     [manager.requestSerializer setValue:api_key forHTTPHeaderField:@"api_key"];
+    //设置请求超时时间
+    manager.requestSerializer.timeoutInterval = 8.f;
     
     [manager GET:urlStr parameters:paramDic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         

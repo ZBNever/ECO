@@ -70,27 +70,27 @@
     [self addChildViewController:wordVc2];
     
     // 安卓
-    ZBAndroidViewController *wordVc3 = [[ZBAndroidViewController alloc] init];
+    ZBChildViewController *wordVc3 = [[ZBChildViewController alloc] init];
     wordVc3.title = @"安卓";
-
+    wordVc3.type = 3;
     [self addChildViewController:wordVc3];
     
     //平板
-    ZBIPadViewController *wordVc4 = [[ZBIPadViewController alloc] init];
+    ZBChildViewController *wordVc4 = [[ZBChildViewController alloc] init];
     wordVc4.title = @"平板";
-
+    wordVc4.type =  4;
     [self addChildViewController:wordVc4];
     
     // 笔记本
-    ZBMacBookViewController *wordVc5 = [[ZBMacBookViewController alloc] init];
+    ZBChildViewController *wordVc5 = [[ZBChildViewController alloc] init];
     wordVc5.title = @"笔记本";
-
+    wordVc5.type = 5;
     [self addChildViewController:wordVc5];
     
     // 手表
-    ZBWatchViewController *wordVc6 = [[ZBWatchViewController alloc] init];
+    ZBChildViewController *wordVc6 = [[ZBChildViewController alloc] init];
     wordVc6.title = @"手表";
-
+    wordVc6.type = 6;
     [self addChildViewController:wordVc6];
     
 }

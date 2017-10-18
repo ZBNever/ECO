@@ -42,6 +42,46 @@
 		CA9FAC511F94F9CA009B024C /* ZBIPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9FAC501F94F9CA009B024C /* ZBIPadViewController.m */; };
 		CA9FAC541F94F9DA009B024C /* ZBMacBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9FAC531F94F9DA009B024C /* ZBMacBookViewController.m */; };
 		CA9FAC571F94F9EA009B024C /* ZBWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9FAC561F94F9EA009B024C /* ZBWatchViewController.m */; };
+		CACCBF321F964C1C006AE5AF /* ZBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */; };
+		CACCBFF21F96E38A006AE5AF /* Feasd.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFAF1F96E38A006AE5AF /* Feasd.m */; };
+		CACCBFF31F96E38A006AE5AF /* FeWifiManHub.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFB01F96E38A006AE5AF /* FeWifiManHub.m */; };
+		CACCBFF41F96E38A006AE5AF /* FeRollingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFB11F96E38A006AE5AF /* FeRollingViewController.m */; };
+		CACCBFF51F96E38A006AE5AF /* FeSpinner-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFB21F96E38A006AE5AF /* FeSpinner-Info.plist */; };
+		CACCBFF61F96E38A006AE5AF /* FeVietNamLoaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFB51F96E38A006AE5AF /* FeVietNamLoaderViewController.m */; };
+		CACCBFF71F96E38A006AE5AF /* CabinCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFB71F96E38A006AE5AF /* CabinCondensed-Bold.ttf */; };
+		CACCBFF81F96E38A006AE5AF /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFBA1F96E38A006AE5AF /* FeThreeDotGlow.m */; };
+		CACCBFF91F96E38A006AE5AF /* FeTenDot.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFBB1F96E38A006AE5AF /* FeTenDot.m */; };
+		CACCBFFA1F96E38A006AE5AF /* FeVietNamLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFC01F96E38A006AE5AF /* FeVietNamLoader.m */; };
+		CACCBFFB1F96E38A006AE5AF /* FeRollingLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFC11F96E38A006AE5AF /* FeRollingLoader.m */; };
+		CACCBFFC1F96E38A006AE5AF /* WifiMan_Sign_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFC31F96E38A006AE5AF /* WifiMan_Sign_1@2x.png */; };
+		CACCBFFD1F96E38A006AE5AF /* FeHandwriting.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFC41F96E38A006AE5AF /* FeHandwriting.m */; };
+		CACCBFFE1F96E38A006AE5AF /* FeSpinnerTenDot.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFC51F96E38A006AE5AF /* FeSpinnerTenDot.m */; };
+		CACCBFFF1F96E38A006AE5AF /* FeLoadingBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFC71F96E38A006AE5AF /* FeLoadingBoxViewController.m */; };
+		CACCC0001F96E38A006AE5AF /* FeEqualizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFC81F96E38A006AE5AF /* FeEqualizerViewController.m */; };
+		CACCC0011F96E38A006AE5AF /* FeLoadingIconBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFC91F96E38A006AE5AF /* FeLoadingIconBox.m */; };
+		CACCC0021F96E38A006AE5AF /* FeLoadingIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFCA1F96E38A006AE5AF /* FeLoadingIcon.m */; };
+		CACCC0031F96E38A006AE5AF /* FeWifiManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFCB1F96E38A006AE5AF /* FeWifiManViewController.m */; };
+		CACCC0041F96E38A006AE5AF /* Neou-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFCC1F96E38A006AE5AF /* Neou-Thin.ttf */; };
+		CACCC0051F96E38A006AE5AF /* WifiMan_Sign_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFCD1F96E38A006AE5AF /* WifiMan_Sign_3@2x.png */; };
+		CACCC0061F96E38A006AE5AF /* FeHourGlassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFCF1F96E38A006AE5AF /* FeHourGlassViewController.m */; };
+		CACCC0071F96E38A006AE5AF /* FeThreeDotGlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFD11F96E38A006AE5AF /* FeThreeDotGlowViewController.m */; };
+		CACCC0081F96E38A006AE5AF /* FeZeroLoaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFD31F96E38A006AE5AF /* FeZeroLoaderViewController.m */; };
+		CACCC0091F96E38A006AE5AF /* FeHourGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFD41F96E38A006AE5AF /* FeHourGlass.m */; };
+		CACCC00A1F96E38A006AE5AF /* FeVietNamBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFD61F96E38A006AE5AF /* FeVietNamBar.m */; };
+		CACCC00B1F96E38A006AE5AF /* FeZeroLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFD71F96E38A006AE5AF /* FeZeroLoader.m */; };
+		CACCC00C1F96E38A006AE5AF /* FeWifiManHub.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFD91F96E38A006AE5AF /* FeWifiManHub.xib */; };
+		CACCC00D1F96E38A006AE5AF /* FeEqualize.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFDC1F96E38A006AE5AF /* FeEqualize.m */; };
+		CACCC00E1F96E38A006AE5AF /* FeSpinnerTenDotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFDD1F96E38A006AE5AF /* FeSpinnerTenDotViewController.m */; };
+		CACCC00F1F96E38A006AE5AF /* FeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFDE1F96E38A006AE5AF /* FeViewController.m */; };
+		CACCC0101F96E38A006AE5AF /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFDF1F96E38A006AE5AF /* UIColor+flat.m */; };
+		CACCC0111F96E38A006AE5AF /* WifiMan_Sign_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFE01F96E38A006AE5AF /* WifiMan_Sign_4@2x.png */; };
+		CACCC0121F96E38A006AE5AF /* wifimanhub@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFE11F96E38A006AE5AF /* wifimanhub@2x.png */; };
+		CACCC0131F96E38A006AE5AF /* FeHandwritingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFE31F96E38A006AE5AF /* FeHandwritingViewController.m */; };
+		CACCC0141F96E38A006AE5AF /* wifimanhub_grayscale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFE51F96E38A006AE5AF /* wifimanhub_grayscale@2x.png */; };
+		CACCC0151F96E38A006AE5AF /* FeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFE81F96E38A006AE5AF /* FeAppDelegate.m */; };
+		CACCC0161F96E38A006AE5AF /* WifiMan_Sign_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFEB1F96E38A006AE5AF /* WifiMan_Sign_2@2x.png */; };
+		CACCC0171F96E38A006AE5AF /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFED1F96E38A006AE5AF /* FXBlurView.m */; };
+		CACCC01A1F971EA7006AE5AF /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCC0191F971EA7006AE5AF /* Tools.m */; };
 		CAD3B2721F932A7800062317 /* YZDisplayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3B2691F932A7700062317 /* YZDisplayTitleLabel.m */; };
 		CAD3B2731F932A7800062317 /* YZFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3B26B1F932A7700062317 /* YZFlowLayout.m */; };
 		CAD3B2741F932A7800062317 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3B26C1F932A7700062317 /* UIView+Frame.m */; };
@@ -133,6 +173,77 @@
 		CA9FAC531F94F9DA009B024C /* ZBMacBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBMacBookViewController.m; sourceTree = "<group>"; };
 		CA9FAC551F94F9EA009B024C /* ZBWatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBWatchViewController.h; sourceTree = "<group>"; };
 		CA9FAC561F94F9EA009B024C /* ZBWatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBWatchViewController.m; sourceTree = "<group>"; };
+		CACCBF301F964C1C006AE5AF /* ZBDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBDetailViewController.h; sourceTree = "<group>"; };
+		CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBDetailViewController.m; sourceTree = "<group>"; };
+		CACCBFAF1F96E38A006AE5AF /* Feasd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feasd.m; sourceTree = "<group>"; };
+		CACCBFB01F96E38A006AE5AF /* FeWifiManHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeWifiManHub.m; sourceTree = "<group>"; };
+		CACCBFB11F96E38A006AE5AF /* FeRollingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeRollingViewController.m; sourceTree = "<group>"; };
+		CACCBFB21F96E38A006AE5AF /* FeSpinner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FeSpinner-Info.plist"; sourceTree = "<group>"; };
+		CACCBFB31F96E38A006AE5AF /* FeVietNamBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeVietNamBar.h; sourceTree = "<group>"; };
+		CACCBFB41F96E38A006AE5AF /* FeZeroLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeZeroLoader.h; sourceTree = "<group>"; };
+		CACCBFB51F96E38A006AE5AF /* FeVietNamLoaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeVietNamLoaderViewController.m; sourceTree = "<group>"; };
+		CACCBFB61F96E38A006AE5AF /* FeHourGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlass.h; sourceTree = "<group>"; };
+		CACCBFB71F96E38A006AE5AF /* CabinCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CabinCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		CACCBFB81F96E38A006AE5AF /* FeZeroLoaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeZeroLoaderViewController.h; sourceTree = "<group>"; };
+		CACCBFB91F96E38A006AE5AF /* FeThreeDotGlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeThreeDotGlowViewController.h; sourceTree = "<group>"; };
+		CACCBFBA1F96E38A006AE5AF /* FeThreeDotGlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeThreeDotGlow.m; sourceTree = "<group>"; };
+		CACCBFBB1F96E38A006AE5AF /* FeTenDot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeTenDot.m; sourceTree = "<group>"; };
+		CACCBFBC1F96E38A006AE5AF /* FeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeViewController.h; sourceTree = "<group>"; };
+		CACCBFBD1F96E38A006AE5AF /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
+		CACCBFBE1F96E38A006AE5AF /* FeSpinnerTenDotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeSpinnerTenDotViewController.h; sourceTree = "<group>"; };
+		CACCBFBF1F96E38A006AE5AF /* FeEqualize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeEqualize.h; sourceTree = "<group>"; };
+		CACCBFC01F96E38A006AE5AF /* FeVietNamLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeVietNamLoader.m; sourceTree = "<group>"; };
+		CACCBFC11F96E38A006AE5AF /* FeRollingLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeRollingLoader.m; sourceTree = "<group>"; };
+		CACCBFC21F96E38A006AE5AF /* FeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeAppDelegate.h; sourceTree = "<group>"; };
+		CACCBFC31F96E38A006AE5AF /* WifiMan_Sign_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WifiMan_Sign_1@2x.png"; sourceTree = "<group>"; };
+		CACCBFC41F96E38A006AE5AF /* FeHandwriting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHandwriting.m; sourceTree = "<group>"; };
+		CACCBFC51F96E38A006AE5AF /* FeSpinnerTenDot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeSpinnerTenDot.m; sourceTree = "<group>"; };
+		CACCBFC61F96E38A006AE5AF /* FeHandwritingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHandwritingViewController.h; sourceTree = "<group>"; };
+		CACCBFC71F96E38A006AE5AF /* FeLoadingBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeLoadingBoxViewController.m; sourceTree = "<group>"; };
+		CACCBFC81F96E38A006AE5AF /* FeEqualizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeEqualizerViewController.m; sourceTree = "<group>"; };
+		CACCBFC91F96E38A006AE5AF /* FeLoadingIconBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeLoadingIconBox.m; sourceTree = "<group>"; };
+		CACCBFCA1F96E38A006AE5AF /* FeLoadingIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeLoadingIcon.m; sourceTree = "<group>"; };
+		CACCBFCB1F96E38A006AE5AF /* FeWifiManViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeWifiManViewController.m; sourceTree = "<group>"; };
+		CACCBFCC1F96E38A006AE5AF /* Neou-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neou-Thin.ttf"; sourceTree = "<group>"; };
+		CACCBFCD1F96E38A006AE5AF /* WifiMan_Sign_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WifiMan_Sign_3@2x.png"; sourceTree = "<group>"; };
+		CACCBFCE1F96E38A006AE5AF /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		CACCBFCF1F96E38A006AE5AF /* FeHourGlassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlassViewController.m; sourceTree = "<group>"; };
+		CACCBFD01F96E38A006AE5AF /* FeThreeDotGlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeThreeDotGlow.h; sourceTree = "<group>"; };
+		CACCBFD11F96E38A006AE5AF /* FeThreeDotGlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeThreeDotGlowViewController.m; sourceTree = "<group>"; };
+		CACCBFD21F96E38A006AE5AF /* FeSpinner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FeSpinner-Prefix.pch"; sourceTree = "<group>"; };
+		CACCBFD31F96E38A006AE5AF /* FeZeroLoaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeZeroLoaderViewController.m; sourceTree = "<group>"; };
+		CACCBFD41F96E38A006AE5AF /* FeHourGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHourGlass.m; sourceTree = "<group>"; };
+		CACCBFD51F96E38A006AE5AF /* FeVietNamLoaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeVietNamLoaderViewController.h; sourceTree = "<group>"; };
+		CACCBFD61F96E38A006AE5AF /* FeVietNamBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeVietNamBar.m; sourceTree = "<group>"; };
+		CACCBFD71F96E38A006AE5AF /* FeZeroLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeZeroLoader.m; sourceTree = "<group>"; };
+		CACCBFD81F96E38A006AE5AF /* FeRollingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeRollingViewController.h; sourceTree = "<group>"; };
+		CACCBFD91F96E38A006AE5AF /* FeWifiManHub.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeWifiManHub.xib; sourceTree = "<group>"; };
+		CACCBFDA1F96E38A006AE5AF /* Feasd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feasd.h; sourceTree = "<group>"; };
+		CACCBFDB1F96E38A006AE5AF /* FeWifiManHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeWifiManHub.h; sourceTree = "<group>"; };
+		CACCBFDC1F96E38A006AE5AF /* FeEqualize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeEqualize.m; sourceTree = "<group>"; };
+		CACCBFDD1F96E38A006AE5AF /* FeSpinnerTenDotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeSpinnerTenDotViewController.m; sourceTree = "<group>"; };
+		CACCBFDE1F96E38A006AE5AF /* FeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeViewController.m; sourceTree = "<group>"; };
+		CACCBFDF1F96E38A006AE5AF /* UIColor+flat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+flat.m"; sourceTree = "<group>"; };
+		CACCBFE01F96E38A006AE5AF /* WifiMan_Sign_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WifiMan_Sign_4@2x.png"; sourceTree = "<group>"; };
+		CACCBFE11F96E38A006AE5AF /* wifimanhub@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifimanhub@2x.png"; sourceTree = "<group>"; };
+		CACCBFE21F96E38A006AE5AF /* FeTenDot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeTenDot.h; sourceTree = "<group>"; };
+		CACCBFE31F96E38A006AE5AF /* FeHandwritingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeHandwritingViewController.m; sourceTree = "<group>"; };
+		CACCBFE41F96E38A006AE5AF /* FeLoadingBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeLoadingBoxViewController.h; sourceTree = "<group>"; };
+		CACCBFE51F96E38A006AE5AF /* wifimanhub_grayscale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifimanhub_grayscale@2x.png"; sourceTree = "<group>"; };
+		CACCBFE61F96E38A006AE5AF /* FeSpinnerTenDot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeSpinnerTenDot.h; sourceTree = "<group>"; };
+		CACCBFE71F96E38A006AE5AF /* FeHandwriting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHandwriting.h; sourceTree = "<group>"; };
+		CACCBFE81F96E38A006AE5AF /* FeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeAppDelegate.m; sourceTree = "<group>"; };
+		CACCBFE91F96E38A006AE5AF /* FeRollingLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeRollingLoader.h; sourceTree = "<group>"; };
+		CACCBFEA1F96E38A006AE5AF /* FeVietNamLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeVietNamLoader.h; sourceTree = "<group>"; };
+		CACCBFEB1F96E38A006AE5AF /* WifiMan_Sign_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WifiMan_Sign_2@2x.png"; sourceTree = "<group>"; };
+		CACCBFEC1F96E38A006AE5AF /* FeHourGlassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeHourGlassViewController.h; sourceTree = "<group>"; };
+		CACCBFED1F96E38A006AE5AF /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		CACCBFEE1F96E38A006AE5AF /* FeWifiManViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeWifiManViewController.h; sourceTree = "<group>"; };
+		CACCBFEF1F96E38A006AE5AF /* FeLoadingIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeLoadingIcon.h; sourceTree = "<group>"; };
+		CACCBFF01F96E38A006AE5AF /* FeLoadingIconBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeLoadingIconBox.h; sourceTree = "<group>"; };
+		CACCBFF11F96E38A006AE5AF /* FeEqualizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeEqualizerViewController.h; sourceTree = "<group>"; };
+		CACCC0181F971EA7006AE5AF /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		CACCC0191F971EA7006AE5AF /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		CAD3B25B1F911BDF00062317 /* IMG_6611.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6611.JPG; sourceTree = "<group>"; };
 		CAD3B25D1F911C3100062317 /* IMG_6617@2x.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IMG_6617@2x.JPG"; sourceTree = "<group>"; };
 		CAD3B2691F932A7700062317 /* YZDisplayTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZDisplayTitleLabel.m; sourceTree = "<group>"; };
@@ -318,6 +429,8 @@
 		CA97B6CD1F7E96F5008368F0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				CACCC0181F971EA7006AE5AF /* Tools.h */,
+				CACCC0191F971EA7006AE5AF /* Tools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -358,6 +471,7 @@
 		CA97B6D11F7E96F5008368F0 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				CACCBFAE1F96E38A006AE5AF /* FeSpinner */,
 				CAD3B2801F932ED400062317 /* 蒙版 */,
 				CAD3B2681F932A7700062317 /* YZDisplayViewController */,
 				CAD936E21F8A5198004BEDC4 /* CBSegment */,
@@ -422,6 +536,80 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CACCBFAE1F96E38A006AE5AF /* FeSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				CACCBFAF1F96E38A006AE5AF /* Feasd.m */,
+				CACCBFB01F96E38A006AE5AF /* FeWifiManHub.m */,
+				CACCBFB11F96E38A006AE5AF /* FeRollingViewController.m */,
+				CACCBFB21F96E38A006AE5AF /* FeSpinner-Info.plist */,
+				CACCBFB31F96E38A006AE5AF /* FeVietNamBar.h */,
+				CACCBFB41F96E38A006AE5AF /* FeZeroLoader.h */,
+				CACCBFB51F96E38A006AE5AF /* FeVietNamLoaderViewController.m */,
+				CACCBFB61F96E38A006AE5AF /* FeHourGlass.h */,
+				CACCBFB71F96E38A006AE5AF /* CabinCondensed-Bold.ttf */,
+				CACCBFB81F96E38A006AE5AF /* FeZeroLoaderViewController.h */,
+				CACCBFB91F96E38A006AE5AF /* FeThreeDotGlowViewController.h */,
+				CACCBFBA1F96E38A006AE5AF /* FeThreeDotGlow.m */,
+				CACCBFBB1F96E38A006AE5AF /* FeTenDot.m */,
+				CACCBFBC1F96E38A006AE5AF /* FeViewController.h */,
+				CACCBFBD1F96E38A006AE5AF /* UIColor+flat.h */,
+				CACCBFBE1F96E38A006AE5AF /* FeSpinnerTenDotViewController.h */,
+				CACCBFBF1F96E38A006AE5AF /* FeEqualize.h */,
+				CACCBFC01F96E38A006AE5AF /* FeVietNamLoader.m */,
+				CACCBFC11F96E38A006AE5AF /* FeRollingLoader.m */,
+				CACCBFC21F96E38A006AE5AF /* FeAppDelegate.h */,
+				CACCBFC31F96E38A006AE5AF /* WifiMan_Sign_1@2x.png */,
+				CACCBFC41F96E38A006AE5AF /* FeHandwriting.m */,
+				CACCBFC51F96E38A006AE5AF /* FeSpinnerTenDot.m */,
+				CACCBFC61F96E38A006AE5AF /* FeHandwritingViewController.h */,
+				CACCBFC71F96E38A006AE5AF /* FeLoadingBoxViewController.m */,
+				CACCBFC81F96E38A006AE5AF /* FeEqualizerViewController.m */,
+				CACCBFC91F96E38A006AE5AF /* FeLoadingIconBox.m */,
+				CACCBFCA1F96E38A006AE5AF /* FeLoadingIcon.m */,
+				CACCBFCB1F96E38A006AE5AF /* FeWifiManViewController.m */,
+				CACCBFCC1F96E38A006AE5AF /* Neou-Thin.ttf */,
+				CACCBFCD1F96E38A006AE5AF /* WifiMan_Sign_3@2x.png */,
+				CACCBFCE1F96E38A006AE5AF /* FXBlurView.h */,
+				CACCBFCF1F96E38A006AE5AF /* FeHourGlassViewController.m */,
+				CACCBFD01F96E38A006AE5AF /* FeThreeDotGlow.h */,
+				CACCBFD11F96E38A006AE5AF /* FeThreeDotGlowViewController.m */,
+				CACCBFD21F96E38A006AE5AF /* FeSpinner-Prefix.pch */,
+				CACCBFD31F96E38A006AE5AF /* FeZeroLoaderViewController.m */,
+				CACCBFD41F96E38A006AE5AF /* FeHourGlass.m */,
+				CACCBFD51F96E38A006AE5AF /* FeVietNamLoaderViewController.h */,
+				CACCBFD61F96E38A006AE5AF /* FeVietNamBar.m */,
+				CACCBFD71F96E38A006AE5AF /* FeZeroLoader.m */,
+				CACCBFD81F96E38A006AE5AF /* FeRollingViewController.h */,
+				CACCBFD91F96E38A006AE5AF /* FeWifiManHub.xib */,
+				CACCBFDA1F96E38A006AE5AF /* Feasd.h */,
+				CACCBFDB1F96E38A006AE5AF /* FeWifiManHub.h */,
+				CACCBFDC1F96E38A006AE5AF /* FeEqualize.m */,
+				CACCBFDD1F96E38A006AE5AF /* FeSpinnerTenDotViewController.m */,
+				CACCBFDE1F96E38A006AE5AF /* FeViewController.m */,
+				CACCBFDF1F96E38A006AE5AF /* UIColor+flat.m */,
+				CACCBFE01F96E38A006AE5AF /* WifiMan_Sign_4@2x.png */,
+				CACCBFE11F96E38A006AE5AF /* wifimanhub@2x.png */,
+				CACCBFE21F96E38A006AE5AF /* FeTenDot.h */,
+				CACCBFE31F96E38A006AE5AF /* FeHandwritingViewController.m */,
+				CACCBFE41F96E38A006AE5AF /* FeLoadingBoxViewController.h */,
+				CACCBFE51F96E38A006AE5AF /* wifimanhub_grayscale@2x.png */,
+				CACCBFE61F96E38A006AE5AF /* FeSpinnerTenDot.h */,
+				CACCBFE71F96E38A006AE5AF /* FeHandwriting.h */,
+				CACCBFE81F96E38A006AE5AF /* FeAppDelegate.m */,
+				CACCBFE91F96E38A006AE5AF /* FeRollingLoader.h */,
+				CACCBFEA1F96E38A006AE5AF /* FeVietNamLoader.h */,
+				CACCBFEB1F96E38A006AE5AF /* WifiMan_Sign_2@2x.png */,
+				CACCBFEC1F96E38A006AE5AF /* FeHourGlassViewController.h */,
+				CACCBFED1F96E38A006AE5AF /* FXBlurView.m */,
+				CACCBFEE1F96E38A006AE5AF /* FeWifiManViewController.h */,
+				CACCBFEF1F96E38A006AE5AF /* FeLoadingIcon.h */,
+				CACCBFF01F96E38A006AE5AF /* FeLoadingIconBox.h */,
+				CACCBFF11F96E38A006AE5AF /* FeEqualizerViewController.h */,
+			);
+			path = FeSpinner;
+			sourceTree = "<group>";
+		};
 		CAD3B2681F932A7700062317 /* YZDisplayViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +672,8 @@
 				CA9FAC531F94F9DA009B024C /* ZBMacBookViewController.m */,
 				CA9FAC551F94F9EA009B024C /* ZBWatchViewController.h */,
 				CA9FAC561F94F9EA009B024C /* ZBWatchViewController.m */,
+				CACCBF301F964C1C006AE5AF /* ZBDetailViewController.h */,
+				CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -593,6 +783,8 @@
 				CAD936FA1F8B9A6A004BEDC4 /* otherData.json in Resources */,
 				CA6DB7571F80C69D00B66C4D /* 4_normal.png in Resources */,
 				CAD936FD1F8B9BA1004BEDC4 /* iphoneData.json in Resources */,
+				CACCC0051F96E38A006AE5AF /* WifiMan_Sign_3@2x.png in Resources */,
+				CACCBFF51F96E38A006AE5AF /* FeSpinner-Info.plist in Resources */,
 				CA6DB7541F80C69D00B66C4D /* 2_normal.png in Resources */,
 				CAD936F71F8B9A6A004BEDC4 /* ipadData.json in Resources */,
 				CADDCE5A1F93764C00305D47 /* ZBProductCollectionCell.xib in Resources */,
@@ -601,18 +793,26 @@
 				CAD936EB1F8A75AA004BEDC4 /* home_gray@2x.png in Resources */,
 				CA6DB7511F80C69D00B66C4D /* 3_selected@2x.png in Resources */,
 				CAD937121F8D1E29004BEDC4 /* HotProductView.xib in Resources */,
+				CACCC0121F96E38A006AE5AF /* wifimanhub@2x.png in Resources */,
 				CAD9371D1F8E3F3B004BEDC4 /* TodayNewCell.xib in Resources */,
 				CAD936EA1F8A75AA004BEDC4 /* home_green@2x.png in Resources */,
 				CA6DB74F1F80C69D00B66C4D /* 3_normal@2x.png in Resources */,
 				CA6DB7521F80C69D00B66C4D /* 5_normal.png in Resources */,
 				CAD936F91F8B9A6A004BEDC4 /* cameraData.json in Resources */,
+				CACCBFF71F96E38A006AE5AF /* CabinCondensed-Bold.ttf in Resources */,
 				CAD936F81F8B9A6A004BEDC4 /* macbookData.json in Resources */,
+				CACCC0161F96E38A006AE5AF /* WifiMan_Sign_2@2x.png in Resources */,
 				CA6DB7801F80E6A900B66C4D /* HomeData.json in Resources */,
 				CA6DB7351F809EE400B66C4D /* HB-0215@2x.png in Resources */,
 				CA6DB7551F80C69D00B66C4D /* 1_selected@2x.png in Resources */,
 				CA6DB7561F80C69D00B66C4D /* 1_normal.png in Resources */,
+				CACCC0041F96E38A006AE5AF /* Neou-Thin.ttf in Resources */,
+				CACCC0141F96E38A006AE5AF /* wifimanhub_grayscale@2x.png in Resources */,
 				CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */,
 				CA6DB7581F80C69D00B66C4D /* 2_selected.png in Resources */,
+				CACCC00C1F96E38A006AE5AF /* FeWifiManHub.xib in Resources */,
+				CACCC0111F96E38A006AE5AF /* WifiMan_Sign_4@2x.png in Resources */,
+				CACCBFFC1F96E38A006AE5AF /* WifiMan_Sign_1@2x.png in Resources */,
 				CA6DB7531F80C69D00B66C4D /* 5_selected.png in Resources */,
 				CA6DB7501F80C69D00B66C4D /* 4_selected.png in Resources */,
 			);
@@ -660,9 +860,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ECO/Pods-ECO-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -677,41 +880,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA9FAC511F94F9CA009B024C /* ZBIPadViewController.m in Sources */,
+				CACCC0131F96E38A006AE5AF /* FeHandwritingViewController.m in Sources */,
 				CAD3B2741F932A7800062317 /* UIView+Frame.m in Sources */,
 				CADDCE541F9369F600305D47 /* ZBChildCell.m in Sources */,
+				CACCC0021F96E38A006AE5AF /* FeLoadingIcon.m in Sources */,
 				CAD9370B1F8D178D004BEDC4 /* FindBannerModel.m in Sources */,
+				CACCC0031F96E38A006AE5AF /* FeWifiManViewController.m in Sources */,
+				CACCBFFD1F96E38A006AE5AF /* FeHandwriting.m in Sources */,
 				CA6DB7751F80D58F00B66C4D /* HomeDataModel.m in Sources */,
 				CAD937041F8D1454004BEDC4 /* ZBHTTPRequestManager.m in Sources */,
 				CA97B6BA1F7E9526008368F0 /* main.m in Sources */,
+				CACCBFFF1F96E38A006AE5AF /* FeLoadingBoxViewController.m in Sources */,
+				CACCC00D1F96E38A006AE5AF /* FeEqualize.m in Sources */,
 				CAD937181F8E3DE0004BEDC4 /* TodayNewDataModel.m in Sources */,
 				CA9FAC4E1F94F9B7009B024C /* ZBAndroidViewController.m in Sources */,
 				CA9FAC541F94F9DA009B024C /* ZBMacBookViewController.m in Sources */,
 				CA6DB7421F80C5FF00B66C4D /* ViewControllerC.m in Sources */,
+				CACCC0151F96E38A006AE5AF /* FeAppDelegate.m in Sources */,
+				CACCC0071F96E38A006AE5AF /* FeThreeDotGlowViewController.m in Sources */,
+				CACCC00E1F96E38A006AE5AF /* FeSpinnerTenDotViewController.m in Sources */,
 				CAD937151F8D209D004BEDC4 /* HotProductModel.m in Sources */,
+				CACCC0061F96E38A006AE5AF /* FeHourGlassViewController.m in Sources */,
 				CAD3B2731F932A7800062317 /* YZFlowLayout.m in Sources */,
 				CA6DB7761F80D58F00B66C4D /* HomeCategoriesModel.m in Sources */,
+				CACCC0101F96E38A006AE5AF /* UIColor+flat.m in Sources */,
 				CAD3B2781F932B8000062317 /* ZBCommendVC.m in Sources */,
 				CA6DB7741F80D58F00B66C4D /* HomeHotProductsModel.m in Sources */,
+				CACCBFF61F96E38A006AE5AF /* FeVietNamLoaderViewController.m in Sources */,
+				CACCC0001F96E38A006AE5AF /* FeEqualizerViewController.m in Sources */,
 				CAD3B2841F932ED400062317 /* RequesCover.m in Sources */,
 				CA6DB7431F80C5FF00B66C4D /* ViewControllerE.m in Sources */,
 				CAD9370E1F8D1AF8004BEDC4 /* HotProductView.m in Sources */,
+				CACCC0091F96E38A006AE5AF /* FeHourGlass.m in Sources */,
+				CACCC0081F96E38A006AE5AF /* FeZeroLoaderViewController.m in Sources */,
+				CACCBFF21F96E38A006AE5AF /* Feasd.m in Sources */,
 				CAD937001F8CE969004BEDC4 /* BaseMethod.m in Sources */,
+				CACCBFF41F96E38A006AE5AF /* FeRollingViewController.m in Sources */,
 				CAD3B27B1F932BD600062317 /* ZBChildViewController.m in Sources */,
 				CAD9371C1F8E3F3B004BEDC4 /* TodayNewCell.m in Sources */,
+				CACCC0011F96E38A006AE5AF /* FeLoadingIconBox.m in Sources */,
+				CACCBFFE1F96E38A006AE5AF /* FeSpinnerTenDot.m in Sources */,
+				CACCC00A1F96E38A006AE5AF /* FeVietNamBar.m in Sources */,
+				CACCC0171F96E38A006AE5AF /* FXBlurView.m in Sources */,
+				CACCBFF91F96E38A006AE5AF /* FeTenDot.m in Sources */,
 				CADDCE5D1F937AF800305D47 /* ZBProductDataModel.m in Sources */,
 				CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */,
+				CACCBFF31F96E38A006AE5AF /* FeWifiManHub.m in Sources */,
 				CA9FAC571F94F9EA009B024C /* ZBWatchViewController.m in Sources */,
 				CA6DB7401F80C5FF00B66C4D /* ViewControllerB.m in Sources */,
 				CADDCE591F93764C00305D47 /* ZBProductCollectionCell.m in Sources */,
 				CAD3B2721F932A7800062317 /* YZDisplayTitleLabel.m in Sources */,
+				CACCC01A1F971EA7006AE5AF /* Tools.m in Sources */,
+				CACCC00B1F96E38A006AE5AF /* FeZeroLoader.m in Sources */,
+				CACCBF321F964C1C006AE5AF /* ZBDetailViewController.m in Sources */,
 				CA6DB7771F80D58F00B66C4D /* HomeBannersModel.m in Sources */,
 				CADDCE601F937B9900305D47 /* ZBProductListModel.m in Sources */,
 				CAD3B2751F932A7800062317 /* YZDisplayViewController.m in Sources */,
 				CAD936E51F8A5198004BEDC4 /* CBSegmentView.m in Sources */,
+				CACCBFFA1F96E38A006AE5AF /* FeVietNamLoader.m in Sources */,
 				CA6DB7411F80C5FF00B66C4D /* ViewControllerD.m in Sources */,
+				CACCBFF81F96E38A006AE5AF /* FeThreeDotGlow.m in Sources */,
 				CA6DB7831F81285600B66C4D /* CategoriesView.m in Sources */,
 				CA6DB75F1F80D1E000B66C4D /* HomeCell.m in Sources */,
 				CA6DB7441F80C5FF00B66C4D /* ViewControllerA.m in Sources */,
+				CACCBFFB1F96E38A006AE5AF /* FeRollingLoader.m in Sources */,
+				CACCC00F1F96E38A006AE5AF /* FeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

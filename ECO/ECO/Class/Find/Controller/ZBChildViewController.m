@@ -9,20 +9,23 @@
 #import "ZBChildViewController.h"
 
 #import "YZDisplayViewHeader.h"
-
-#import "RequesCover.h"
+//加载页面
+#import "FeThreeDotGlow.h"
 
 #import "ZBChildCell.h"
 
 #import "ZBProductDataModel.h"
+/** 商品详情 */
+#import "ZBDetailViewController.h"
 
+#import "MJRefresh.h"
 static NSString *ID = @"cell";
 
 @interface ZBChildViewController ()
 
-@property (nonatomic, weak) RequesCover *cover;
-
+@property (strong, nonatomic) FeThreeDotGlow *threeDot;
 @property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) MJRefreshNormalHeader *header;
 
 @end
 
@@ -31,6 +34,8 @@ static NSString *ID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
         self.view.backgroundColor = ViewController_BackGround;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self example03];
     /****滚动完成请求数据*******/
     
     // 如果想要滚动完成或者标题点击的时候，加载数据，需要监听通知
@@ -42,11 +47,11 @@ static NSString *ID = @"cell";
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ZBChildCell" bundle:nil] forCellReuseIdentifier:ID];
     // 开发中可以搞个蒙版，一开始遮住当前界面，等请求成功，在把蒙版隐藏.
-    RequesCover *cover = [RequesCover requestCover];
+    _threeDot = [[FeThreeDotGlow alloc] initWithView:self.view blur:YES];
+    [self.view addSubview:_threeDot];
+    // Start
+    [_threeDot show];
     
-    [self.view addSubview:cover];
-    
-    _cover = cover;
 }
 - (void)initTableView{
     
@@ -57,33 +62,43 @@ static NSString *ID = @"cell";
 {
     [super viewDidLayoutSubviews];
     
-    self.cover.frame = self.view.bounds;
-    
 }
-// 加载数据
-- (void)loadData
+#pragma mark UITableView + 下拉刷新 隐藏时间
+- (void)example03
 {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        NSLog(@"%@--请求数据成功",self.title);
-        
-        [self.cover removeFromSuperview];
-        
-    });
+    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadUrlData)];
+    
+    // 设置自动切换透明度(在导航栏下面自动隐藏)
+    header.automaticallyChangeAlpha = YES;
+    
+    // 隐藏时间
+    header.lastUpdatedTimeLabel.hidden = YES;
+    
+    // 马上进入刷新状态
+    [header beginRefreshing];
+    self.header = header;
+    // 设置header
+    self.tableView.mj_header = header;
 }
-
 - (void)loadUrlData{
     
-//    NSArray *urlArr = @[iphone_URL,android_URL,ipad_URL,macbook_URL,watch_URL];
-    
-    [ZBHTTPRequestManager requestGETWithURLStr:iphone_URL paramDic:nil Api_key:nil finish:^(id responseObject) {
+    NSArray *urlArr = @[iphone_URL,android_URL,ipad_URL,macbook_URL,watch_URL];
+    [self.dataArr removeAllObjects];
+    [ZBHTTPRequestManager requestGETWithURLStr:urlArr[self.type-2] paramDic:nil Api_key:nil finish:^(id responseObject) {
         NSLog(@"responseObject:%@",responseObject);
-        self.dataArr  = [ZBProductDataModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-//        self.dataArr = [modelArr mutableCopy];
-        [self.cover removeFromSuperview];
+        NSArray *modelArr = [ZBProductDataModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        self.dataArr  = [modelArr mutableCopy];
+        [UIView animateWithDuration:1.2 animations:^{
+            self.threeDot.alpha = 0;
+        } completion:^(BOOL finished) {
+            [self.threeDot removeFromSuperview];
+        }];
         [self.tableView reloadData];
+        [self.header endRefreshing];
     } enError:^(NSError *error) {
-        
+        NSLog(@"error.code:%ld",error.code);
+        [self.header endRefreshing];
     }];
     
 }
@@ -109,10 +124,13 @@ static NSString *ID = @"cell";
     ZBChildCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     if (cell == nil) {
-        cell = [[ZBChildCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[ZBChildCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID viewController:self];
     }
+    cell.VC = self;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell refreshUI:self.dataArr[indexPath.row]];
+    if (self.dataArr.count != 0) {
+            [cell refreshUI:self.dataArr[indexPath.row]];
+    }
 
     return cell;
 }

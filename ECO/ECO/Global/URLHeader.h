@@ -28,6 +28,8 @@
 
 #define macbook_URL             @"http://panda.huodao.hk/api/product/catebrand_product_list?p=ios&type_id=3&v=3.5.0"
 
-#define watch_URL               @"http://panda.huodao.hk/api/product/catebrand_product_list?p=ios&type_id=9&v=3.5.0"
+#define watch_URL                @"http://panda.huodao.hk/api/product/catebrand_product_list?p=ios&type_id=9&v=3.5.0"
+
+#define detail_URL(Id)        [NSString stringWithFormat:@"http://panda.huodao.hk/api/product/detail?p=ios&product_id=%@&v=3.5.0",Id]    
 
 #endif /* URLHeader_h */

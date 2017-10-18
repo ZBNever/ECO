@@ -20,5 +20,4 @@
 
 @property (nonatomic, strong) NSString *brand_banner_url;
 
-
 @end

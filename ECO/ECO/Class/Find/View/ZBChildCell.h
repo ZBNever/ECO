@@ -15,6 +15,10 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageHeadView;
 
+@property (nonatomic, strong) UIViewController *VC;
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier viewController:(UIViewController *)VC;
+
 - (void)refreshUI:(ZBProductDataModel *)model;
 
 @end

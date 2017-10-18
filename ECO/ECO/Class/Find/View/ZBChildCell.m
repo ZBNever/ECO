@@ -9,6 +9,7 @@
 #import "ZBChildCell.h"
 #import "ZBProductCollectionCell.h"
 #import "ZBProductListModel.h"
+#import "ZBDetailViewController.h"
 
 @interface ZBChildCell ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -16,14 +17,16 @@
 
 @property (nonatomic, strong) NSMutableArray *listDataArr;
 
+
+
 @end
 
 @implementation ZBChildCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier viewController:(UIViewController *)VC{
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
+        self.VC = VC;
     }
     return self;
     
@@ -48,6 +51,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+
     [self initCollectionView];
 }
 
@@ -63,9 +67,10 @@
     [self.imageHeadView sd_setImageWithURL:[NSURL URLWithString:model.model_banner_url?:model.brand_banner_url]];
     self.listDataArr = [model.product_list mutableCopy];
     if (self.listDataArr.count>0) {
+        self.collectionView.alpha = 1;
         [self.collectionView reloadData];
     }else{
-        [self.collectionView removeFromSuperview];
+        self.collectionView.alpha = 0;
     }
     
 }
@@ -86,7 +91,7 @@
     
 
         ZBProductCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-
+    
         [cell refreshUI:self.listDataArr[indexPath.row ]];
         return cell;
         
@@ -149,8 +154,10 @@
     //        [self clickImage:indexPath];
     //    }
     ZBProductListModel *model = self.listDataArr[indexPath.item];
-    
-    NSLog(@"model.product_name:%@",model.product_name);
+    ZBDetailViewController *detailVC = [[ZBDetailViewController alloc] init];
+    detailVC.product_id = model.product_id;
+    [self.VC.navigationController pushViewController:detailVC animated:YES];
+    NSLog(@"model.product_id:%@",model.product_id);
     
 }
 

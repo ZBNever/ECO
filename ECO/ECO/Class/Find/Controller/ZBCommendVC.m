@@ -37,6 +37,8 @@
 
 @property (nonatomic, strong) NSMutableArray *todayDataArr;
 
+@property (nonatomic, strong) MJRefreshNormalHeader *header;
+
 @end
 
 @implementation ZBCommendVC
@@ -45,6 +47,7 @@
     [super viewDidLoad];
 //    [self.view addSubview:self.sliderSegmentView];
     [self initCollectionView];
+    [self example03];
     [self loadBannerDataFromURL];
     [self loadHotDataFromURL];
     [self loadTodayDataFromURL];
@@ -75,15 +78,30 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.collectionView.backgroundColor = ViewController_BackGround;
-    
-    //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"TodayNewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HotProductView" bundle:nil] forCellWithReuseIdentifier:@"HotProductView"];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"segument"];
     [self.view addSubview:self.collectionView];
 }
-
+#pragma mark UITableView + 下拉刷新 隐藏时间
+- (void)example03
+{
+    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTodayDataFromURL)];
+    
+    // 设置自动切换透明度(在导航栏下面自动隐藏)
+    header.automaticallyChangeAlpha = YES;
+    
+    // 隐藏时间
+    header.lastUpdatedTimeLabel.hidden = YES;
+    
+    // 马上进入刷新状态
+    [header beginRefreshing];
+    self.header = header;
+    // 设置header
+    self.collectionView.mj_header = self.header;
+}
 - (void)loadHotData:(NSString *)data{
     //    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:data ofType:nil];
     //    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
@@ -221,7 +239,7 @@
         
         self.hotImageArr = [hotDataArr mutableCopy];
         [self.collectionView reloadData];
-        
+        [self.header endRefreshing];
     } enError:^(NSError *error) {
         
     }];
@@ -235,9 +253,9 @@
         //
         self.todayDataArr = [todayNewDataArr mutableCopy];
         [self.collectionView reloadData];
-        
+        [self.header endRefreshing];
     } enError:^(NSError *error) {
-        
+        [self.header endRefreshing];
     }];
     
 }

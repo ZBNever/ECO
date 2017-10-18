@@ -29,6 +29,7 @@ static NSString *ID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = ViewController_BackGround;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     /****滚动完成请求数据*******/
     
     // 如果想要滚动完成或者标题点击的时候，加载数据，需要监听通知
