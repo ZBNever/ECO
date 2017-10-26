@@ -22,6 +22,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - XHLogHelper (2.3.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDCycleScrollView
   - SDWebImage
+  - XHLogHelper
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -38,7 +40,8 @@ SPEC CHECKSUMS:
   MJRefresh: 6642e35b3227a5447b9fd5e17c552c90196c9859
   SDCycleScrollView: d0fd5fe40a80918371fd8939214eb3be81033d83
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  XHLogHelper: 5b1555482c34e24e126305b2d0e3b745d3a1b4f3
 
-PODFILE CHECKSUM: 2dfad0de6cffd3d5d61e361afab7a028e00776c6
+PODFILE CHECKSUM: f8d8662e3b9a7bac6a0bb29e324414c27ddae142
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.1.1

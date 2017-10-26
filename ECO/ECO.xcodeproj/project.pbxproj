@@ -34,6 +34,9 @@
 		CA6DB7801F80E6A900B66C4D /* HomeData.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6DB77F1F80E6A800B66C4D /* HomeData.json */; };
 		CA6DB7831F81285600B66C4D /* CategoriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6DB7821F81285600B66C4D /* CategoriesView.m */; };
 		CA6DB7851F8128CE00B66C4D /* CategoriesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6DB7841F8128CE00B66C4D /* CategoriesView.xib */; };
+		CA727C791F9DCB5D00F89413 /* ZBDetailSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA727C771F9DCB5D00F89413 /* ZBDetailSecondCell.m */; };
+		CA727C7A1F9DCB5D00F89413 /* ZBDetailSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA727C781F9DCB5D00F89413 /* ZBDetailSecondCell.xib */; };
+		CA727C7D1F9DD09600F89413 /* ZBProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA727C7C1F9DD09600F89413 /* ZBProductDetailModel.m */; };
 		CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6AB1F7E9526008368F0 /* AppDelegate.m */; };
 		CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B01F7E9526008368F0 /* Main.storyboard */; };
 		CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B31F7E9526008368F0 /* Assets.xcassets */; };
@@ -82,6 +85,8 @@
 		CACCC0161F96E38A006AE5AF /* WifiMan_Sign_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CACCBFEB1F96E38A006AE5AF /* WifiMan_Sign_2@2x.png */; };
 		CACCC0171F96E38A006AE5AF /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFED1F96E38A006AE5AF /* FXBlurView.m */; };
 		CACCC01A1F971EA7006AE5AF /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCC0191F971EA7006AE5AF /* Tools.m */; };
+		CACCC0201F9746B7006AE5AF /* ZBDetailFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCC01E1F9746B7006AE5AF /* ZBDetailFirstCell.m */; };
+		CACCC0211F9746B7006AE5AF /* ZBDetailFirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CACCC01F1F9746B7006AE5AF /* ZBDetailFirstCell.xib */; };
 		CAD3B2721F932A7800062317 /* YZDisplayTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3B2691F932A7700062317 /* YZDisplayTitleLabel.m */; };
 		CAD3B2731F932A7800062317 /* YZFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3B26B1F932A7700062317 /* YZFlowLayout.m */; };
 		CAD3B2741F932A7800062317 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3B26C1F932A7700062317 /* UIView+Frame.m */; };
@@ -156,6 +161,11 @@
 		CA6DB7811F81285600B66C4D /* CategoriesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoriesView.h; sourceTree = "<group>"; };
 		CA6DB7821F81285600B66C4D /* CategoriesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoriesView.m; sourceTree = "<group>"; };
 		CA6DB7841F8128CE00B66C4D /* CategoriesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesView.xib; sourceTree = "<group>"; };
+		CA727C761F9DCB5D00F89413 /* ZBDetailSecondCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBDetailSecondCell.h; sourceTree = "<group>"; };
+		CA727C771F9DCB5D00F89413 /* ZBDetailSecondCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBDetailSecondCell.m; sourceTree = "<group>"; };
+		CA727C781F9DCB5D00F89413 /* ZBDetailSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBDetailSecondCell.xib; sourceTree = "<group>"; };
+		CA727C7B1F9DD09600F89413 /* ZBProductDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBProductDetailModel.h; sourceTree = "<group>"; };
+		CA727C7C1F9DD09600F89413 /* ZBProductDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBProductDetailModel.m; sourceTree = "<group>"; };
 		CA97B6A71F7E9525008368F0 /* ECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA97B6AA1F7E9526008368F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA97B6AB1F7E9526008368F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -244,6 +254,9 @@
 		CACCBFF11F96E38A006AE5AF /* FeEqualizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeEqualizerViewController.h; sourceTree = "<group>"; };
 		CACCC0181F971EA7006AE5AF /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		CACCC0191F971EA7006AE5AF /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		CACCC01D1F9746B7006AE5AF /* ZBDetailFirstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBDetailFirstCell.h; sourceTree = "<group>"; };
+		CACCC01E1F9746B7006AE5AF /* ZBDetailFirstCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBDetailFirstCell.m; sourceTree = "<group>"; };
+		CACCC01F1F9746B7006AE5AF /* ZBDetailFirstCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBDetailFirstCell.xib; sourceTree = "<group>"; };
 		CAD3B25B1F911BDF00062317 /* IMG_6611.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6611.JPG; sourceTree = "<group>"; };
 		CAD3B25D1F911C3100062317 /* IMG_6617@2x.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IMG_6617@2x.JPG"; sourceTree = "<group>"; };
 		CAD3B2691F932A7700062317 /* YZDisplayTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZDisplayTitleLabel.m; sourceTree = "<group>"; };
@@ -691,6 +704,8 @@
 				CADDCE5C1F937AF800305D47 /* ZBProductDataModel.m */,
 				CADDCE5E1F937B9900305D47 /* ZBProductListModel.h */,
 				CADDCE5F1F937B9900305D47 /* ZBProductListModel.m */,
+				CA727C7B1F9DD09600F89413 /* ZBProductDetailModel.h */,
+				CA727C7C1F9DD09600F89413 /* ZBProductDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -710,6 +725,12 @@
 				CADDCE561F93764C00305D47 /* ZBProductCollectionCell.h */,
 				CADDCE571F93764C00305D47 /* ZBProductCollectionCell.m */,
 				CADDCE581F93764C00305D47 /* ZBProductCollectionCell.xib */,
+				CACCC01D1F9746B7006AE5AF /* ZBDetailFirstCell.h */,
+				CACCC01E1F9746B7006AE5AF /* ZBDetailFirstCell.m */,
+				CACCC01F1F9746B7006AE5AF /* ZBDetailFirstCell.xib */,
+				CA727C761F9DCB5D00F89413 /* ZBDetailSecondCell.h */,
+				CA727C771F9DCB5D00F89413 /* ZBDetailSecondCell.m */,
+				CA727C781F9DCB5D00F89413 /* ZBDetailSecondCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -805,6 +826,8 @@
 				CA6DB7801F80E6A900B66C4D /* HomeData.json in Resources */,
 				CA6DB7351F809EE400B66C4D /* HB-0215@2x.png in Resources */,
 				CA6DB7551F80C69D00B66C4D /* 1_selected@2x.png in Resources */,
+				CACCC0211F9746B7006AE5AF /* ZBDetailFirstCell.xib in Resources */,
+				CA727C7A1F9DCB5D00F89413 /* ZBDetailSecondCell.xib in Resources */,
 				CA6DB7561F80C69D00B66C4D /* 1_normal.png in Resources */,
 				CACCC0041F96E38A006AE5AF /* Neou-Thin.ttf in Resources */,
 				CACCC0141F96E38A006AE5AF /* wifimanhub_grayscale@2x.png in Resources */,
@@ -836,7 +859,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C6F278BF03836F90B869ACE6 /* [CP] Embed Pods Frameworks */ = {
@@ -941,10 +964,13 @@
 				CA6DB7411F80C5FF00B66C4D /* ViewControllerD.m in Sources */,
 				CACCBFF81F96E38A006AE5AF /* FeThreeDotGlow.m in Sources */,
 				CA6DB7831F81285600B66C4D /* CategoriesView.m in Sources */,
+				CA727C791F9DCB5D00F89413 /* ZBDetailSecondCell.m in Sources */,
 				CA6DB75F1F80D1E000B66C4D /* HomeCell.m in Sources */,
 				CA6DB7441F80C5FF00B66C4D /* ViewControllerA.m in Sources */,
+				CA727C7D1F9DD09600F89413 /* ZBProductDetailModel.m in Sources */,
 				CACCBFFB1F96E38A006AE5AF /* FeRollingLoader.m in Sources */,
 				CACCC00F1F96E38A006AE5AF /* FeViewController.m in Sources */,
+				CACCC0201F9746B7006AE5AF /* ZBDetailFirstCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

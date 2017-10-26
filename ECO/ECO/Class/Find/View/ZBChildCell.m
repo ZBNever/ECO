@@ -156,6 +156,8 @@
     ZBProductListModel *model = self.listDataArr[indexPath.item];
     ZBDetailViewController *detailVC = [[ZBDetailViewController alloc] init];
     detailVC.product_id = model.product_id;
+    //push的时候隐藏tabbar
+    detailVC.hidesBottomBarWhenPushed = YES;
     [self.VC.navigationController pushViewController:detailVC animated:YES];
     NSLog(@"model.product_id:%@",model.product_id);
     

@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ECO/Class/Find/View/ZBChildCell.m"
-            timestampString = "530006941.971435"
+            timestampString = "530010571.214621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -52,12 +52,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ECO/Class/Find/Controller/ZBWatchViewController.m"
-            timestampString = "530006941.971562"
+            timestampString = "530010571.214777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
             landmarkName = "-loadUrlData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ECO/Class/Find/Controller/ZBDetailViewController.m"
+            timestampString = "530681127.964093"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-loadUrlData:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
