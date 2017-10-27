@@ -24,7 +24,7 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [BaseMethod controller:self Title:@"淘机" tabBarItemImage:@"home_gray" tabBarItemSelectedImage:@"home_green"];
+        [BaseMethod controller:self Title:@"淘机" tabBarItemImage:@"find_gray" tabBarItemSelectedImage:@"find_green"];
     }
     return self;
 }

@@ -10,10 +10,12 @@
 #import "SDCycleScrollView.h"
 #import "ZBDetailFirstCell.h"
 #import "ZBDetailSecondCell.h"
+#import "ZBDetailThirdCell.h"
 #import "ZBProductDetailModel.h"
 
 static NSString *ID = @"cell";
 static NSString *SCell = @"SCell";
+static NSString *TCell = @"TCell";
 
 @interface ZBDetailViewController ()<SDCycleScrollViewDelegate>
 
@@ -39,7 +41,8 @@ static NSString *SCell = @"SCell";
     self.tableView.tableFooterView = self.buttonView;
 //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailFirstCell" bundle:nil] forCellReuseIdentifier:ID];
-        [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailSecondCell" bundle:nil] forCellReuseIdentifier:SCell];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailSecondCell" bundle:nil] forCellReuseIdentifier:SCell];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailThirdCell" bundle:nil] forCellReuseIdentifier:TCell];
 }
 
 
@@ -70,6 +73,9 @@ static NSString *SCell = @"SCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.row == 2) {
+        return 533;
+    }
     return 180;
     
 }
@@ -87,12 +93,17 @@ static NSString *SCell = @"SCell";
         [secondCell refreshUI:self.dataModel];
         return secondCell;
     }else{
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KCell"];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"KCell"];
-        }
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
+        ZBDetailThirdCell  *thirdCell = [tableView dequeueReusableCellWithIdentifier:TCell];
+        thirdCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [thirdCell refreshUI:self.dataModel];
+        return thirdCell;
+//
+//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KCell"];
+//        if (!cell) {
+//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"KCell"];
+//        }
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        return cell;
     }
 
 }

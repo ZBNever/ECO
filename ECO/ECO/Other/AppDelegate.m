@@ -44,7 +44,7 @@
 //    navA.title = @"红色";
     ctlB.view.backgroundColor = [UIColor whiteColor];
 //    ctlB.title = @"绿色";
-    ctlC.view.backgroundColor = [UIColor purpleColor];
+    ctlC.view.backgroundColor = [UIColor whiteColor];
 //    ctlC.title = @"紫色";
     ctlD.view.backgroundColor = [UIColor yellowColor];
 //    ctlD.title = @"黄色";
@@ -55,7 +55,7 @@
     UITabBarController *tabCtl = [UITabBarController new];
     
     //设置管理的控制器数组
-    tabCtl.viewControllers = @[navA,navB,ctlC,ctlD,ctlE];
+    tabCtl.viewControllers = @[navA,navB,ctlC];
     
     //设置默认选中某个控制器
     tabCtl.selectedIndex = 0;

@@ -36,12 +36,13 @@
 @property (nonatomic, strong) NSString *delete_at; // "0000-00-00 00:00:00",
 @property (nonatomic, strong) NSString *buy_at; // "2017-10-16 16:38:03",
 @property (nonatomic, strong) NSString *refuse_reason; // "",
+@property (nonatomic, strong) NSString *imei;//IMEI
 @property (nonatomic, strong) NSString *check_res; // "经检测：该机底部和背部有轻微瑕疵，但屏幕无瑕，不影响日常使用；硬件功能正常；官方保修剩余时间在3个月以上",
 @property (nonatomic, strong) NSString *activation_time; // "2017年3月21日",
 @property (nonatomic, strong) NSString *guarantee_time; // "2018年3月20日",
 @property (nonatomic, strong) NSString *charge_num; // 11,
-@property (nonatomic, strong) NSString *engineer_name;
-@property (nonatomic, strong) NSString *professional;
+@property (nonatomic, strong) NSString *engineer_name;//质检工程师名字
+@property (nonatomic, strong) NSString *professional;//质检工程师级别
 @property (nonatomic, strong) NSArray   *imgs; //
 @property (nonatomic, strong) NSArray   *param_value;
 @property (nonatomic, strong) NSString *netword_string;
