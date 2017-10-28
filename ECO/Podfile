@@ -9,7 +9,7 @@ target 'ECO' do
     pod 'SDWebImage'
     pod 'MJRefresh'
     pod 'XHLogHelper'
-
+    pod 'FMDB'
 end
 
 

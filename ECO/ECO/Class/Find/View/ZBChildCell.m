@@ -143,17 +143,14 @@
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    //    HomeCell *cell = (HomeCell *)[collectionView cellForItemAtIndexPath:self.index];
-    //    if (CellState == nomalState) {
-    //
-    //        RoomVC *roomVC = [[RoomVC alloc] init];
-    //        roomVC.model = self.dataArr[indexPath.row];
-    //        [self.navigationController pushViewController:roomVC animated:YES];
-    //    }else{
-    //
-    //        [self clickImage:indexPath];
-    //    }
+
     ZBProductListModel *model = self.listDataArr[indexPath.item];
+    
+//    [ZFMDBTool deleteData];
+    
+    if (![ZFMDBTool containsData:model.product_id]) {
+         [ZFMDBTool insertData:model];
+    }
     ZBDetailViewController *detailVC = [[ZBDetailViewController alloc] init];
     detailVC.product_id = model.product_id;
     //push的时候隐藏tabbar

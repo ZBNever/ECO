@@ -13,6 +13,9 @@
 		CA288D931FA2D7B900037D2D /* NavHeadTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA288D8D1FA2D7B900037D2D /* NavHeadTitleView.m */; };
 		CA288D941FA2D7B900037D2D /* HeadLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA288D901FA2D7B900037D2D /* HeadLineView.m */; };
 		CA288D951FA2D7B900037D2D /* HeadImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA288D921FA2D7B900037D2D /* HeadImageView.m */; };
+		CA288DAC1FA2F70800037D2D /* ZFMDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CA288DAB1FA2F70800037D2D /* ZFMDBTool.m */; };
+		CA288DB01FA335A200037D2D /* ZBMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA288DAE1FA335A200037D2D /* ZBMineCell.m */; };
+		CA288DB11FA335A200037D2D /* ZBMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA288DAF1FA335A200037D2D /* ZBMineCell.xib */; };
 		CA6DB7331F809DC800B66C4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA6DB7321F809DC800B66C4D /* LaunchScreen.storyboard */; };
 		CA6DB7401F80C5FF00B66C4D /* ViewControllerB.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6DB7371F80C5FE00B66C4D /* ViewControllerB.m */; };
 		CA6DB7411F80C5FF00B66C4D /* ViewControllerD.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6DB73C1F80C5FE00B66C4D /* ViewControllerD.m */; };
@@ -124,6 +127,11 @@
 		CA288D901FA2D7B900037D2D /* HeadLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadLineView.m; sourceTree = "<group>"; };
 		CA288D911FA2D7B900037D2D /* NavHeadTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavHeadTitleView.h; sourceTree = "<group>"; };
 		CA288D921FA2D7B900037D2D /* HeadImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadImageView.m; sourceTree = "<group>"; };
+		CA288DAA1FA2F70700037D2D /* ZFMDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFMDBTool.h; sourceTree = "<group>"; };
+		CA288DAB1FA2F70800037D2D /* ZFMDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFMDBTool.m; sourceTree = "<group>"; };
+		CA288DAD1FA335A200037D2D /* ZBMineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBMineCell.h; sourceTree = "<group>"; };
+		CA288DAE1FA335A200037D2D /* ZBMineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBMineCell.m; sourceTree = "<group>"; };
+		CA288DAF1FA335A200037D2D /* ZBMineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBMineCell.xib; sourceTree = "<group>"; };
 		CA6DB7321F809DC800B66C4D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA6DB7371F80C5FE00B66C4D /* ViewControllerB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerB.m; sourceTree = "<group>"; };
 		CA6DB7381F80C5FE00B66C4D /* ViewControllerE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerE.h; sourceTree = "<group>"; };
@@ -362,6 +370,9 @@
 			isa = PBXGroup;
 			children = (
 				CA288D8C1FA2D7B900037D2D /* Views */,
+				CA288DAD1FA335A200037D2D /* ZBMineCell.h */,
+				CA288DAE1FA335A200037D2D /* ZBMineCell.m */,
+				CA288DAF1FA335A200037D2D /* ZBMineCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -461,6 +472,8 @@
 		CA97B6CD1F7E96F5008368F0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				CA288DAA1FA2F70700037D2D /* ZFMDBTool.h */,
+				CA288DAB1FA2F70800037D2D /* ZFMDBTool.m */,
 				CACCC0181F971EA7006AE5AF /* Tools.h */,
 				CACCC0191F971EA7006AE5AF /* Tools.m */,
 			);
@@ -847,6 +860,7 @@
 				CA288D841FA2CA9100037D2D /* Image.xcassets in Resources */,
 				CACCC00C1F96E38A006AE5AF /* FeWifiManHub.xib in Resources */,
 				CACCC0111F96E38A006AE5AF /* WifiMan_Sign_4@2x.png in Resources */,
+				CA288DB11FA335A200037D2D /* ZBMineCell.xib in Resources */,
 				CACCBFFC1F96E38A006AE5AF /* WifiMan_Sign_1@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,7 +883,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C6F278BF03836F90B869ACE6 /* [CP] Embed Pods Frameworks */ = {
@@ -917,6 +931,7 @@
 				CACCC0131F96E38A006AE5AF /* FeHandwritingViewController.m in Sources */,
 				CAD3B2741F932A7800062317 /* UIView+Frame.m in Sources */,
 				CADDCE541F9369F600305D47 /* ZBChildCell.m in Sources */,
+				CA288DAC1FA2F70800037D2D /* ZFMDBTool.m in Sources */,
 				CACCC0021F96E38A006AE5AF /* FeLoadingIcon.m in Sources */,
 				CAD9370B1F8D178D004BEDC4 /* FindBannerModel.m in Sources */,
 				CACCC0031F96E38A006AE5AF /* FeWifiManViewController.m in Sources */,
@@ -953,6 +968,7 @@
 				CACCBFF41F96E38A006AE5AF /* FeRollingViewController.m in Sources */,
 				CAD3B27B1F932BD600062317 /* ZBChildViewController.m in Sources */,
 				CAD9371C1F8E3F3B004BEDC4 /* TodayNewCell.m in Sources */,
+				CA288DB01FA335A200037D2D /* ZBMineCell.m in Sources */,
 				CACCC0011F96E38A006AE5AF /* FeLoadingIconBox.m in Sources */,
 				CACCBFFE1F96E38A006AE5AF /* FeSpinnerTenDot.m in Sources */,
 				CACCC00A1F96E38A006AE5AF /* FeVietNamBar.m in Sources */,

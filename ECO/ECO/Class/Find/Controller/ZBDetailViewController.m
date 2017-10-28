@@ -28,6 +28,12 @@ static NSString *TCell = @"TCell";
 @property (nonatomic, strong) NSMutableArray *bannerImgArr;
 
 @property (nonatomic, strong) ZBProductDetailModel *dataModel;
+
+@property (nonatomic, strong) UIButton *collectionBtn;
+
+@property (nonatomic, assign) BOOL isCollection;
+
+@property (nonatomic, assign) BOOL isBuy;
 @end
 
 @implementation ZBDetailViewController
@@ -35,6 +41,15 @@ static NSString *TCell = @"TCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"商品详情";
+    
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightBtn setImage:[UIImage imageNamed:@"collection_gray"] forState:UIControlStateNormal];
+    [rightBtn setImage:[UIImage imageNamed:@"collection_red"] forState:UIControlStateSelected];
+    [rightBtn addTarget:self action:@selector(collectionAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    rightBtn.selected = self.isCollection = [[NSUserDefaults standardUserDefaults] boolForKey:self.product_id];
+    self.collectionBtn = rightBtn;
+    
     self.view.backgroundColor = ViewController_BackGround;
     [self loadUrlData:self.product_id];
     self.tableView.tableHeaderView = self.cycleScrollView;
@@ -44,10 +59,14 @@ static NSString *TCell = @"TCell";
     [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailSecondCell" bundle:nil] forCellReuseIdentifier:SCell];
     [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailThirdCell" bundle:nil] forCellReuseIdentifier:TCell];
 }
-
+//收藏
+-  (void)collectionAction:(UIButton *)sender{
+    
+    self.isCollection =  self.collectionBtn.selected = !sender.selected;
+    [[NSUserDefaults standardUserDefaults] setBool:self.isCollection forKey:self.product_id];
+}
 
 - (void)loadUrlData:(NSString *)product_id{
-    
     
     [ZBHTTPRequestManager requestGETWithURLStr:detail_URL(product_id) paramDic:nil Api_key:nil finish:^(id responseObject) {
         
@@ -149,9 +168,15 @@ static NSString *TCell = @"TCell";
         btn.layer.masksToBounds = YES;
         btn.layer.cornerRadius = 10.0f;
         [btn setTitle:@"立即购买" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(buyAction:) forControlEvents:UIControlEventTouchUpInside];
         [_buttonView addSubview:btn];
     }
     return _buttonView;
+}
+- (void)buyAction:(UIButton *)sender{
+    
+    
     
 }
+
 @end

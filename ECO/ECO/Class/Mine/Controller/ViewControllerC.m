@@ -10,10 +10,15 @@
 #import "NavHeadTitleView.h"
 #import "HeadImageView.h"
 #import "HeadLineView.h"
+#import "ZBProductListModel.h"
+#import "ZBMineCell.h"
+
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 //颜色
 #define JXColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+static NSString *Cell = @"Cell";
 
 @interface ViewControllerC ()<NavHeadTitleViewDelegate,headLineDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -36,6 +41,7 @@
 @property(nonatomic,assign)NSInteger currentIndex;
 @property(nonatomic,assign)int rowHeight;
 @property(nonatomic,strong)UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArr;
 @end
 
 @implementation ViewControllerC
@@ -46,6 +52,13 @@
     }
     return self;
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.dataArr = [[ZFMDBTool dataArr] mutableCopy];
+    [self.tableView reloadData];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //拉伸顶部图片
@@ -56,7 +69,13 @@
     [self loadData];
     //创建TableView
     [self createTableView];
+    //注册cell
+    [self registerCell];
+}
+/** 注册cell */
+- (void)registerCell{
     
+        [self.tableView registerNib:[UINib nibWithNibName:@"ZBMineCell" bundle:nil] forCellReuseIdentifier:Cell];
 }
 
 //创建数据源
@@ -67,10 +86,13 @@
     _dataArray2=[[NSMutableArray alloc]init];
     for (int i=0; i < 3; i++) {
         if (i == 0) {
-            for (int i=0; i<10; i++) {
-                NSString * string=[NSString stringWithFormat:@"第%d行",i];
-                [_dataArray0 addObject:string];
-            }
+            
+            _dataArray0 = [self.dataArr mutableCopy];
+            
+//            for (int i=0; i<10; i++) {
+//                NSString * string=[NSString stringWithFormat:@"第%d行",i];
+//                [_dataArray0 addObject:string];
+//            }
         }else if(i == 1){
             for (int i=1; i<8; i++) {
                 NSString * string=[NSString stringWithFormat:@"%d 娃",i];
@@ -209,14 +231,16 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (_currentIndex==0) {
-        return _dataArray0.count;
-    }else if(_currentIndex==1){
-        return _dataArray1.count;
-    }else{
-        return _dataArray2.count;
-    }
-    return 0;
+    return self.dataArr.count;
+    
+//    if (_currentIndex==0) {
+//        return self.dataArr.count;
+//    }else if(_currentIndex==1){
+//        return _dataArray1.count;
+//    }else{
+//        return _dataArray2.count;
+//    }
+//    return 0;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -233,38 +257,51 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //创建一个静态标识符  来给每一个cell 加上标记  方便我们从复用队列里面取到 名字为该标记的cell
-    static NSString *reusID=@"ID";
+//    static NSString *reusID=@"ID";
     //我创建一个cell 先从复用队列dequeue 里面 用上面创建的静态标识符来取
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:reusID];
+    ZBMineCell *cell = [tableView dequeueReusableCellWithIdentifier:Cell];
     //做一个if判断  如果没有cell  我们就创建一个新的 并且 还要给这个cell 加上复用标识符
     if (!cell) {
-        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reusID];
+        cell = [[ZBMineCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Cell ViewController:self];
     }
     if (_currentIndex==0) {
-        cell.textLabel.text=[_dataArray0 objectAtIndex:indexPath.row];
         
-        cell.detailTextLabel.text=[_dataArray0 objectAtIndex:indexPath.row];
+        ZBProductListModel *model = [self.dataArr objectAtIndex:indexPath.row];
         
-        [cell.imageView setImage:[UIImage imageNamed:@"23.jpg"]];
+        [cell refreshUI:model];
+        
+        
+//        cell.textLabel.text=[_dataArray0 objectAtIndex:indexPath.row];
+//
+//        cell.detailTextLabel.text=[_dataArray0 objectAtIndex:indexPath.row];
+//
+//        [cell.imageView setImage:[UIImage imageNamed:@"23.jpg"]];
         
         return cell;
         
     }else if(_currentIndex==1){
-        cell.textLabel.text=[_dataArray1 objectAtIndex:indexPath.row];
         
-        cell.detailTextLabel.text=[_dataArray1 objectAtIndex:indexPath.row];
+        ZBProductListModel *model = [self.dataArr objectAtIndex:indexPath.row];
         
-        [cell.imageView setImage:[UIImage imageNamed:@"5.jpg"]];
-        
+        [cell refreshUI:model];
+//        cell.textLabel.text=[_dataArray1 objectAtIndex:indexPath.row];
+//
+//        cell.detailTextLabel.text=[_dataArray1 objectAtIndex:indexPath.row];
+//
+//        [cell.imageView setImage:[UIImage imageNamed:@"5.jpg"]];
+//
         return cell;
         
     }else if(_currentIndex==2){
-        cell.textLabel.text=[_dataArray2 objectAtIndex:indexPath.row];
+        ZBProductListModel *model = [self.dataArr objectAtIndex:indexPath.row];
         
-        cell.detailTextLabel.text=[_dataArray2 objectAtIndex:indexPath.row];
-        
-        [cell.imageView setImage:[UIImage imageNamed:@"29.jpg"]];
-        
+        [cell refreshUI:model];
+//        cell.textLabel.text=[_dataArray2 objectAtIndex:indexPath.row];
+//
+//        cell.detailTextLabel.text=[_dataArray2 objectAtIndex:indexPath.row];
+//
+//        [cell.imageView setImage:[UIImage imageNamed:@"29.jpg"]];
+//
         return cell;
     }
     
@@ -326,7 +363,12 @@
     }
     
 }
-
-
+- (NSMutableArray *)dataArr{
+    
+    if (!_dataArr) {
+        _dataArr = [[ZFMDBTool dataArr] mutableCopy];
+    }
+    return _dataArr;
+}
 
 @end

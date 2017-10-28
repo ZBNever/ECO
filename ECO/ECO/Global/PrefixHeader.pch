@@ -22,4 +22,6 @@
 #import "BaseMethod.h"
 #import "ZBHTTPRequestManager.h"
 #import "YZDisplayViewController.h"
+#import <FMDatabase.h>
+#import "ZFMDBTool.h"
 #endif /* PrefixHeader_pch */
