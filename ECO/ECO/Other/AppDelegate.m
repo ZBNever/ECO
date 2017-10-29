@@ -36,6 +36,7 @@
     ViewControllerB *ctlB = [ViewControllerB new];
     UINavigationController *navB = [[UINavigationController alloc] initWithRootViewController:ctlB];
     ViewControllerC *ctlC = [ViewControllerC new];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:ctlC];
     ViewControllerD *ctlD = [ViewControllerD new];
     ViewControllerE *ctlE = [ViewControllerE new];
     
@@ -55,7 +56,7 @@
     UITabBarController *tabCtl = [UITabBarController new];
     
     //设置管理的控制器数组
-    tabCtl.viewControllers = @[navA,navB,ctlC];
+    tabCtl.viewControllers = @[navA,navB,navC];
     
     //设置默认选中某个控制器
     tabCtl.selectedIndex = 0;

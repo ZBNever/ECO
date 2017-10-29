@@ -18,4 +18,7 @@
 @property (nonatomic, strong) NSString *product_name_str2; // "32G \U91d1\U8272";
 @property (nonatomic, strong) NSString *product_tag; // "1,6,16";
 
+
+
+
 @end

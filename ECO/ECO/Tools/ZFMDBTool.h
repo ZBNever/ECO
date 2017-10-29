@@ -10,7 +10,10 @@
 #import "ZBProductListModel.h"
 
 @interface ZFMDBTool : NSObject
-
+/** 收藏数组 */
++ (NSArray *)collectionDataArr;
+/** 购买数组 */
++ (NSArray *)buyDataArr;
 /** 数据数组 */
 + (NSArray *)dataArr;
 /** 插入数据 */
@@ -20,10 +23,10 @@
 /** 更新数据 */
 + (void)updateData:(ZBProductListModel *)model withType: (NSInteger)i;
 /** 删除数据表 */
-+ (void)deleteData;
++ (void)deleteAllData;
 /** 是否有数据 */
 + (BOOL)containsData;
 /** 是否某个数据 */
-+ (BOOL)containsData:(NSString *)pid;
++ (BOOL)containsData:(ZBProductListModel *)model;
 
 @end

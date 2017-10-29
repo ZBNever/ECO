@@ -28,7 +28,7 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HB-0215.png" translatesAutoresizingMaskIntoConstraints="NO" id="rpD-1h-Vcy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HB-215" translatesAutoresizingMaskIntoConstraints="NO" id="rpD-1h-Vcy">
                                 <rect key="frame" x="98" y="215" width="179" height="236"/>
                             </imageView>
                         </subviews>
@@ -50,6 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HB-0215.png" width="375" height="668"/>
+        <image name="HB-215" width="375" height="668"/>
     </resources>
 </document>

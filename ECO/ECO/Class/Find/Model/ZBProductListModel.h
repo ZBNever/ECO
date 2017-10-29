@@ -16,5 +16,6 @@
 @property (nonatomic, strong) NSString *product_name_str1; // "95\u65b0 iPhone7 Plus",
 @property (nonatomic, strong) NSString *product_name_str2; // "128G \u9ed1",
 @property (nonatomic, strong) NSString *main_pic; // "http:\/\/image.huodao.hk\/main5-129-10-20.png"
-
+@property (nonatomic, strong) NSString *product_tag; // "1,6,16";
+@property (nonatomic, strong) NSString *type;//存储来源
 @end

@@ -37,10 +37,6 @@
 		CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B01F7E9526008368F0 /* Main.storyboard */; };
 		CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B31F7E9526008368F0 /* Assets.xcassets */; };
 		CA97B6BA1F7E9526008368F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6B91F7E9526008368F0 /* main.m */; };
-		CA9FAC4E1F94F9B7009B024C /* ZBAndroidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9FAC4D1F94F9B7009B024C /* ZBAndroidViewController.m */; };
-		CA9FAC511F94F9CA009B024C /* ZBIPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9FAC501F94F9CA009B024C /* ZBIPadViewController.m */; };
-		CA9FAC541F94F9DA009B024C /* ZBMacBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9FAC531F94F9DA009B024C /* ZBMacBookViewController.m */; };
-		CA9FAC571F94F9EA009B024C /* ZBWatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9FAC561F94F9EA009B024C /* ZBWatchViewController.m */; };
 		CAAFE79E1FA1C9760055A75E /* ZBDetailThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFE79C1FA1C9760055A75E /* ZBDetailThirdCell.m */; };
 		CAAFE79F1FA1C9760055A75E /* ZBDetailThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAFE79D1FA1C9760055A75E /* ZBDetailThirdCell.xib */; };
 		CACCBF321F964C1C006AE5AF /* ZBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */; };
@@ -172,14 +168,6 @@
 		CA97B6B91F7E9526008368F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA97B6E31F7E9777008368F0 /* TabbarBeyondClick.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarBeyondClick.pch; sourceTree = "<group>"; };
 		CA97B6E41F7E9777008368F0 /* AppStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStyle.h; sourceTree = "<group>"; };
-		CA9FAC4C1F94F9B7009B024C /* ZBAndroidViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBAndroidViewController.h; sourceTree = "<group>"; };
-		CA9FAC4D1F94F9B7009B024C /* ZBAndroidViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBAndroidViewController.m; sourceTree = "<group>"; };
-		CA9FAC4F1F94F9CA009B024C /* ZBIPadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBIPadViewController.h; sourceTree = "<group>"; };
-		CA9FAC501F94F9CA009B024C /* ZBIPadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBIPadViewController.m; sourceTree = "<group>"; };
-		CA9FAC521F94F9DA009B024C /* ZBMacBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBMacBookViewController.h; sourceTree = "<group>"; };
-		CA9FAC531F94F9DA009B024C /* ZBMacBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBMacBookViewController.m; sourceTree = "<group>"; };
-		CA9FAC551F94F9EA009B024C /* ZBWatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBWatchViewController.h; sourceTree = "<group>"; };
-		CA9FAC561F94F9EA009B024C /* ZBWatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBWatchViewController.m; sourceTree = "<group>"; };
 		CAAFE79B1FA1C9760055A75E /* ZBDetailThirdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBDetailThirdCell.h; sourceTree = "<group>"; };
 		CAAFE79C1FA1C9760055A75E /* ZBDetailThirdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBDetailThirdCell.m; sourceTree = "<group>"; };
 		CAAFE79D1FA1C9760055A75E /* ZBDetailThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBDetailThirdCell.xib; sourceTree = "<group>"; };
@@ -708,14 +696,6 @@
 				CAD3B2771F932B8000062317 /* ZBCommendVC.m */,
 				CAD3B2791F932BD600062317 /* ZBChildViewController.h */,
 				CAD3B27A1F932BD600062317 /* ZBChildViewController.m */,
-				CA9FAC4C1F94F9B7009B024C /* ZBAndroidViewController.h */,
-				CA9FAC4D1F94F9B7009B024C /* ZBAndroidViewController.m */,
-				CA9FAC4F1F94F9CA009B024C /* ZBIPadViewController.h */,
-				CA9FAC501F94F9CA009B024C /* ZBIPadViewController.m */,
-				CA9FAC521F94F9DA009B024C /* ZBMacBookViewController.h */,
-				CA9FAC531F94F9DA009B024C /* ZBMacBookViewController.m */,
-				CA9FAC551F94F9EA009B024C /* ZBWatchViewController.h */,
-				CA9FAC561F94F9EA009B024C /* ZBWatchViewController.m */,
 				CACCBF301F964C1C006AE5AF /* ZBDetailViewController.h */,
 				CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */,
 			);
@@ -927,7 +907,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAAFE79E1FA1C9760055A75E /* ZBDetailThirdCell.m in Sources */,
-				CA9FAC511F94F9CA009B024C /* ZBIPadViewController.m in Sources */,
 				CACCC0131F96E38A006AE5AF /* FeHandwritingViewController.m in Sources */,
 				CAD3B2741F932A7800062317 /* UIView+Frame.m in Sources */,
 				CADDCE541F9369F600305D47 /* ZBChildCell.m in Sources */,
@@ -943,8 +922,6 @@
 				CACCC00D1F96E38A006AE5AF /* FeEqualize.m in Sources */,
 				CA288D941FA2D7B900037D2D /* HeadLineView.m in Sources */,
 				CAD937181F8E3DE0004BEDC4 /* TodayNewDataModel.m in Sources */,
-				CA9FAC4E1F94F9B7009B024C /* ZBAndroidViewController.m in Sources */,
-				CA9FAC541F94F9DA009B024C /* ZBMacBookViewController.m in Sources */,
 				CACCC0151F96E38A006AE5AF /* FeAppDelegate.m in Sources */,
 				CACCC0071F96E38A006AE5AF /* FeThreeDotGlowViewController.m in Sources */,
 				CA288D8B1FA2D79700037D2D /* ViewControllerC.m in Sources */,
@@ -977,7 +954,6 @@
 				CADDCE5D1F937AF800305D47 /* ZBProductDataModel.m in Sources */,
 				CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */,
 				CACCBFF31F96E38A006AE5AF /* FeWifiManHub.m in Sources */,
-				CA9FAC571F94F9EA009B024C /* ZBWatchViewController.m in Sources */,
 				CA6DB7401F80C5FF00B66C4D /* ViewControllerB.m in Sources */,
 				CADDCE591F93764C00305D47 /* ZBProductCollectionCell.m in Sources */,
 				CAD3B2721F932A7800062317 /* YZDisplayTitleLabel.m in Sources */,

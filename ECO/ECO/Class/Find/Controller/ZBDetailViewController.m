@@ -41,7 +41,19 @@ static NSString *TCell = @"TCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"商品详情";
+    self.view.backgroundColor = ViewController_BackGround;
+    //右边收藏按钮
+    [self creatRightItemBtn];
+    //请求数据
+    [self loadUrlData:self.product_id];
     
+    self.tableView.tableHeaderView = self.cycleScrollView;
+    self.tableView.tableFooterView = self.buttonView;
+    //注册cell
+    [self registerCell];
+}
+
+- (void)creatRightItemBtn{
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightBtn setImage:[UIImage imageNamed:@"collection_gray"] forState:UIControlStateNormal];
     [rightBtn setImage:[UIImage imageNamed:@"collection_red"] forState:UIControlStateSelected];
@@ -49,27 +61,32 @@ static NSString *TCell = @"TCell";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     rightBtn.selected = self.isCollection = [[NSUserDefaults standardUserDefaults] boolForKey:self.product_id];
     self.collectionBtn = rightBtn;
-    
-    self.view.backgroundColor = ViewController_BackGround;
-    [self loadUrlData:self.product_id];
-    self.tableView.tableHeaderView = self.cycleScrollView;
-    self.tableView.tableFooterView = self.buttonView;
-//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailFirstCell" bundle:nil] forCellReuseIdentifier:ID];
-    [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailSecondCell" bundle:nil] forCellReuseIdentifier:SCell];
-    [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailThirdCell" bundle:nil] forCellReuseIdentifier:TCell];
 }
+
 //收藏
 -  (void)collectionAction:(UIButton *)sender{
     
     self.isCollection =  self.collectionBtn.selected = !sender.selected;
     [[NSUserDefaults standardUserDefaults] setBool:self.isCollection forKey:self.product_id];
+    self.productModel.type = @"2";
+    if ([ZFMDBTool containsData:self.productModel]) {
+        [ZFMDBTool deleteData:self.productModel];
+    }else{
+        [ZFMDBTool insertData:self.productModel];
+    }
+    
 }
-
+//注册cell
+- (void)registerCell{
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailFirstCell" bundle:nil] forCellReuseIdentifier:ID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailSecondCell" bundle:nil] forCellReuseIdentifier:SCell];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ZBDetailThirdCell" bundle:nil] forCellReuseIdentifier:TCell];
+}
 - (void)loadUrlData:(NSString *)product_id{
     
     [ZBHTTPRequestManager requestGETWithURLStr:detail_URL(product_id) paramDic:nil Api_key:nil finish:^(id responseObject) {
-        
+
         NSLog(@"responseObject:%@",responseObject);
         ZBProductDetailModel *model  = [ZBProductDetailModel mj_objectWithKeyValues:responseObject[@"data"]];
         self.dataModel = model;
@@ -79,8 +96,9 @@ static NSString *TCell = @"TCell";
         //刷新滚动视图
         self.cycleScrollView.imageURLStringsGroup = self.bannerImgArr;
         [self.tableView reloadData];
+
     } enError:^(NSError *error) {
-        [Tools MBProgressHUD:@"加载失败"];
+
     }];
     
 }
@@ -173,9 +191,13 @@ static NSString *TCell = @"TCell";
     }
     return _buttonView;
 }
+//购买商品
 - (void)buyAction:(UIButton *)sender{
     
-    
+    if (![ZFMDBTool containsData:self.productModel]) {
+        self.productModel.type = @"1";
+        [ZFMDBTool insertData:self.productModel];
+    }
     
 }
 

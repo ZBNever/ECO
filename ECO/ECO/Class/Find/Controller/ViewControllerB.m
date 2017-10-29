@@ -37,7 +37,7 @@
     
     [self setUpTitleEffect:^(UIColor *__autoreleasing *titleScrollViewColor, UIColor *__autoreleasing *norColor, UIColor *__autoreleasing *selColor, UIFont *__autoreleasing *titleFont, CGFloat *titleHeight, CGFloat *titleWidth) {
         *norColor = [UIColor lightGrayColor];
-        *selColor = [UIColor redColor];
+        *selColor = [UIColor greenColor];
         *titleWidth = [UIScreen mainScreen].bounds.size.width / 5;
     }];
     
@@ -50,6 +50,7 @@
     [self setUpUnderLineEffect:^(BOOL *isUnderLineDelayScroll, CGFloat *underLineH, UIColor *__autoreleasing *underLineColor,BOOL *isUnderLineEqualTitleWidth) {
         //        *isUnderLineDelayScroll = YES;
         *isUnderLineEqualTitleWidth = YES;
+        *underLineColor = [UIColor greenColor];
     }];
     
 }

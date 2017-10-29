@@ -12,6 +12,7 @@
 #import "HeadLineView.h"
 #import "ZBProductListModel.h"
 #import "ZBMineCell.h"
+#import "ZBDetailViewController.h"
 
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -42,6 +43,8 @@ static NSString *Cell = @"Cell";
 @property(nonatomic,assign)int rowHeight;
 @property(nonatomic,strong)UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) NSMutableArray *buyDataArr;
+@property (nonatomic, strong) NSMutableArray *collectionDataArr;
 @end
 
 @implementation ViewControllerC
@@ -54,6 +57,9 @@ static NSString *Cell = @"Cell";
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+    [self collectionDataArr];
+    [self buyDataArr];
     self.dataArr = [[ZFMDBTool dataArr] mutableCopy];
     [self.tableView reloadData];
     
@@ -108,10 +114,11 @@ static NSString *Cell = @"Cell";
 }
 //拉伸顶部图片
 -(void)lashenBgView{
-    UIImage *image=[UIImage imageNamed:@"bg-mine"];
+    UIImage *image=[UIImage imageNamed:@"bg_eco3"];
     //图片的宽度设为屏幕的宽度，高度自适应
     NSLog(@"%f",image.size.height);
     _backgroundImgV=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, image.size.height*0.6)];
+    _backgroundImgV.contentMode = UIViewContentModeScaleAspectFill;
     _backgroundImgV.image=image;
     _backgroundImgV.userInteractionEnabled=YES;
     [self.view addSubview:_backgroundImgV];
@@ -127,7 +134,9 @@ static NSString *Cell = @"Cell";
         _tableView.showsVerticalScrollIndicator=NO;
         _tableView.dataSource=self;
         _tableView.delegate=self;
-        _tableView.tableFooterView = [[UIView alloc] init];
+        UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 250)];
+        footView.backgroundColor = [UIColor whiteColor];
+        _tableView.tableFooterView = footView;
         [self.view addSubview:_tableView];
     }
     [_tableView setTableHeaderView:[self headImageView]];
@@ -169,7 +178,7 @@ static NSString *Cell = @"Cell";
         
         _headerImg=[[UIImageView alloc]initWithFrame:CGRectMake(WIDTH/2-35, 50, 70, 70)];
         _headerImg.center=CGPointMake(WIDTH/2, 70);
-        [_headerImg setImage:[UIImage imageNamed:@"zrx7.jpg"]];
+        [_headerImg setImage:[UIImage imageNamed:@"minion"]];
         [_headerImg.layer setMasksToBounds:YES];
         [_headerImg.layer setCornerRadius:35];
         _headerImg.backgroundColor=[UIColor whiteColor];
@@ -180,7 +189,7 @@ static NSString *Cell = @"Cell";
         //昵称
         _nickLabel=[[UILabel alloc]initWithFrame:CGRectMake(147, 130, 105, 20)];
         _nickLabel.center=CGPointMake(WIDTH/2, 125);
-        _nickLabel.text=@"执念12o3";
+        _nickLabel.text=@"Never";
         //        _nickLabel.font=JXFont(14);
         _nickLabel.textColor=[UIColor whiteColor];
         _nickLabel.textAlignment=NSTextAlignmentCenter;
@@ -217,6 +226,17 @@ static NSString *Cell = @"Cell";
 //右按钮回调
 -(void)NavHeadToRight{
     NSLog(@"点击了右按钮");
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"你确定删除所有数据？" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [ZFMDBTool deleteAllData];
+        self.dataArr = [[ZFMDBTool dataArr] mutableCopy];
+        [self.tableView reloadData];
+    }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 #pragma mark ---- UITableViewDelegate ----
@@ -231,16 +251,16 @@ static NSString *Cell = @"Cell";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataArr.count;
     
-//    if (_currentIndex==0) {
-//        return self.dataArr.count;
-//    }else if(_currentIndex==1){
-//        return _dataArray1.count;
-//    }else{
-//        return _dataArray2.count;
-//    }
-//    return 0;
+    
+    if (_currentIndex==0) {
+        return self.dataArr.count;
+    }else if(_currentIndex==1){
+        return self.buyDataArr.count;
+    }else{
+        return self.collectionDataArr.count;
+    }
+    return 0;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -256,9 +276,11 @@ static NSString *Cell = @"Cell";
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     //创建一个静态标识符  来给每一个cell 加上标记  方便我们从复用队列里面取到 名字为该标记的cell
 //    static NSString *reusID=@"ID";
     //我创建一个cell 先从复用队列dequeue 里面 用上面创建的静态标识符来取
+    
     ZBMineCell *cell = [tableView dequeueReusableCellWithIdentifier:Cell];
     //做一个if判断  如果没有cell  我们就创建一个新的 并且 还要给这个cell 加上复用标识符
     if (!cell) {
@@ -270,38 +292,21 @@ static NSString *Cell = @"Cell";
         
         [cell refreshUI:model];
         
-        
-//        cell.textLabel.text=[_dataArray0 objectAtIndex:indexPath.row];
-//
-//        cell.detailTextLabel.text=[_dataArray0 objectAtIndex:indexPath.row];
-//
-//        [cell.imageView setImage:[UIImage imageNamed:@"23.jpg"]];
-        
         return cell;
         
     }else if(_currentIndex==1){
         
-        ZBProductListModel *model = [self.dataArr objectAtIndex:indexPath.row];
+        ZBProductListModel *model = [self.buyDataArr objectAtIndex:indexPath.row];
         
         [cell refreshUI:model];
-//        cell.textLabel.text=[_dataArray1 objectAtIndex:indexPath.row];
-//
-//        cell.detailTextLabel.text=[_dataArray1 objectAtIndex:indexPath.row];
-//
-//        [cell.imageView setImage:[UIImage imageNamed:@"5.jpg"]];
-//
+
         return cell;
         
     }else if(_currentIndex==2){
-        ZBProductListModel *model = [self.dataArr objectAtIndex:indexPath.row];
+        ZBProductListModel *model = [self.collectionDataArr objectAtIndex:indexPath.row];
         
         [cell refreshUI:model];
-//        cell.textLabel.text=[_dataArray2 objectAtIndex:indexPath.row];
-//
-//        cell.detailTextLabel.text=[_dataArray2 objectAtIndex:indexPath.row];
-//
-//        [cell.imageView setImage:[UIImage imageNamed:@"29.jpg"]];
-//
+
         return cell;
     }
     
@@ -310,15 +315,82 @@ static NSString *Cell = @"Cell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //cell被点击恢复
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    ZBProductListModel *model;
     if (_currentIndex==0) {
         NSLog(@"第一模块：%ld",indexPath.row);
+        model = [self.dataArr objectAtIndex:indexPath.row];
     }else if (_currentIndex==1){
         NSLog(@"第二模块：%ld",indexPath.row);
+        model = [self.buyDataArr objectAtIndex:indexPath.row];
     }else{
         NSLog(@"第三模块：%ld",indexPath.row);
+        model = [self.collectionDataArr objectAtIndex:indexPath.row];
+    }
+    ZBDetailViewController *VC = [[ZBDetailViewController alloc] init];
+    VC.product_id = model.product_id;
+    VC.productModel = model;
+    self.navigationController.navigationBar.hidden = NO;
+    [self.navigationController pushViewController:VC animated:YES];
+}
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return   UITableViewCellEditingStyleDelete;
+    
+}
+
+//先要设Cell可编辑
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return YES;
+    
+}
+
+//进入编辑模式，按下出现的编辑按钮后
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    
+    [tableView setEditing:NO animated:YES];
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"你确定删除该消息？" preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            ZBProductListModel *model = [self.dataArr objectAtIndex:indexPath.row];
+            //取消收藏
+             [[NSUserDefaults standardUserDefaults] setBool:NO forKey:model.product_id];
+            [ZFMDBTool deleteData:model];
+            [self dataArr];
+            [self.tableView reloadData];
+        }]];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
     }
     
 }
+
+//修改编辑按钮文字
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除";
+}
+
+//设置进入编辑状态时，Cell不会缩进
+- (BOOL)tableView: (UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+
 //-(void)popView{
 //    [self addAnimation];
 //}
@@ -365,10 +437,23 @@ static NSString *Cell = @"Cell";
 }
 - (NSMutableArray *)dataArr{
     
-    if (!_dataArr) {
-        _dataArr = [[ZFMDBTool dataArr] mutableCopy];
-    }
+    _dataArr = [[ZFMDBTool dataArr] mutableCopy];
+
     return _dataArr;
 }
 
+- (NSMutableArray *)buyDataArr{
+    
+    _buyDataArr = [[ZFMDBTool buyDataArr] mutableCopy];
+    
+    return _buyDataArr;
+    
+}
+
+-(NSMutableArray *)collectionDataArr{
+    
+    _collectionDataArr = [[ZFMDBTool collectionDataArr] mutableCopy];
+    
+    return _collectionDataArr;
+}
 @end

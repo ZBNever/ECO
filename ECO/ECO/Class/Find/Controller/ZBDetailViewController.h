@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBProductListModel.h"
 
 @interface ZBDetailViewController : UITableViewController
 
 @property (nonatomic, strong) NSString *product_id;
+
+@property (nonatomic, strong) ZBProductListModel *productModel;
 
 @end

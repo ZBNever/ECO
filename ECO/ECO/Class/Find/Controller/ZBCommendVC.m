@@ -4,7 +4,7 @@
 //
 //  Created by Never on 2017/10/15.
 //  Copyright © 2017年 Never. All rights reserved.
-//
+//  推荐页面
 
 #import "ZBCommendVC.h"
 #import "SDCycleScrollView.h"
@@ -17,7 +17,8 @@
 #import "HomeHotProductsModel.h"
 #import "HotProductView.h"
 #import "HotProductModel.h"
-#import "TodayNewDataModel.h"
+#import "ZBProductListModel.h"
+#import "ZBDetailViewController.h"
 
 @interface ZBCommendVC ()<SDCycleScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIAlertViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -189,18 +190,16 @@
     return UIEdgeInsetsMake(1, 1, 1, 0.1);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.section == 1) {
+        ZBProductListModel *model = self.todayDataArr[indexPath.item];
+        ZBDetailViewController *VC = [[ZBDetailViewController alloc] init];
+        VC.product_id = model.product_id;
+        VC.productModel = model;
+        [self.navigationController pushViewController:VC animated:YES];
+    }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    //    HomeCell *cell = (HomeCell *)[collectionView cellForItemAtIndexPath:self.index];
-    //    if (CellState == nomalState) {
-    //
-    //        RoomVC *roomVC = [[RoomVC alloc] init];
-    //        roomVC.model = self.dataArr[indexPath.row];
-    //        [self.navigationController pushViewController:roomVC animated:YES];
-    //    }else{
-    //
-    //        [self clickImage:indexPath];
-    //    }
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -249,7 +248,7 @@
 - (void)loadTodayDataFromURL{
     [ZBHTTPRequestManager requestGETWithURLStr:TodayList_Url paramDic:nil Api_key:nil finish:^(id responseObject) {
         NSLog(@"responseObject:%@",responseObject);
-        NSArray *todayNewDataArr = [TodayNewDataModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"product_list"]];
+        NSArray *todayNewDataArr = [ZBProductListModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"product_list"]];
         //
         self.todayDataArr = [todayNewDataArr mutableCopy];
         [self.collectionView reloadData];

@@ -122,12 +122,6 @@
     
      return CGSizeMake(0, 0);
     
-//    if (section == 0) {
-//        return CGSizeMake(0, screen_width*(200/375.0));
-//    }else{
-//
-//        return CGSizeMake(0, 50);
-//    }
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -148,11 +142,9 @@
     
 //    [ZFMDBTool deleteData];
     
-    if (![ZFMDBTool containsData:model.product_id]) {
-         [ZFMDBTool insertData:model];
-    }
     ZBDetailViewController *detailVC = [[ZBDetailViewController alloc] init];
     detailVC.product_id = model.product_id;
+    detailVC.productModel = model;
     //push的时候隐藏tabbar
     detailVC.hidesBottomBarWhenPushed = YES;
     [self.VC.navigationController pushViewController:detailVC animated:YES];
