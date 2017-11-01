@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,35 +19,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="185" height="270"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="立即回收" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUl-op-HP5">
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="立即回收" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUl-op-HP5">
                         <rect key="frame" x="0.0" y="230" width="185" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="48N-us-E1T"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="￥1920" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPH-yB-wQE">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥1920" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPH-yB-wQE">
                         <rect key="frame" x="109" y="199" width="76" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="76" id="4qH-hD-KwK"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="回收最高价" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mC-fs-4M3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="回收最高价" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mC-fs-4M3">
                         <rect key="frame" x="0.0" y="199" width="107" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Qgt-RP-zDC"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-ey-3Km">
+                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-ey-3Km">
                         <rect key="frame" x="20" y="0.0" width="148" height="148"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="苹果 iPhone6" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gQG-ls-y6V">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="苹果 iPhone6" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gQG-ls-y6V">
                         <rect key="frame" x="5" y="149" width="175" height="49"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="49" id="B4J-8a-23G"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name=".PingFangSC-Regular" family=".PingFang SC" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -54,6 +62,24 @@
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4mC-fs-4M3" firstAttribute="firstBaseline" secondItem="uPH-yB-wQE" secondAttribute="firstBaseline" id="5vz-6s-9z6"/>
+                <constraint firstItem="4mC-fs-4M3" firstAttribute="baseline" secondItem="uPH-yB-wQE" secondAttribute="baseline" id="EWQ-et-eZt"/>
+                <constraint firstItem="4mC-fs-4M3" firstAttribute="top" secondItem="gQG-ls-y6V" secondAttribute="bottom" constant="1" id="FaZ-kR-rtI"/>
+                <constraint firstItem="uPH-yB-wQE" firstAttribute="leading" secondItem="4mC-fs-4M3" secondAttribute="trailing" constant="2" id="IGs-kK-F4p"/>
+                <constraint firstItem="uPH-yB-wQE" firstAttribute="trailing" secondItem="ZUl-op-HP5" secondAttribute="trailing" id="NQq-KZ-WFs"/>
+                <constraint firstAttribute="trailing" secondItem="uPH-yB-wQE" secondAttribute="trailing" id="QyV-me-rRr"/>
+                <constraint firstItem="gQG-ls-y6V" firstAttribute="top" secondItem="cpK-ey-3Km" secondAttribute="bottom" constant="1" id="Rco-O7-8qL"/>
+                <constraint firstAttribute="trailing" secondItem="cpK-ey-3Km" secondAttribute="trailing" constant="17" id="VK4-II-AkO"/>
+                <constraint firstItem="gQG-ls-y6V" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Y5a-Ki-MYj"/>
+                <constraint firstAttribute="bottom" secondItem="ZUl-op-HP5" secondAttribute="bottom" id="Yz9-oW-5YK"/>
+                <constraint firstItem="ZUl-op-HP5" firstAttribute="top" secondItem="4mC-fs-4M3" secondAttribute="bottom" constant="10" id="a2P-dz-YPr"/>
+                <constraint firstItem="4mC-fs-4M3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gko-4h-g3S"/>
+                <constraint firstItem="gQG-ls-y6V" firstAttribute="centerX" secondItem="ZUl-op-HP5" secondAttribute="centerX" id="rei-xr-teg"/>
+                <constraint firstItem="cpK-ey-3Km" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uWr-9j-9QC"/>
+                <constraint firstItem="4mC-fs-4M3" firstAttribute="leading" secondItem="ZUl-op-HP5" secondAttribute="leading" id="wfm-XR-mI3"/>
+                <constraint firstItem="cpK-ey-3Km" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="zYv-n4-b7T"/>
+            </constraints>
             <size key="customSize" width="181" height="270"/>
             <connections>
                 <outlet property="cellImageView" destination="cpK-ey-3Km" id="fNr-vy-8Nf"/>

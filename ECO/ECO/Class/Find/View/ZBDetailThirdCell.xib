@@ -37,13 +37,13 @@
                         <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="检验员" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKD-HG-VTJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="检验员" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKD-HG-VTJ">
                         <rect key="frame" x="16" y="111" width="343" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高级质检工程师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrt-Cv-UJP">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高级质检工程师" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrt-Cv-UJP">
                         <rect key="frame" x="16" y="147" width="343" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,9 +56,11 @@
                             <constraint firstAttribute="width" constant="108" id="ZLz-vA-rZd"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="检测结果：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xax-zU-YsY">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="检测结果：" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xax-zU-YsY">
                         <rect key="frame" x="16" y="176" width="343" height="227"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="227" id="jwG-FK-E5L"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -70,7 +72,9 @@
                     <constraint firstItem="KqU-VZ-kGk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BHR-9F-jST"/>
                     <constraint firstItem="kmd-FQ-BXw" firstAttribute="trailing" secondItem="YJf-M3-hL8" secondAttribute="trailing" id="D9L-8D-U6m"/>
                     <constraint firstAttribute="bottomMargin" secondItem="dQe-qp-wdk" secondAttribute="bottom" constant="7" id="GqV-vB-QQN"/>
+                    <constraint firstItem="Xax-zU-YsY" firstAttribute="trailing" secondItem="Jrt-Cv-UJP" secondAttribute="trailing" id="L03-6j-ehO"/>
                     <constraint firstItem="kmd-FQ-BXw" firstAttribute="top" secondItem="YJf-M3-hL8" secondAttribute="bottom" constant="23" id="L8k-uj-Wk2"/>
+                    <constraint firstItem="Xax-zU-YsY" firstAttribute="leading" secondItem="Jrt-Cv-UJP" secondAttribute="leading" id="MH2-vD-tJC"/>
                     <constraint firstItem="dQe-qp-wdk" firstAttribute="trailing" secondItem="Jrt-Cv-UJP" secondAttribute="trailing" id="NFw-us-D9C"/>
                     <constraint firstItem="KqU-VZ-kGk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Tsd-gR-U0I"/>
                     <constraint firstItem="Jrt-Cv-UJP" firstAttribute="top" secondItem="vKD-HG-VTJ" secondAttribute="bottom" constant="15" id="Yr4-k7-Mak"/>
@@ -80,6 +84,7 @@
                     <constraint firstItem="dQe-qp-wdk" firstAttribute="trailing" secondItem="vKD-HG-VTJ" secondAttribute="trailing" id="csz-Zw-M81"/>
                     <constraint firstItem="vKD-HG-VTJ" firstAttribute="leading" secondItem="Jrt-Cv-UJP" secondAttribute="leading" id="cwS-xY-PEg"/>
                     <constraint firstItem="kmd-FQ-BXw" firstAttribute="leading" secondItem="YJf-M3-hL8" secondAttribute="leading" id="eN2-Hv-ash"/>
+                    <constraint firstItem="Xax-zU-YsY" firstAttribute="top" secondItem="Jrt-Cv-UJP" secondAttribute="bottom" constant="8" symbolic="YES" id="t15-jC-4rc"/>
                     <constraint firstItem="vKD-HG-VTJ" firstAttribute="top" secondItem="kmd-FQ-BXw" secondAttribute="bottom" constant="5" id="uTf-ik-hIq"/>
                     <constraint firstItem="KqU-VZ-kGk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="x4t-me-ems"/>
                     <constraint firstItem="vKD-HG-VTJ" firstAttribute="leading" secondItem="kmd-FQ-BXw" secondAttribute="leading" id="y00-xY-KEq"/>

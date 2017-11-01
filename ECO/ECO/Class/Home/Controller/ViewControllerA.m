@@ -7,6 +7,12 @@
 //
 
 #import "ViewControllerA.h"
+
+#import "EWMineVC.h"
+#import "EWShoppingCartVC.h"
+#import "EWCompanyVC.h"
+
+
 #import "SDCycleScrollView.h"
 #import "HomeCell.h"
 #import "CategoriesView.h"
@@ -37,7 +43,6 @@
     
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 
-        
         [BaseMethod controller:self Title:@"主页" tabBarItemImage:@"home_gray" tabBarItemSelectedImage:@"home_green"];
     }
     
@@ -272,12 +277,45 @@
 //点击了第几张
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     
+    [self  creatNewWindow];
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"第%ld张",index] message:@"暂无跳转链接" delegate:self cancelButtonTitle:@"取消" otherButtonTitles: nil];
 //    [alert show];
     
 }
 
+- (void)creatNewWindow{
 
+    //实例化5个控制器
+    EWCompanyVC *ctlA = [EWCompanyVC new];
+    UINavigationController *navA = [[UINavigationController alloc] initWithRootViewController:ctlA];
+    EWShoppingCartVC *ctlB = [EWShoppingCartVC new];
+    UINavigationController *navB = [[UINavigationController alloc] initWithRootViewController:ctlB];
+    EWMineVC *ctlC = [EWMineVC new];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:ctlC];
+
+    
+    //设置背景色和标题
+    ctlA.view.backgroundColor = [UIColor whiteColor];
+    //    navA.title = @"红色";
+    ctlB.view.backgroundColor = [UIColor whiteColor];
+    //    ctlB.title = @"绿色";
+    ctlC.view.backgroundColor = [UIColor whiteColor];
+
+    
+    //实例化一个UITabbarController
+    UITabBarController *tabCtl = [UITabBarController new];
+    
+    //设置管理的控制器数组
+    tabCtl.viewControllers = @[navA,navB,navC];
+    
+    //设置默认选中某个控制器
+    tabCtl.selectedIndex = 2;
+    //设置转场方式
+    [tabCtl setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:tabCtl animated:YES completion:nil];
+    //设置根视图控制器
+
+}
 
 - (NSMutableArray *)dataArr{
     

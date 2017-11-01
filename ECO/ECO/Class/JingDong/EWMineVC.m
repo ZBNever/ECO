@@ -1,16 +1,18 @@
 //
-//  ViewControllerD.m
-//  UI-day7-UITabbarController分栏控制器
+//  EWMineVC.m
+//  ECO
 //
-//  Created by liufy on 15/7/28.
-//  Copyright (c) 2015年 liufy. All rights reserved.
+//  Created by Never on 2017/10/31.
+//  Copyright © 2017年 Never. All rights reserved.
 //
 
-#import "ViewControllerD.h"
+#import "EWMineVC.h"
+//我的企业采购
+#import "EWMyPurchaseVC.h"
 
 static NSString *Cell = @"cell";
 
-@interface ViewControllerD ()<UITableViewDelegate,UITableViewDataSource>
+@interface EWMineVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -20,14 +22,11 @@ static NSString *Cell = @"cell";
 
 @end
 
-@implementation ViewControllerD
+@implementation EWMineVC
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         [BaseMethod controller:self Title:@"我的" tabBarItemImage:@"me_gray" tabBarItemSelectedImage:@"me_green"];
-
-        
-
         [self initData];
     }
     return self;
@@ -36,12 +35,10 @@ static NSString *Cell = @"cell";
 - (void)initData{
     
     _cellDataArr = @[@"我的采购",@"我的售后",@"地址管理",@"使用帮助"];
-    
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //标题颜色
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor orangeColor],NSForegroundColorAttributeName,nil]];
     
     [self.view addSubview:self.tableView];
 }
@@ -79,6 +76,18 @@ static NSString *Cell = @"cell";
     //cell被点击恢复
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    switch (indexPath.row) {
+        case 0:
+            {
+                EWMyPurchaseVC *VC = [[EWMyPurchaseVC alloc] init];
+                VC.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:VC animated:YES];
+            }
+            break;
+            
+        default:
+            break;
+    }
 }
 - (UIView *)headView{
     
@@ -89,9 +98,10 @@ static NSString *Cell = @"cell";
         lab.text = @"长城物业集团股份有限公司";
         lab.textColor = [UIColor whiteColor];
         [_headView addSubview:lab];
-        _headView.backgroundColor = [UIColor orangeColor];
+        _headView.backgroundColor = [UIColor themeColor];
     }
-     return _headView;
+    return _headView;
 }
+
 
 @end

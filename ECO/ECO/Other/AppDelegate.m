@@ -32,12 +32,12 @@
     //实例化5个控制器
     ViewControllerA *ctlA = [ViewControllerA new];
     UINavigationController *navA = [[UINavigationController alloc] initWithRootViewController:ctlA];
-    
     ViewControllerB *ctlB = [ViewControllerB new];
     UINavigationController *navB = [[UINavigationController alloc] initWithRootViewController:ctlB];
     ViewControllerC *ctlC = [ViewControllerC new];
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:ctlC];
     ViewControllerD *ctlD = [ViewControllerD new];
+    UINavigationController *navD = [[UINavigationController alloc] initWithRootViewController:ctlD];
     ViewControllerE *ctlE = [ViewControllerE new];
     
     //设置背景色和标题

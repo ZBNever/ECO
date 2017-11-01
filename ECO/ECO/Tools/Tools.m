@@ -52,7 +52,7 @@
     //NO允许点击其他地方，YES不允许点击其他地方
     HUD.userInteractionEnabled = NO;
     HUD.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    HUD.bezelView.color = [UIColor colorWithWhite:0.3 alpha:0.9];
+//    HUD.bezelView.color = [UIColor colorWithWhite:0.3 alpha:0.9];
     HUD.label.text = text;
 //    HUD.contentColor = [UIColor whiteColor];
     HUD.animationType = MBProgressHUDAnimationZoomOut;

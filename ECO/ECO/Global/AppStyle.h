@@ -24,7 +24,8 @@
 #define Theme_TextColor RGB(55,65,75)  //
 
 //导航栏颜色
-#define kNavigationBarBg  RGB(206,8,2) //#ce0802
+#define kNavigationBarBg  RGB(206,8,2) //#ce0802 ff4400
+
 
 #define KUIScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KUIScreenHeight [UIScreen mainScreen].bounds.size.height

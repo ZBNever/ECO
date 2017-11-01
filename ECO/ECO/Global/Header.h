@@ -15,6 +15,8 @@
 // 4.屏幕大小尺寸
 #define screen_width            [UIScreen mainScreen].bounds.size.width
 #define screen_height          [UIScreen mainScreen].bounds.size.height
-#define NavHeight                  64
+#define NavHeight                 CGRectGetMaxY(self.navigationController.navigationBar.frame)
+
+#define background
 
 #endif /* Header_h */

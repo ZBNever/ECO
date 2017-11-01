@@ -35,6 +35,7 @@
 
 // 导航条高度
 static CGFloat const YZNavBarH = 64;
+#define NavBarH CGRectGetMaxY(self.navigationController.navigationBar.frame)
 
 // 标题滚动视图的高度
 static CGFloat const YZTitleScrollViewH = 44;

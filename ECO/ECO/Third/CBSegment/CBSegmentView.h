@@ -52,7 +52,13 @@ typedef NS_ENUM(NSInteger, CBSegmentStyle) {
            titleColor:(UIColor *)titleColor
    titleSelectedColor:(UIColor *)selectedColor
             withStyle:(CBSegmentStyle)style;
-
+//固定不滑动
+- (void)setTitleArray:(NSArray<NSString *> *)titleArray
+            titleFont:(CGFloat)font
+           titleColor:(UIColor *)titleColor
+   titleSelectedColor:(UIColor *)selectedColor
+            withStyle:(CBSegmentStyle)style
+            isNotMove:(BOOL)isNotMove;
 @end
 
 @interface UIView (CBViewFrame)

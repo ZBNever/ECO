@@ -13,6 +13,7 @@
 #import "ZBProductListModel.h"
 #import "ZBMineCell.h"
 #import "ZBDetailViewController.h"
+#import "LoginVC.h"
 
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -21,7 +22,7 @@
 
 static NSString *Cell = @"Cell";
 
-@interface ViewControllerC ()<NavHeadTitleViewDelegate,headLineDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface ViewControllerC ()<NavHeadTitleViewDelegate,headLineDelegate,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 {
     //头像
     UIImageView *_headerImg;
@@ -45,6 +46,9 @@ static NSString *Cell = @"Cell";
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @property (nonatomic, strong) NSMutableArray *buyDataArr;
 @property (nonatomic, strong) NSMutableArray *collectionDataArr;
+@property (nonatomic, assign) BOOL isLogin;
+@property (nonatomic, strong) MBProgressHUD *textHUD;
+
 @end
 
 @implementation ViewControllerC
@@ -55,8 +59,18 @@ static NSString *Cell = @"Cell";
     }
     return self;
 }
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _isLogin =  [[NSUserDefaults standardUserDefaults] boolForKey:@"login"];
+        if (!_isLogin) {
+            [self loginVC];
+        }
+    });
+    
     self.navigationController.navigationBar.hidden = YES;
     [self collectionDataArr];
     [self buyDataArr];
@@ -67,6 +81,7 @@ static NSString *Cell = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     //拉伸顶部图片
     [self lashenBgView];
     //创建导航栏
@@ -77,7 +92,15 @@ static NSString *Cell = @"Cell";
     [self createTableView];
     //注册cell
     [self registerCell];
+    
+    
 }
+- (void)loginVC{
+    
+    LoginVC *VC = [LoginVC sharedInstance];
+    [self.tabBarController presentViewController:VC animated:YES completion:nil];
+}
+
 /** 注册cell */
 - (void)registerCell{
     
@@ -205,11 +228,30 @@ static NSString *Cell = @"Cell";
 //头像点击事件
 -(void)tapClick:(UITapGestureRecognizer *)recognizer{
     NSLog(@"你打到我的头了");
+    [self loginVC];
 }
 //修改昵称
 -(void)fixClick:(UIButton *)btn{
     NSLog(@"修改昵称");
+   __block  NSString *nikeText = _nickLabel.text;
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"修改昵称" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            UITextField *textField = alertController.textFields.firstObject;
+        
+            //将 昵称输入的内容
+            _nickLabel.text = textField.text;
+    }]];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"请输入昵称";
+        textField.text = nikeText;
+    }];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
 }
+
 -(void)createNav{
     self.NavView=[[NavHeadTitleView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 64)];
     self.NavView.title=@"个人中心";
@@ -251,8 +293,6 @@ static NSString *Cell = @"Cell";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
-    
     if (_currentIndex==0) {
         return self.dataArr.count;
     }else if(_currentIndex==1){
@@ -456,4 +496,12 @@ static NSString *Cell = @"Cell";
     
     return _collectionDataArr;
 }
+- (MBProgressHUD *)textHUD{
+    
+    if (!_textHUD) {
+        _textHUD = [Tools MBProgressHUDOnlyText:@""];
+    }
+    return _textHUD;
+}
+
 @end

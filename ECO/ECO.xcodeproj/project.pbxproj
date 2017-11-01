@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		87F5E79BB23E3C21043131C2 /* libPods-ECO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D64493FE7795CC3A36F42528 /* libPods-ECO.a */; };
+		CA1E04681FA5D0EE00D468B2 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E04671FA5D0EE00D468B2 /* LoginVC.m */; };
+		CA1E046C1FA5D0FD00D468B2 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1E046A1FA5D0FD00D468B2 /* LoginView.xib */; };
+		CA1E046D1FA5D0FD00D468B2 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E046B1FA5D0FD00D468B2 /* LoginView.m */; };
+		CA1E04731FA5D18100D468B2 /* YGGravityImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E04711FA5D18100D468B2 /* YGGravityImageView.m */; };
+		CA1E04741FA5D18100D468B2 /* YGGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E04721FA5D18100D468B2 /* YGGravity.m */; };
 		CA288D841FA2CA9100037D2D /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA288D831FA2CA9100037D2D /* Image.xcassets */; };
 		CA288D8B1FA2D79700037D2D /* ViewControllerC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA288D881FA2D79600037D2D /* ViewControllerC.m */; };
 		CA288D931FA2D7B900037D2D /* NavHeadTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA288D8D1FA2D7B900037D2D /* NavHeadTitleView.m */; };
@@ -33,6 +38,12 @@
 		CA727C791F9DCB5D00F89413 /* ZBDetailSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA727C771F9DCB5D00F89413 /* ZBDetailSecondCell.m */; };
 		CA727C7A1F9DCB5D00F89413 /* ZBDetailSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA727C781F9DCB5D00F89413 /* ZBDetailSecondCell.xib */; };
 		CA727C7D1F9DD09600F89413 /* ZBProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA727C7C1F9DD09600F89413 /* ZBProductDetailModel.m */; };
+		CA7C085B1FA823830083C0F9 /* EWCompanyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C085A1FA823830083C0F9 /* EWCompanyVC.m */; };
+		CA7C08611FA824A20083C0F9 /* EWMineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C08601FA824A20083C0F9 /* EWMineVC.m */; };
+		CA7C08641FA827EF0083C0F9 /* EWShoppingCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C08631FA827EF0083C0F9 /* EWShoppingCartVC.m */; };
+		CA7C08671FA8580B0083C0F9 /* EWMyPurchaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C08661FA8580B0083C0F9 /* EWMyPurchaseVC.m */; };
+		CA7C086A1FA8585A0083C0F9 /* EWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C08691FA8585A0083C0F9 /* EWBaseViewController.m */; };
+		CA7C086D1FA8755B0083C0F9 /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C086B1FA8755B0083C0F9 /* UIColor+Util.m */; };
 		CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6AB1F7E9526008368F0 /* AppDelegate.m */; };
 		CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B01F7E9526008368F0 /* Main.storyboard */; };
 		CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B31F7E9526008368F0 /* Assets.xcassets */; };
@@ -114,6 +125,15 @@
 
 /* Begin PBXFileReference section */
 		93F2ECCA515DA203302C7750 /* Pods-ECO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECO/Pods-ECO.release.xcconfig"; sourceTree = "<group>"; };
+		CA1E04661FA5D0EE00D468B2 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		CA1E04671FA5D0EE00D468B2 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		CA1E04691FA5D0FD00D468B2 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		CA1E046A1FA5D0FD00D468B2 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		CA1E046B1FA5D0FD00D468B2 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		CA1E046F1FA5D18100D468B2 /* YGGravity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGGravity.h; sourceTree = "<group>"; };
+		CA1E04701FA5D18100D468B2 /* YGGravityImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGGravityImageView.h; sourceTree = "<group>"; };
+		CA1E04711FA5D18100D468B2 /* YGGravityImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGGravityImageView.m; sourceTree = "<group>"; };
+		CA1E04721FA5D18100D468B2 /* YGGravity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGGravity.m; sourceTree = "<group>"; };
 		CA288D831FA2CA9100037D2D /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		CA288D871FA2D79600037D2D /* ViewControllerC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerC.h; sourceTree = "<group>"; };
 		CA288D881FA2D79600037D2D /* ViewControllerC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerC.m; sourceTree = "<group>"; };
@@ -159,6 +179,18 @@
 		CA727C781F9DCB5D00F89413 /* ZBDetailSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBDetailSecondCell.xib; sourceTree = "<group>"; };
 		CA727C7B1F9DD09600F89413 /* ZBProductDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBProductDetailModel.h; sourceTree = "<group>"; };
 		CA727C7C1F9DD09600F89413 /* ZBProductDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBProductDetailModel.m; sourceTree = "<group>"; };
+		CA7C08591FA823830083C0F9 /* EWCompanyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCompanyVC.h; sourceTree = "<group>"; };
+		CA7C085A1FA823830083C0F9 /* EWCompanyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCompanyVC.m; sourceTree = "<group>"; };
+		CA7C085F1FA824A20083C0F9 /* EWMineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWMineVC.h; sourceTree = "<group>"; };
+		CA7C08601FA824A20083C0F9 /* EWMineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWMineVC.m; sourceTree = "<group>"; };
+		CA7C08621FA827EF0083C0F9 /* EWShoppingCartVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWShoppingCartVC.h; sourceTree = "<group>"; };
+		CA7C08631FA827EF0083C0F9 /* EWShoppingCartVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWShoppingCartVC.m; sourceTree = "<group>"; };
+		CA7C08651FA8580B0083C0F9 /* EWMyPurchaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWMyPurchaseVC.h; sourceTree = "<group>"; };
+		CA7C08661FA8580B0083C0F9 /* EWMyPurchaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWMyPurchaseVC.m; sourceTree = "<group>"; };
+		CA7C08681FA8585A0083C0F9 /* EWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWBaseViewController.h; sourceTree = "<group>"; };
+		CA7C08691FA8585A0083C0F9 /* EWBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWBaseViewController.m; sourceTree = "<group>"; };
+		CA7C086B1FA8755B0083C0F9 /* UIColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
+		CA7C086C1FA8755B0083C0F9 /* UIColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
 		CA97B6A71F7E9525008368F0 /* ECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA97B6AA1F7E9526008368F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA97B6AB1F7E9526008368F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -328,6 +360,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CA1E046E1FA5D18100D468B2 /* YGGravityImageView */ = {
+			isa = PBXGroup;
+			children = (
+				CA1E046F1FA5D18100D468B2 /* YGGravity.h */,
+				CA1E04701FA5D18100D468B2 /* YGGravityImageView.h */,
+				CA1E04711FA5D18100D468B2 /* YGGravityImageView.m */,
+				CA1E04721FA5D18100D468B2 /* YGGravity.m */,
+			);
+			path = YGGravityImageView;
+			sourceTree = "<group>";
+		};
 		CA288D851FA2D79600037D2D /* Mine */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +386,8 @@
 			children = (
 				CA288D871FA2D79600037D2D /* ViewControllerC.h */,
 				CA288D881FA2D79600037D2D /* ViewControllerC.m */,
+				CA1E04661FA5D0EE00D468B2 /* LoginVC.h */,
+				CA1E04671FA5D0EE00D468B2 /* LoginVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -357,6 +402,9 @@
 		CA288D8A1FA2D79600037D2D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA1E04691FA5D0FD00D468B2 /* LoginView.h */,
+				CA1E046B1FA5D0FD00D468B2 /* LoginView.m */,
+				CA1E046A1FA5D0FD00D468B2 /* LoginView.xib */,
 				CA288D8C1FA2D7B900037D2D /* Views */,
 				CA288DAD1FA335A200037D2D /* ZBMineCell.h */,
 				CA288DAE1FA335A200037D2D /* ZBMineCell.m */,
@@ -414,6 +462,23 @@
 			path = AihuihouModel;
 			sourceTree = "<group>";
 		};
+		CA7C08581FA822890083C0F9 /* JingDong */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C08681FA8585A0083C0F9 /* EWBaseViewController.h */,
+				CA7C08691FA8585A0083C0F9 /* EWBaseViewController.m */,
+				CA7C08591FA823830083C0F9 /* EWCompanyVC.h */,
+				CA7C085A1FA823830083C0F9 /* EWCompanyVC.m */,
+				CA7C08621FA827EF0083C0F9 /* EWShoppingCartVC.h */,
+				CA7C08631FA827EF0083C0F9 /* EWShoppingCartVC.m */,
+				CA7C085F1FA824A20083C0F9 /* EWMineVC.h */,
+				CA7C08601FA824A20083C0F9 /* EWMineVC.m */,
+				CA7C08651FA8580B0083C0F9 /* EWMyPurchaseVC.h */,
+				CA7C08661FA8580B0083C0F9 /* EWMyPurchaseVC.m */,
+			);
+			path = JingDong;
+			sourceTree = "<group>";
+		};
 		CA97B69E1F7E9525008368F0 = {
 			isa = PBXGroup;
 			children = (
@@ -450,9 +515,10 @@
 		CA97B6C01F7E96F5008368F0 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				CA288D851FA2D79600037D2D /* Mine */,
-				CAD937051F8D16F0004BEDC4 /* Find */,
+				CA7C08581FA822890083C0F9 /* JingDong */,
 				CA97B7221F7FF22E008368F0 /* Home */,
+				CAD937051F8D16F0004BEDC4 /* Find */,
+				CA288D851FA2D79600037D2D /* Mine */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -460,6 +526,8 @@
 		CA97B6CD1F7E96F5008368F0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				CA7C086C1FA8755B0083C0F9 /* UIColor+Util.h */,
+				CA7C086B1FA8755B0083C0F9 /* UIColor+Util.m */,
 				CA288DAA1FA2F70700037D2D /* ZFMDBTool.h */,
 				CA288DAB1FA2F70800037D2D /* ZFMDBTool.m */,
 				CACCC0181F971EA7006AE5AF /* Tools.h */,
@@ -505,6 +573,7 @@
 		CA97B6D11F7E96F5008368F0 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				CA1E046E1FA5D18100D468B2 /* YGGravityImageView */,
 				CACCBFAE1F96E38A006AE5AF /* FeSpinner */,
 				CAD3B2801F932ED400062317 /* 蒙版 */,
 				CAD3B2681F932A7700062317 /* YZDisplayViewController */,
@@ -829,6 +898,7 @@
 				CAD9371D1F8E3F3B004BEDC4 /* TodayNewCell.xib in Resources */,
 				CAD936F91F8B9A6A004BEDC4 /* cameraData.json in Resources */,
 				CACCBFF71F96E38A006AE5AF /* CabinCondensed-Bold.ttf in Resources */,
+				CA1E046C1FA5D0FD00D468B2 /* LoginView.xib in Resources */,
 				CAD936F81F8B9A6A004BEDC4 /* macbookData.json in Resources */,
 				CACCC0161F96E38A006AE5AF /* WifiMan_Sign_2@2x.png in Resources */,
 				CA6DB7801F80E6A900B66C4D /* HomeData.json in Resources */,
@@ -941,14 +1011,18 @@
 				CACCC0091F96E38A006AE5AF /* FeHourGlass.m in Sources */,
 				CACCC0081F96E38A006AE5AF /* FeZeroLoaderViewController.m in Sources */,
 				CACCBFF21F96E38A006AE5AF /* Feasd.m in Sources */,
+				CA1E04731FA5D18100D468B2 /* YGGravityImageView.m in Sources */,
+				CA7C08611FA824A20083C0F9 /* EWMineVC.m in Sources */,
 				CAD937001F8CE969004BEDC4 /* BaseMethod.m in Sources */,
 				CACCBFF41F96E38A006AE5AF /* FeRollingViewController.m in Sources */,
 				CAD3B27B1F932BD600062317 /* ZBChildViewController.m in Sources */,
+				CA1E04681FA5D0EE00D468B2 /* LoginVC.m in Sources */,
 				CAD9371C1F8E3F3B004BEDC4 /* TodayNewCell.m in Sources */,
 				CA288DB01FA335A200037D2D /* ZBMineCell.m in Sources */,
 				CACCC0011F96E38A006AE5AF /* FeLoadingIconBox.m in Sources */,
 				CACCBFFE1F96E38A006AE5AF /* FeSpinnerTenDot.m in Sources */,
 				CACCC00A1F96E38A006AE5AF /* FeVietNamBar.m in Sources */,
+				CA7C08671FA8580B0083C0F9 /* EWMyPurchaseVC.m in Sources */,
 				CACCC0171F96E38A006AE5AF /* FXBlurView.m in Sources */,
 				CACCBFF91F96E38A006AE5AF /* FeTenDot.m in Sources */,
 				CADDCE5D1F937AF800305D47 /* ZBProductDataModel.m in Sources */,
@@ -957,11 +1031,15 @@
 				CA6DB7401F80C5FF00B66C4D /* ViewControllerB.m in Sources */,
 				CADDCE591F93764C00305D47 /* ZBProductCollectionCell.m in Sources */,
 				CAD3B2721F932A7800062317 /* YZDisplayTitleLabel.m in Sources */,
+				CA7C08641FA827EF0083C0F9 /* EWShoppingCartVC.m in Sources */,
 				CACCC01A1F971EA7006AE5AF /* Tools.m in Sources */,
 				CACCC00B1F96E38A006AE5AF /* FeZeroLoader.m in Sources */,
+				CA7C086D1FA8755B0083C0F9 /* UIColor+Util.m in Sources */,
 				CA288D951FA2D7B900037D2D /* HeadImageView.m in Sources */,
 				CACCBF321F964C1C006AE5AF /* ZBDetailViewController.m in Sources */,
+				CA1E046D1FA5D0FD00D468B2 /* LoginView.m in Sources */,
 				CA6DB7771F80D58F00B66C4D /* HomeBannersModel.m in Sources */,
+				CA1E04741FA5D18100D468B2 /* YGGravity.m in Sources */,
 				CADDCE601F937B9900305D47 /* ZBProductListModel.m in Sources */,
 				CAD3B2751F932A7800062317 /* YZDisplayViewController.m in Sources */,
 				CAD936E51F8A5198004BEDC4 /* CBSegmentView.m in Sources */,
@@ -970,10 +1048,12 @@
 				CACCBFF81F96E38A006AE5AF /* FeThreeDotGlow.m in Sources */,
 				CA6DB7831F81285600B66C4D /* CategoriesView.m in Sources */,
 				CA727C791F9DCB5D00F89413 /* ZBDetailSecondCell.m in Sources */,
+				CA7C086A1FA8585A0083C0F9 /* EWBaseViewController.m in Sources */,
 				CA6DB75F1F80D1E000B66C4D /* HomeCell.m in Sources */,
 				CA6DB7441F80C5FF00B66C4D /* ViewControllerA.m in Sources */,
 				CA727C7D1F9DD09600F89413 /* ZBProductDetailModel.m in Sources */,
 				CACCBFFB1F96E38A006AE5AF /* FeRollingLoader.m in Sources */,
+				CA7C085B1FA823830083C0F9 /* EWCompanyVC.m in Sources */,
 				CACCC00F1F96E38A006AE5AF /* FeViewController.m in Sources */,
 				CA288D931FA2D7B900037D2D /* NavHeadTitleView.m in Sources */,
 				CACCC0201F9746B7006AE5AF /* ZBDetailFirstCell.m in Sources */,

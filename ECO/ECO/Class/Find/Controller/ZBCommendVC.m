@@ -195,6 +195,7 @@
     if (indexPath.section == 1) {
         ZBProductListModel *model = self.todayDataArr[indexPath.item];
         ZBDetailViewController *VC = [[ZBDetailViewController alloc] init];
+        VC.hidesBottomBarWhenPushed = YES;
         VC.product_id = model.product_id;
         VC.productModel = model;
         [self.navigationController pushViewController:VC animated:YES];

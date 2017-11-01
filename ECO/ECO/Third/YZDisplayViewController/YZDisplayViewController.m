@@ -177,6 +177,7 @@ static NSString * const ID = @"CONTENTCELL";
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self initial];
     
 }
@@ -478,12 +479,12 @@ static NSString * const ID = @"CONTENTCELL";
         
         _isInitial = YES;
         
+    
         CGFloat statusH = [UIApplication sharedApplication].statusBarFrame.size.height;
         
-        CGFloat titleY = self.navigationController.navigationBarHidden == NO ?YZNavBarH:statusH;
+        CGFloat titleY = self.navigationController.navigationBarHidden == NO ?NavHeight:statusH;
         
-        
-        
+
         // 是否占据全屏
         if (_isfullScreen) {
             
