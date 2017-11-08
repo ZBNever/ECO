@@ -10,6 +10,7 @@ target 'ECO' do
     pod 'MJRefresh'
     pod 'XHLogHelper'
     pod 'FMDB'
+    pod 'IQKeyboardManager'
 end
 
 

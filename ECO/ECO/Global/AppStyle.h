@@ -29,6 +29,13 @@
 
 #define KUIScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KUIScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define KHeight     self.frame.size.height
+#define KWidth      self.frame.size.width
+
+#define NavHeight                 CGRectGetMaxY(self.navigationController.navigationBar.frame)
+#define KWindow                     [UIApplication sharedApplication].delegate.window
+
 // 1.判断是否为iOS7
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 #define ViewController_BackGround [UIColor colorWithRed:243.0/255.0 green:243.0/255.0 blue:243.0/255.0 alpha:1.0]//视图控制器背景颜色

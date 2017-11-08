@@ -14,6 +14,16 @@
 + (UIColor *)colorWithHex:(int)hexValue;
 /** 十六进制颜色 */
 + (UIColor *) colorWithHexString: (NSString *)color;
+/** #cccccc */
++ (UIColor *)colorForCCC;
+/** #ffffff */
++ (UIColor *)colorForFFF;
+/** 333333 */
++ (UIColor *)colorFor333;
+/** #999999 */
++ (UIColor *)colorFor999;
+/** #f3f3f3 */
++ (UIColor *)colorForF3;
 + (UIColor *)themeColor;
 + (UIColor *)nameColor;
 + (UIColor *)titleColor;

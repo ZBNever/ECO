@@ -12,7 +12,7 @@
 #import "ViewControllerC.h"
 #import "ViewControllerD.h"
 #import "ViewControllerE.h"
-
+#import <IQKeyboardManager.h>
 
 @interface AppDelegate ()
 
@@ -28,7 +28,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     //实例化5个控制器
     ViewControllerA *ctlA = [ViewControllerA new];
     UINavigationController *navA = [[UINavigationController alloc] initWithRootViewController:ctlA];
@@ -36,9 +37,9 @@
     UINavigationController *navB = [[UINavigationController alloc] initWithRootViewController:ctlB];
     ViewControllerC *ctlC = [ViewControllerC new];
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:ctlC];
-    ViewControllerD *ctlD = [ViewControllerD new];
-    UINavigationController *navD = [[UINavigationController alloc] initWithRootViewController:ctlD];
-    ViewControllerE *ctlE = [ViewControllerE new];
+//    ViewControllerD *ctlD = [ViewControllerD new];
+//    UINavigationController *navD = [[UINavigationController alloc] initWithRootViewController:ctlD];
+//    ViewControllerE *ctlE = [ViewControllerE new];
     
     //设置背景色和标题
     ctlA.view.backgroundColor = [UIColor whiteColor];
@@ -47,9 +48,9 @@
 //    ctlB.title = @"绿色";
     ctlC.view.backgroundColor = [UIColor whiteColor];
 //    ctlC.title = @"紫色";
-    ctlD.view.backgroundColor = [UIColor yellowColor];
+//    ctlD.view.backgroundColor = [UIColor yellowColor];
 //    ctlD.title = @"黄色";
-    ctlE.view.backgroundColor = [UIColor blueColor];
+//    ctlE.view.backgroundColor = [UIColor blueColor];
 //    ctlE.title = @"蓝色";
     
     //实例化一个UITabbarController

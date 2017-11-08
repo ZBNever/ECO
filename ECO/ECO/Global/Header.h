@@ -17,6 +17,5 @@
 #define screen_height          [UIScreen mainScreen].bounds.size.height
 #define NavHeight                 CGRectGetMaxY(self.navigationController.navigationBar.frame)
 
-#define background
 
 #endif /* Header_h */

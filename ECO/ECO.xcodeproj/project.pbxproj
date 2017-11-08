@@ -38,16 +38,17 @@
 		CA727C791F9DCB5D00F89413 /* ZBDetailSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA727C771F9DCB5D00F89413 /* ZBDetailSecondCell.m */; };
 		CA727C7A1F9DCB5D00F89413 /* ZBDetailSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA727C781F9DCB5D00F89413 /* ZBDetailSecondCell.xib */; };
 		CA727C7D1F9DD09600F89413 /* ZBProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA727C7C1F9DD09600F89413 /* ZBProductDetailModel.m */; };
-		CA7C085B1FA823830083C0F9 /* EWCompanyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C085A1FA823830083C0F9 /* EWCompanyVC.m */; };
-		CA7C08611FA824A20083C0F9 /* EWMineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C08601FA824A20083C0F9 /* EWMineVC.m */; };
-		CA7C08641FA827EF0083C0F9 /* EWShoppingCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C08631FA827EF0083C0F9 /* EWShoppingCartVC.m */; };
-		CA7C08671FA8580B0083C0F9 /* EWMyPurchaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C08661FA8580B0083C0F9 /* EWMyPurchaseVC.m */; };
-		CA7C086A1FA8585A0083C0F9 /* EWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C08691FA8585A0083C0F9 /* EWBaseViewController.m */; };
 		CA7C086D1FA8755B0083C0F9 /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7C086B1FA8755B0083C0F9 /* UIColor+Util.m */; };
+		CA8973BB1FB34A9600CECD29 /* ZBWriteInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8973B91FB34A9600CECD29 /* ZBWriteInfoCell.m */; };
+		CA8973BC1FB34A9600CECD29 /* ZBWriteInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8973BA1FB34A9600CECD29 /* ZBWriteInfoCell.xib */; };
+		CA8973BF1FB3509100CECD29 /* ZBBottomBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8973BE1FB3509100CECD29 /* ZBBottomBtnView.m */; };
 		CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6AB1F7E9526008368F0 /* AppDelegate.m */; };
 		CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B01F7E9526008368F0 /* Main.storyboard */; };
 		CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B31F7E9526008368F0 /* Assets.xcassets */; };
 		CA97B6BA1F7E9526008368F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6B91F7E9526008368F0 /* main.m */; };
+		CAAD24161FB1FA210071FA12 /* ZBCallBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAD24141FB1FA210071FA12 /* ZBCallBackVC.m */; };
+		CAAD241A1FB1FF4C0071FA12 /* ZBCallBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAD24191FB1FF4C0071FA12 /* ZBCallBackView.m */; };
+		CAAD241E1FB201E40071FA12 /* ZBCallBackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAD241D1FB201E40071FA12 /* ZBCallBackView.xib */; };
 		CAAFE79E1FA1C9760055A75E /* ZBDetailThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFE79C1FA1C9760055A75E /* ZBDetailThirdCell.m */; };
 		CAAFE79F1FA1C9760055A75E /* ZBDetailThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAFE79D1FA1C9760055A75E /* ZBDetailThirdCell.xib */; };
 		CACCBF321F964C1C006AE5AF /* ZBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */; };
@@ -179,18 +180,13 @@
 		CA727C781F9DCB5D00F89413 /* ZBDetailSecondCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBDetailSecondCell.xib; sourceTree = "<group>"; };
 		CA727C7B1F9DD09600F89413 /* ZBProductDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBProductDetailModel.h; sourceTree = "<group>"; };
 		CA727C7C1F9DD09600F89413 /* ZBProductDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBProductDetailModel.m; sourceTree = "<group>"; };
-		CA7C08591FA823830083C0F9 /* EWCompanyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCompanyVC.h; sourceTree = "<group>"; };
-		CA7C085A1FA823830083C0F9 /* EWCompanyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCompanyVC.m; sourceTree = "<group>"; };
-		CA7C085F1FA824A20083C0F9 /* EWMineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWMineVC.h; sourceTree = "<group>"; };
-		CA7C08601FA824A20083C0F9 /* EWMineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWMineVC.m; sourceTree = "<group>"; };
-		CA7C08621FA827EF0083C0F9 /* EWShoppingCartVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWShoppingCartVC.h; sourceTree = "<group>"; };
-		CA7C08631FA827EF0083C0F9 /* EWShoppingCartVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWShoppingCartVC.m; sourceTree = "<group>"; };
-		CA7C08651FA8580B0083C0F9 /* EWMyPurchaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWMyPurchaseVC.h; sourceTree = "<group>"; };
-		CA7C08661FA8580B0083C0F9 /* EWMyPurchaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWMyPurchaseVC.m; sourceTree = "<group>"; };
-		CA7C08681FA8585A0083C0F9 /* EWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWBaseViewController.h; sourceTree = "<group>"; };
-		CA7C08691FA8585A0083C0F9 /* EWBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWBaseViewController.m; sourceTree = "<group>"; };
 		CA7C086B1FA8755B0083C0F9 /* UIColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
 		CA7C086C1FA8755B0083C0F9 /* UIColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
+		CA8973B81FB34A9600CECD29 /* ZBWriteInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBWriteInfoCell.h; sourceTree = "<group>"; };
+		CA8973B91FB34A9600CECD29 /* ZBWriteInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBWriteInfoCell.m; sourceTree = "<group>"; };
+		CA8973BA1FB34A9600CECD29 /* ZBWriteInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBWriteInfoCell.xib; sourceTree = "<group>"; };
+		CA8973BD1FB3509100CECD29 /* ZBBottomBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBBottomBtnView.h; sourceTree = "<group>"; };
+		CA8973BE1FB3509100CECD29 /* ZBBottomBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBBottomBtnView.m; sourceTree = "<group>"; };
 		CA97B6A71F7E9525008368F0 /* ECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA97B6AA1F7E9526008368F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA97B6AB1F7E9526008368F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -200,6 +196,11 @@
 		CA97B6B91F7E9526008368F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA97B6E31F7E9777008368F0 /* TabbarBeyondClick.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbarBeyondClick.pch; sourceTree = "<group>"; };
 		CA97B6E41F7E9777008368F0 /* AppStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStyle.h; sourceTree = "<group>"; };
+		CAAD24131FB1FA210071FA12 /* ZBCallBackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBCallBackVC.h; sourceTree = "<group>"; };
+		CAAD24141FB1FA210071FA12 /* ZBCallBackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBCallBackVC.m; sourceTree = "<group>"; };
+		CAAD24181FB1FF4C0071FA12 /* ZBCallBackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBCallBackView.h; sourceTree = "<group>"; };
+		CAAD24191FB1FF4C0071FA12 /* ZBCallBackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBCallBackView.m; sourceTree = "<group>"; };
+		CAAD241D1FB201E40071FA12 /* ZBCallBackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBCallBackView.xib; sourceTree = "<group>"; };
 		CAAFE79B1FA1C9760055A75E /* ZBDetailThirdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBDetailThirdCell.h; sourceTree = "<group>"; };
 		CAAFE79C1FA1C9760055A75E /* ZBDetailThirdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBDetailThirdCell.m; sourceTree = "<group>"; };
 		CAAFE79D1FA1C9760055A75E /* ZBDetailThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBDetailThirdCell.xib; sourceTree = "<group>"; };
@@ -462,23 +463,6 @@
 			path = AihuihouModel;
 			sourceTree = "<group>";
 		};
-		CA7C08581FA822890083C0F9 /* JingDong */ = {
-			isa = PBXGroup;
-			children = (
-				CA7C08681FA8585A0083C0F9 /* EWBaseViewController.h */,
-				CA7C08691FA8585A0083C0F9 /* EWBaseViewController.m */,
-				CA7C08591FA823830083C0F9 /* EWCompanyVC.h */,
-				CA7C085A1FA823830083C0F9 /* EWCompanyVC.m */,
-				CA7C08621FA827EF0083C0F9 /* EWShoppingCartVC.h */,
-				CA7C08631FA827EF0083C0F9 /* EWShoppingCartVC.m */,
-				CA7C085F1FA824A20083C0F9 /* EWMineVC.h */,
-				CA7C08601FA824A20083C0F9 /* EWMineVC.m */,
-				CA7C08651FA8580B0083C0F9 /* EWMyPurchaseVC.h */,
-				CA7C08661FA8580B0083C0F9 /* EWMyPurchaseVC.m */,
-			);
-			path = JingDong;
-			sourceTree = "<group>";
-		};
 		CA97B69E1F7E9525008368F0 = {
 			isa = PBXGroup;
 			children = (
@@ -515,7 +499,6 @@
 		CA97B6C01F7E96F5008368F0 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				CA7C08581FA822890083C0F9 /* JingDong */,
 				CA97B7221F7FF22E008368F0 /* Home */,
 				CAD937051F8D16F0004BEDC4 /* Find */,
 				CA288D851FA2D79600037D2D /* Mine */,
@@ -558,6 +541,10 @@
 		CA97B6D01F7E96F5008368F0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				CA6DB7391F80C5FE00B66C4D /* ViewControllerD.h */,
+				CA6DB73C1F80C5FE00B66C4D /* ViewControllerD.m */,
+				CA6DB7381F80C5FE00B66C4D /* ViewControllerE.h */,
+				CA6DB73E1F80C5FE00B66C4D /* ViewControllerE.m */,
 				CA97B6AA1F7E9526008368F0 /* AppDelegate.h */,
 				CA97B6AB1F7E9526008368F0 /* AppDelegate.m */,
 				CA97B6B01F7E9526008368F0 /* Main.storyboard */,
@@ -608,10 +595,8 @@
 			children = (
 				CA6DB73B1F80C5FE00B66C4D /* ViewControllerA.h */,
 				CA6DB73F1F80C5FE00B66C4D /* ViewControllerA.m */,
-				CA6DB7391F80C5FE00B66C4D /* ViewControllerD.h */,
-				CA6DB73C1F80C5FE00B66C4D /* ViewControllerD.m */,
-				CA6DB7381F80C5FE00B66C4D /* ViewControllerE.h */,
-				CA6DB73E1F80C5FE00B66C4D /* ViewControllerE.m */,
+				CAAD24131FB1FA210071FA12 /* ZBCallBackVC.h */,
+				CAAD24141FB1FA210071FA12 /* ZBCallBackVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -633,6 +618,14 @@
 				CA6DB7811F81285600B66C4D /* CategoriesView.h */,
 				CA6DB7821F81285600B66C4D /* CategoriesView.m */,
 				CA6DB7841F8128CE00B66C4D /* CategoriesView.xib */,
+				CAAD24181FB1FF4C0071FA12 /* ZBCallBackView.h */,
+				CAAD24191FB1FF4C0071FA12 /* ZBCallBackView.m */,
+				CAAD241D1FB201E40071FA12 /* ZBCallBackView.xib */,
+				CA8973B81FB34A9600CECD29 /* ZBWriteInfoCell.h */,
+				CA8973B91FB34A9600CECD29 /* ZBWriteInfoCell.m */,
+				CA8973BA1FB34A9600CECD29 /* ZBWriteInfoCell.xib */,
+				CA8973BD1FB3509100CECD29 /* ZBBottomBtnView.h */,
+				CA8973BE1FB3509100CECD29 /* ZBBottomBtnView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -883,11 +876,13 @@
 				CADDCE551F9369F600305D47 /* ZBChildCell.xib in Resources */,
 				CA6DB7851F8128CE00B66C4D /* CategoriesView.xib in Resources */,
 				CAD3B2851F932ED400062317 /* RequesCover.xib in Resources */,
+				CAAD241E1FB201E40071FA12 /* ZBCallBackView.xib in Resources */,
 				CA6DB7331F809DC800B66C4D /* LaunchScreen.storyboard in Resources */,
 				CAD936FA1F8B9A6A004BEDC4 /* otherData.json in Resources */,
 				CAD936FD1F8B9BA1004BEDC4 /* iphoneData.json in Resources */,
 				CACCC0051F96E38A006AE5AF /* WifiMan_Sign_3@2x.png in Resources */,
 				CACCBFF51F96E38A006AE5AF /* FeSpinner-Info.plist in Resources */,
+				CA8973BC1FB34A9600CECD29 /* ZBWriteInfoCell.xib in Resources */,
 				CAD936F71F8B9A6A004BEDC4 /* ipadData.json in Resources */,
 				CADDCE5A1F93764C00305D47 /* ZBProductCollectionCell.xib in Resources */,
 				CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */,
@@ -958,6 +953,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ECO/Pods-ECO-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -984,6 +980,7 @@
 				CACCC0021F96E38A006AE5AF /* FeLoadingIcon.m in Sources */,
 				CAD9370B1F8D178D004BEDC4 /* FindBannerModel.m in Sources */,
 				CACCC0031F96E38A006AE5AF /* FeWifiManViewController.m in Sources */,
+				CA8973BB1FB34A9600CECD29 /* ZBWriteInfoCell.m in Sources */,
 				CACCBFFD1F96E38A006AE5AF /* FeHandwriting.m in Sources */,
 				CA6DB7751F80D58F00B66C4D /* HomeDataModel.m in Sources */,
 				CAD937041F8D1454004BEDC4 /* ZBHTTPRequestManager.m in Sources */,
@@ -1012,7 +1009,6 @@
 				CACCC0081F96E38A006AE5AF /* FeZeroLoaderViewController.m in Sources */,
 				CACCBFF21F96E38A006AE5AF /* Feasd.m in Sources */,
 				CA1E04731FA5D18100D468B2 /* YGGravityImageView.m in Sources */,
-				CA7C08611FA824A20083C0F9 /* EWMineVC.m in Sources */,
 				CAD937001F8CE969004BEDC4 /* BaseMethod.m in Sources */,
 				CACCBFF41F96E38A006AE5AF /* FeRollingViewController.m in Sources */,
 				CAD3B27B1F932BD600062317 /* ZBChildViewController.m in Sources */,
@@ -1022,7 +1018,6 @@
 				CACCC0011F96E38A006AE5AF /* FeLoadingIconBox.m in Sources */,
 				CACCBFFE1F96E38A006AE5AF /* FeSpinnerTenDot.m in Sources */,
 				CACCC00A1F96E38A006AE5AF /* FeVietNamBar.m in Sources */,
-				CA7C08671FA8580B0083C0F9 /* EWMyPurchaseVC.m in Sources */,
 				CACCC0171F96E38A006AE5AF /* FXBlurView.m in Sources */,
 				CACCBFF91F96E38A006AE5AF /* FeTenDot.m in Sources */,
 				CADDCE5D1F937AF800305D47 /* ZBProductDataModel.m in Sources */,
@@ -1031,11 +1026,13 @@
 				CA6DB7401F80C5FF00B66C4D /* ViewControllerB.m in Sources */,
 				CADDCE591F93764C00305D47 /* ZBProductCollectionCell.m in Sources */,
 				CAD3B2721F932A7800062317 /* YZDisplayTitleLabel.m in Sources */,
-				CA7C08641FA827EF0083C0F9 /* EWShoppingCartVC.m in Sources */,
 				CACCC01A1F971EA7006AE5AF /* Tools.m in Sources */,
 				CACCC00B1F96E38A006AE5AF /* FeZeroLoader.m in Sources */,
+				CAAD241A1FB1FF4C0071FA12 /* ZBCallBackView.m in Sources */,
 				CA7C086D1FA8755B0083C0F9 /* UIColor+Util.m in Sources */,
+				CAAD24161FB1FA210071FA12 /* ZBCallBackVC.m in Sources */,
 				CA288D951FA2D7B900037D2D /* HeadImageView.m in Sources */,
+				CA8973BF1FB3509100CECD29 /* ZBBottomBtnView.m in Sources */,
 				CACCBF321F964C1C006AE5AF /* ZBDetailViewController.m in Sources */,
 				CA1E046D1FA5D0FD00D468B2 /* LoginView.m in Sources */,
 				CA6DB7771F80D58F00B66C4D /* HomeBannersModel.m in Sources */,
@@ -1048,12 +1045,10 @@
 				CACCBFF81F96E38A006AE5AF /* FeThreeDotGlow.m in Sources */,
 				CA6DB7831F81285600B66C4D /* CategoriesView.m in Sources */,
 				CA727C791F9DCB5D00F89413 /* ZBDetailSecondCell.m in Sources */,
-				CA7C086A1FA8585A0083C0F9 /* EWBaseViewController.m in Sources */,
 				CA6DB75F1F80D1E000B66C4D /* HomeCell.m in Sources */,
 				CA6DB7441F80C5FF00B66C4D /* ViewControllerA.m in Sources */,
 				CA727C7D1F9DD09600F89413 /* ZBProductDetailModel.m in Sources */,
 				CACCBFFB1F96E38A006AE5AF /* FeRollingLoader.m in Sources */,
-				CA7C085B1FA823830083C0F9 /* EWCompanyVC.m in Sources */,
 				CACCC00F1F96E38A006AE5AF /* FeViewController.m in Sources */,
 				CA288D931FA2D7B900037D2D /* NavHeadTitleView.m in Sources */,
 				CACCC0201F9746B7006AE5AF /* ZBDetailFirstCell.m in Sources */,
@@ -1196,7 +1191,7 @@
 					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ECO/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.never.ECO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1224,7 +1219,7 @@
 					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ECO/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.never.ECO;
 				PRODUCT_NAME = "$(TARGET_NAME)";

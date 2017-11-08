@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C7F0263BFBF1E97ED55DB9AC98DC0BE4'
+               BlueprintIdentifier = 'C17A0A0A6AB1C5B4E0CECCADB8DD0D41'
                BlueprintName = 'XHLogHelper'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libXHLogHelper.a'>

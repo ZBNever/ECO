@@ -370,6 +370,7 @@ static NSString *Cell = @"Cell";
     VC.product_id = model.product_id;
     VC.productModel = model;
     self.navigationController.navigationBar.hidden = NO;
+    VC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:VC animated:YES];
 }
 

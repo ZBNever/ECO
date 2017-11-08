@@ -17,7 +17,9 @@ static NSString *ID = @"cell";
 static NSString *SCell = @"SCell";
 static NSString *TCell = @"TCell";
 
-@interface ZBDetailViewController ()<SDCycleScrollViewDelegate>
+@interface ZBDetailViewController ()<SDCycleScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *dataArr;
 
@@ -44,11 +46,10 @@ static NSString *TCell = @"TCell";
     self.view.backgroundColor = ViewController_BackGround;
     //右边收藏按钮
     [self creatRightItemBtn];
+    [self.view addSubview:self.tableView];
+    [self.view addSubview:self.buttonView];
     //请求数据
     [self loadUrlData:self.product_id];
-    
-    self.tableView.tableHeaderView = self.cycleScrollView;
-    self.tableView.tableFooterView = self.buttonView;
     //注册cell
     [self registerCell];
 }
@@ -61,6 +62,19 @@ static NSString *TCell = @"TCell";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     rightBtn.selected = self.isCollection = [[NSUserDefaults standardUserDefaults] boolForKey:self.product_id];
     self.collectionBtn = rightBtn;
+}
+
+- (UITableView *)tableView{
+    
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tableHeaderView = self.cycleScrollView;
+        _tableView.tableFooterView = [UIView new];
+    }
+    return _tableView;
+    
 }
 
 //收藏
@@ -178,10 +192,10 @@ static NSString *TCell = @"TCell";
     
     if (!_buttonView) {
         
-        _buttonView = [[UIView alloc] initWithFrame:CGRectMake(0, screen_height-49-64, screen_height, 49)];
-        _buttonView.backgroundColor = [UIColor whiteColor];
+        _buttonView = [[UIView alloc] initWithFrame:CGRectMake(0, screen_height-49, screen_height, 49)];
+        _buttonView.backgroundColor = [UIColor clearColor];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(10, 5, screen_width-20, 39);
+        btn.frame = CGRectMake(10, 0, screen_width-20, 45);
         btn.backgroundColor = [UIColor greenColor];
         btn.layer.masksToBounds = YES;
         btn.layer.cornerRadius = 10.0f;
@@ -194,10 +208,14 @@ static NSString *TCell = @"TCell";
 //购买商品
 - (void)buyAction:(UIButton *)sender{
     
+    self.productModel.type = @"1";
+    MBProgressHUD *HUD = [Tools MBProgressHUD:@"购买成功"];
+    [HUD hideAnimated:YES afterDelay:2.0f];
     if (![ZFMDBTool containsData:self.productModel]) {
-        self.productModel.type = @"1";
+        
         [ZFMDBTool insertData:self.productModel];
     }
+
     
 }
 

@@ -7,12 +7,6 @@
 //
 
 #import "ViewControllerA.h"
-
-#import "EWMineVC.h"
-#import "EWShoppingCartVC.h"
-#import "EWCompanyVC.h"
-
-
 #import "SDCycleScrollView.h"
 #import "HomeCell.h"
 #import "CategoriesView.h"
@@ -21,6 +15,7 @@
 #import "HomeBannersModel.h"
 #import "HomeCategoriesModel.h"
 #import "HomeHotProductsModel.h"
+#import "ZBCallBackVC.h"
 
 @interface ViewControllerA ()<SDCycleScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIAlertViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -206,7 +201,7 @@
         cell.cellImageView.tag = indexPath.row + 1000;
 //        cell.cellLab.tag = indexPath.row + 2000;
         //    cell.delegate = self;
-        [cell refresAihuishouhUI:self.dataArr[indexPath.row ]];
+        [cell refresAihuishouhUI:self.dataArr[indexPath.item]];
         return cell;
         
     }
@@ -258,16 +253,13 @@
 
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    //    HomeCell *cell = (HomeCell *)[collectionView cellForItemAtIndexPath:self.index];
-//    if (CellState == nomalState) {
-//
-//        RoomVC *roomVC = [[RoomVC alloc] init];
-//        roomVC.model = self.dataArr[indexPath.row];
-//        [self.navigationController pushViewController:roomVC animated:YES];
-//    }else{
-//
-//        [self clickImage:indexPath];
-//    }
+    
+    if (indexPath.section == 1) {
+        ZBCallBackVC *VC = [[ZBCallBackVC alloc] init];
+        VC.model = self.dataArr[indexPath.item];
+        VC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:VC animated:YES];
+    }
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -276,45 +268,10 @@
 #pragma mark - SDCycleScrollViewDelegate
 //点击了第几张
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
-    
-    [self  creatNewWindow];
+
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"第%ld张",index] message:@"暂无跳转链接" delegate:self cancelButtonTitle:@"取消" otherButtonTitles: nil];
 //    [alert show];
     
-}
-
-- (void)creatNewWindow{
-
-    //实例化5个控制器
-    EWCompanyVC *ctlA = [EWCompanyVC new];
-    UINavigationController *navA = [[UINavigationController alloc] initWithRootViewController:ctlA];
-    EWShoppingCartVC *ctlB = [EWShoppingCartVC new];
-    UINavigationController *navB = [[UINavigationController alloc] initWithRootViewController:ctlB];
-    EWMineVC *ctlC = [EWMineVC new];
-    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:ctlC];
-
-    
-    //设置背景色和标题
-    ctlA.view.backgroundColor = [UIColor whiteColor];
-    //    navA.title = @"红色";
-    ctlB.view.backgroundColor = [UIColor whiteColor];
-    //    ctlB.title = @"绿色";
-    ctlC.view.backgroundColor = [UIColor whiteColor];
-
-    
-    //实例化一个UITabbarController
-    UITabBarController *tabCtl = [UITabBarController new];
-    
-    //设置管理的控制器数组
-    tabCtl.viewControllers = @[navA,navB,navC];
-    
-    //设置默认选中某个控制器
-    tabCtl.selectedIndex = 2;
-    //设置转场方式
-    [tabCtl setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    [self presentViewController:tabCtl animated:YES completion:nil];
-    //设置根视图控制器
-
 }
 
 - (NSMutableArray *)dataArr{

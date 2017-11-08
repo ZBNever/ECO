@@ -64,7 +64,7 @@
 
 + (UIColor *)themeColor
 {
-    return [UIColor colorWithHexString:@"ff4400"];
+    return [UIColor greenColor];
 }
 
 + (UIColor *)nameColor
@@ -131,6 +131,29 @@
 + (UIColor *)lineColor
 {
     return [UIColor colorWithHex:0x2bc157];
+}
+
+
++ (UIColor *)colorForCCC
+{
+    return [UIColor colorWithHexString:@"cccccc"];
+}
+
++ (UIColor *)colorForFFF
+{
+    return [UIColor colorWithHexString:@"ffffff"];
+}
++ (UIColor *)colorFor333
+{
+    return [UIColor colorWithHexString:@"333333"];
+}
++ (UIColor *)colorFor999
+{
+    return [UIColor colorWithHexString:@"999999"];
+}
++ (UIColor *)colorForF3
+{
+    return [UIColor colorWithHexString:@"f3f3f3"];
 }
 
 @end
