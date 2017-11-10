@@ -9,6 +9,7 @@
 #import "ZBCallBackVC.h"
 #import "ZBCallBackView.h"
 #import "ZBWriteInfoCell.h"
+#import "ZBSendAdressCell.h"
 #import "ZBBottomBtnView.h"
 
 static NSString *CellID = @"CellID";
@@ -28,9 +29,10 @@ static NSInteger heightForTabbar = 49;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"下单回收";
-    self.view.backgroundColor = [UIColor colorForCCC];
+    self.view.backgroundColor = [UIColor colorForF3];
     [self.view addSubview:self.mainTableView];
     [self.view addSubview:self.bottomBtnView];
+    [self.mainTableView registerNib:[UINib nibWithNibName:@"ZBSendAdressCell" bundle:nil] forCellReuseIdentifier:CellID];
     [self.mainTableView registerNib:[UINib nibWithNibName:@"ZBWriteInfoCell" bundle:nil] forCellReuseIdentifier:SCellID];
 }
 
@@ -48,13 +50,8 @@ static NSInteger heightForTabbar = 49;
     
     
     if (indexPath.section == 0) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellID];
-            
-        }
+        ZBSendAdressCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.textLabel.text = @"回收地址：贺州学院";
         return cell;
     }else{
         ZBWriteInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:SCellID];
@@ -71,7 +68,7 @@ static NSInteger heightForTabbar = 49;
         
     }else{
         
-        return 40;
+        return 160;
         
     }
     
@@ -95,6 +92,8 @@ static NSInteger heightForTabbar = 49;
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
         _mainTableView.allowsSelection = NO;
+        //取消分割线
+        _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _mainTableView.tableHeaderView = [ZBCallBackView initCallBackView];
         _mainTableView.tableFooterView = [UIView new];
     }

@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ZBBottomBtnViewDelegate <NSObject>
+
+- (void)bottomBtnClick:(UIButton *)sender;
+
+@end
+
 @interface ZBBottomBtnView : UIView
+
+@property (nonatomic, weak) id<ZBBottomBtnViewDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 

@@ -35,7 +35,8 @@
     [self addSubview:btn];
 }
 - (void)btnAction:(UIButton *)sender{
-    
-    
+    if ([self.delegate respondsToSelector:@selector(bottomBtnClick:)]) {
+        [self.delegate bottomBtnClick:sender];
+    }
 }
 @end

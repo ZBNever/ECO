@@ -42,6 +42,8 @@
 		CA8973BB1FB34A9600CECD29 /* ZBWriteInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8973B91FB34A9600CECD29 /* ZBWriteInfoCell.m */; };
 		CA8973BC1FB34A9600CECD29 /* ZBWriteInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8973BA1FB34A9600CECD29 /* ZBWriteInfoCell.xib */; };
 		CA8973BF1FB3509100CECD29 /* ZBBottomBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8973BE1FB3509100CECD29 /* ZBBottomBtnView.m */; };
+		CA8973C31FB44ECB00CECD29 /* ZBSendAdressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8973C11FB44ECB00CECD29 /* ZBSendAdressCell.m */; };
+		CA8973C41FB44ECB00CECD29 /* ZBSendAdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8973C21FB44ECB00CECD29 /* ZBSendAdressCell.xib */; };
 		CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6AB1F7E9526008368F0 /* AppDelegate.m */; };
 		CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B01F7E9526008368F0 /* Main.storyboard */; };
 		CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B31F7E9526008368F0 /* Assets.xcassets */; };
@@ -187,6 +189,9 @@
 		CA8973BA1FB34A9600CECD29 /* ZBWriteInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBWriteInfoCell.xib; sourceTree = "<group>"; };
 		CA8973BD1FB3509100CECD29 /* ZBBottomBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBBottomBtnView.h; sourceTree = "<group>"; };
 		CA8973BE1FB3509100CECD29 /* ZBBottomBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBBottomBtnView.m; sourceTree = "<group>"; };
+		CA8973C01FB44ECB00CECD29 /* ZBSendAdressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBSendAdressCell.h; sourceTree = "<group>"; };
+		CA8973C11FB44ECB00CECD29 /* ZBSendAdressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBSendAdressCell.m; sourceTree = "<group>"; };
+		CA8973C21FB44ECB00CECD29 /* ZBSendAdressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBSendAdressCell.xib; sourceTree = "<group>"; };
 		CA97B6A71F7E9525008368F0 /* ECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA97B6AA1F7E9526008368F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA97B6AB1F7E9526008368F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -624,6 +629,9 @@
 				CA8973B81FB34A9600CECD29 /* ZBWriteInfoCell.h */,
 				CA8973B91FB34A9600CECD29 /* ZBWriteInfoCell.m */,
 				CA8973BA1FB34A9600CECD29 /* ZBWriteInfoCell.xib */,
+				CA8973C01FB44ECB00CECD29 /* ZBSendAdressCell.h */,
+				CA8973C11FB44ECB00CECD29 /* ZBSendAdressCell.m */,
+				CA8973C21FB44ECB00CECD29 /* ZBSendAdressCell.xib */,
 				CA8973BD1FB3509100CECD29 /* ZBBottomBtnView.h */,
 				CA8973BE1FB3509100CECD29 /* ZBBottomBtnView.m */,
 			);
@@ -882,6 +890,7 @@
 				CAD936FD1F8B9BA1004BEDC4 /* iphoneData.json in Resources */,
 				CACCC0051F96E38A006AE5AF /* WifiMan_Sign_3@2x.png in Resources */,
 				CACCBFF51F96E38A006AE5AF /* FeSpinner-Info.plist in Resources */,
+				CA8973C41FB44ECB00CECD29 /* ZBSendAdressCell.xib in Resources */,
 				CA8973BC1FB34A9600CECD29 /* ZBWriteInfoCell.xib in Resources */,
 				CAD936F71F8B9A6A004BEDC4 /* ipadData.json in Resources */,
 				CADDCE5A1F93764C00305D47 /* ZBProductCollectionCell.xib in Resources */,
@@ -972,6 +981,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8973C31FB44ECB00CECD29 /* ZBSendAdressCell.m in Sources */,
 				CAAFE79E1FA1C9760055A75E /* ZBDetailThirdCell.m in Sources */,
 				CACCC0131F96E38A006AE5AF /* FeHandwritingViewController.m in Sources */,
 				CAD3B2741F932A7800062317 /* UIView+Frame.m in Sources */,
