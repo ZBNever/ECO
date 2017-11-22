@@ -263,11 +263,13 @@ static NSString *Cell = @"Cell";
 }
 //左按钮
 -(void)NavHeadback{
-    NSLog(@"点击了左按钮");
+//    NSLog(@"点击了左按钮");
+    MBProgressHUD *HUD =[Tools MBProgressHUDOnlyText:@"暂无信息"];
+    [HUD hideAnimated:YES afterDelay:1.5f];
 }
 //右按钮回调
 -(void)NavHeadToRight{
-    NSLog(@"点击了右按钮");
+//    NSLog(@"点击了右按钮");
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"你确定删除所有数据？" preferredStyle:UIAlertControllerStyleAlert];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];

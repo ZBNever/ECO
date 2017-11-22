@@ -57,6 +57,10 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="nameTextFeild" destination="MEr-5Z-u7w" id="bH6-8d-ZpA"/>
+                <outlet property="numTextFeild" destination="EMG-5A-0Fh" id="3HF-6Q-vrd"/>
+            </connections>
             <point key="canvasLocation" x="61" y="102"/>
         </tableViewCell>
     </objects>

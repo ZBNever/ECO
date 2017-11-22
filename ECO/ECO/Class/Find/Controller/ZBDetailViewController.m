@@ -12,6 +12,7 @@
 #import "ZBDetailSecondCell.h"
 #import "ZBDetailThirdCell.h"
 #import "ZBProductDetailModel.h"
+#import "ZBConfirmViewController.h"
 
 static NSString *ID = @"cell";
 static NSString *SCell = @"SCell";
@@ -67,7 +68,7 @@ static NSString *TCell = @"TCell";
 - (UITableView *)tableView{
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height-49) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableHeaderView = self.cycleScrollView;
@@ -125,7 +126,7 @@ static NSString *TCell = @"TCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 2) {
-        return 533;
+        return 425;
     }
     return 180;
     
@@ -208,14 +209,9 @@ static NSString *TCell = @"TCell";
 //购买商品
 - (void)buyAction:(UIButton *)sender{
     
-    self.productModel.type = @"1";
-    MBProgressHUD *HUD = [Tools MBProgressHUD:@"购买成功"];
-    [HUD hideAnimated:YES afterDelay:2.0f];
-    if (![ZFMDBTool containsData:self.productModel]) {
-        
-        [ZFMDBTool insertData:self.productModel];
-    }
-
+    ZBConfirmViewController *VC = [[ZBConfirmViewController alloc] init];
+    VC.dataModel = self.dataModel;
+    [self.navigationController pushViewController:VC animated:YES];
     
 }
 

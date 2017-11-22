@@ -44,6 +44,7 @@
 		CA8973BF1FB3509100CECD29 /* ZBBottomBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8973BE1FB3509100CECD29 /* ZBBottomBtnView.m */; };
 		CA8973C31FB44ECB00CECD29 /* ZBSendAdressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8973C11FB44ECB00CECD29 /* ZBSendAdressCell.m */; };
 		CA8973C41FB44ECB00CECD29 /* ZBSendAdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8973C21FB44ECB00CECD29 /* ZBSendAdressCell.xib */; };
+		CA8973C71FBAE8E400CECD29 /* ZBConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8973C61FBAE8E400CECD29 /* ZBConfirmViewController.m */; };
 		CA97B6AC1F7E9526008368F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA97B6AB1F7E9526008368F0 /* AppDelegate.m */; };
 		CA97B6B21F7E9526008368F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B01F7E9526008368F0 /* Main.storyboard */; };
 		CA97B6B41F7E9526008368F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA97B6B31F7E9526008368F0 /* Assets.xcassets */; };
@@ -53,6 +54,8 @@
 		CAAD241E1FB201E40071FA12 /* ZBCallBackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAD241D1FB201E40071FA12 /* ZBCallBackView.xib */; };
 		CAAFE79E1FA1C9760055A75E /* ZBDetailThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFE79C1FA1C9760055A75E /* ZBDetailThirdCell.m */; };
 		CAAFE79F1FA1C9760055A75E /* ZBDetailThirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAAFE79D1FA1C9760055A75E /* ZBDetailThirdCell.xib */; };
+		CABCE2F41FC336020041F1CB /* ZBConfirmHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = CABCE2F31FC336020041F1CB /* ZBConfirmHeadView.m */; };
+		CABCE2F61FC3360E0041F1CB /* ZBConfirmHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABCE2F51FC3360E0041F1CB /* ZBConfirmHeadView.xib */; };
 		CACCBF321F964C1C006AE5AF /* ZBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */; };
 		CACCBFF21F96E38A006AE5AF /* Feasd.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFAF1F96E38A006AE5AF /* Feasd.m */; };
 		CACCBFF31F96E38A006AE5AF /* FeWifiManHub.m in Sources */ = {isa = PBXBuildFile; fileRef = CACCBFB01F96E38A006AE5AF /* FeWifiManHub.m */; };
@@ -192,6 +195,8 @@
 		CA8973C01FB44ECB00CECD29 /* ZBSendAdressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBSendAdressCell.h; sourceTree = "<group>"; };
 		CA8973C11FB44ECB00CECD29 /* ZBSendAdressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBSendAdressCell.m; sourceTree = "<group>"; };
 		CA8973C21FB44ECB00CECD29 /* ZBSendAdressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBSendAdressCell.xib; sourceTree = "<group>"; };
+		CA8973C51FBAE8E400CECD29 /* ZBConfirmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBConfirmViewController.h; sourceTree = "<group>"; };
+		CA8973C61FBAE8E400CECD29 /* ZBConfirmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBConfirmViewController.m; sourceTree = "<group>"; };
 		CA97B6A71F7E9525008368F0 /* ECO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA97B6AA1F7E9526008368F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA97B6AB1F7E9526008368F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -209,6 +214,9 @@
 		CAAFE79B1FA1C9760055A75E /* ZBDetailThirdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBDetailThirdCell.h; sourceTree = "<group>"; };
 		CAAFE79C1FA1C9760055A75E /* ZBDetailThirdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBDetailThirdCell.m; sourceTree = "<group>"; };
 		CAAFE79D1FA1C9760055A75E /* ZBDetailThirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBDetailThirdCell.xib; sourceTree = "<group>"; };
+		CABCE2F21FC336020041F1CB /* ZBConfirmHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBConfirmHeadView.h; sourceTree = "<group>"; };
+		CABCE2F31FC336020041F1CB /* ZBConfirmHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBConfirmHeadView.m; sourceTree = "<group>"; };
+		CABCE2F51FC3360E0041F1CB /* ZBConfirmHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZBConfirmHeadView.xib; sourceTree = "<group>"; };
 		CACCBF301F964C1C006AE5AF /* ZBDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBDetailViewController.h; sourceTree = "<group>"; };
 		CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBDetailViewController.m; sourceTree = "<group>"; };
 		CACCBFAF1F96E38A006AE5AF /* Feasd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feasd.m; sourceTree = "<group>"; };
@@ -768,6 +776,8 @@
 				CAD3B27A1F932BD600062317 /* ZBChildViewController.m */,
 				CACCBF301F964C1C006AE5AF /* ZBDetailViewController.h */,
 				CACCBF311F964C1C006AE5AF /* ZBDetailViewController.m */,
+				CA8973C51FBAE8E400CECD29 /* ZBConfirmViewController.h */,
+				CA8973C61FBAE8E400CECD29 /* ZBConfirmViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -815,6 +825,9 @@
 				CAAFE79B1FA1C9760055A75E /* ZBDetailThirdCell.h */,
 				CAAFE79C1FA1C9760055A75E /* ZBDetailThirdCell.m */,
 				CAAFE79D1FA1C9760055A75E /* ZBDetailThirdCell.xib */,
+				CABCE2F21FC336020041F1CB /* ZBConfirmHeadView.h */,
+				CABCE2F31FC336020041F1CB /* ZBConfirmHeadView.m */,
+				CABCE2F51FC3360E0041F1CB /* ZBConfirmHeadView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -914,6 +927,7 @@
 				CA288D841FA2CA9100037D2D /* Image.xcassets in Resources */,
 				CACCC00C1F96E38A006AE5AF /* FeWifiManHub.xib in Resources */,
 				CACCC0111F96E38A006AE5AF /* WifiMan_Sign_4@2x.png in Resources */,
+				CABCE2F61FC3360E0041F1CB /* ZBConfirmHeadView.xib in Resources */,
 				CA288DB11FA335A200037D2D /* ZBMineCell.xib in Resources */,
 				CACCBFFC1F96E38A006AE5AF /* WifiMan_Sign_1@2x.png in Resources */,
 			);
@@ -1010,6 +1024,7 @@
 				CACCC0101F96E38A006AE5AF /* UIColor+flat.m in Sources */,
 				CAD3B2781F932B8000062317 /* ZBCommendVC.m in Sources */,
 				CA6DB7741F80D58F00B66C4D /* HomeHotProductsModel.m in Sources */,
+				CABCE2F41FC336020041F1CB /* ZBConfirmHeadView.m in Sources */,
 				CACCBFF61F96E38A006AE5AF /* FeVietNamLoaderViewController.m in Sources */,
 				CACCC0001F96E38A006AE5AF /* FeEqualizerViewController.m in Sources */,
 				CAD3B2841F932ED400062317 /* RequesCover.m in Sources */,
@@ -1062,6 +1077,7 @@
 				CACCC00F1F96E38A006AE5AF /* FeViewController.m in Sources */,
 				CA288D931FA2D7B900037D2D /* NavHeadTitleView.m in Sources */,
 				CACCC0201F9746B7006AE5AF /* ZBDetailFirstCell.m in Sources */,
+				CA8973C71FBAE8E400CECD29 /* ZBConfirmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

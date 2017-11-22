@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZBWriteInfoCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *nameTextFeild;
+@property (weak, nonatomic) IBOutlet UITextField *numTextFeild;
 
 @end

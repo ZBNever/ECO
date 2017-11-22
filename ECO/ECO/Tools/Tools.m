@@ -46,7 +46,7 @@
     MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView:window];
     HUD.mode = mod;
     if (mod == MBProgressHUDModeCustomView) {
-        UIImageView *customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"minion"]];
+        UIImageView *customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gou_green"]];
         HUD.customView = customView;
     }
     //NO允许点击其他地方，YES不允许点击其他地方

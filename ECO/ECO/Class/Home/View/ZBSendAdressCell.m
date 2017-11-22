@@ -13,12 +13,19 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+- (IBAction)infoBtnAction:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    self.addressTextView.secureTextEntry = sender.selected;
+    self.nameTextView.secureTextEntry = sender.selected;
+    self.phoneNumTextView.secureTextEntry = sender.selected;
 }
 
 @end
