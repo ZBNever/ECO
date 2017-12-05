@@ -76,6 +76,24 @@ static FMDatabase *_dataBase;
     
     return dataArr;
 }
++(NSArray *)callBackArr{
+    
+    FMResultSet *set = [_dataBase executeQuery:@"SELECT * FROM App WHERE type = 0;"];
+    // 不断往下取数据
+    NSMutableArray *callBackArr = [NSMutableArray array];
+    
+    while ([set next]) {
+        ZBProductListModel *AppModel = [ZBProductListModel new];
+        AppModel.product_name = [set stringForColumn:@"name"];
+        AppModel.price = [set stringForColumn:@"des"];
+        AppModel.main_pic = [set stringForColumn:@"url"];
+        AppModel.product_id = [set stringForColumn:@"pid"];
+        AppModel.type = [set stringForColumn:@"type"];
+        [callBackArr addObject:AppModel];
+    }
+    return callBackArr;
+    
+}
 + (NSArray *)buyDataArr{
     
     FMResultSet *set = [_dataBase executeQuery:@"SELECT * FROM App WHERE type = 1;"];

@@ -10,10 +10,12 @@
 #import "ZBProductListModel.h"
 
 @interface ZFMDBTool : NSObject
-/** 收藏数组 */
-+ (NSArray *)collectionDataArr;
+/** 回收数据 */
++(NSArray *)callBackArr;
 /** 购买数组 */
 + (NSArray *)buyDataArr;
+/** 收藏数组 */
++ (NSArray *)collectionDataArr;
 /** 数据数组 */
 + (NSArray *)dataArr;
 /** 插入数据 */

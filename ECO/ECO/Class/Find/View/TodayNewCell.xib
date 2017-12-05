@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,32 +18,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="188" height="209"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXn-iq-zPC">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXn-iq-zPC">
                         <rect key="frame" x="0.0" y="137" width="188" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="fGS-lD-A4y"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DoA-Bh-ZmU">
-                        <rect key="frame" x="24" y="0.0" width="141" height="136"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DoA-Bh-ZmU">
+                        <rect key="frame" x="14" y="0.0" width="159" height="136"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rci-Vq-Jby">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rci-Vq-Jby">
                         <rect key="frame" x="0.0" y="162" width="188" height="25"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="25" id="tj5-or-vod"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUR-dA-7ND">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="价格" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUR-dA-7ND">
                         <rect key="frame" x="0.0" y="187" width="188" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="22" id="ygu-Jj-Srr"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -51,21 +46,6 @@
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="DoA-Bh-ZmU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="4LS-kW-VVn"/>
-                <constraint firstItem="Rci-Vq-Jby" firstAttribute="top" secondItem="PXn-iq-zPC" secondAttribute="bottom" id="4bk-4i-LlA"/>
-                <constraint firstAttribute="bottom" secondItem="EUR-dA-7ND" secondAttribute="bottom" id="5Am-63-GoZ"/>
-                <constraint firstAttribute="trailing" secondItem="DoA-Bh-ZmU" secondAttribute="trailing" constant="23" id="I3I-r0-3Eo"/>
-                <constraint firstItem="EUR-dA-7ND" firstAttribute="top" secondItem="Rci-Vq-Jby" secondAttribute="bottom" id="PR8-UU-wB1"/>
-                <constraint firstAttribute="trailing" secondItem="Rci-Vq-Jby" secondAttribute="trailing" id="Q4r-bo-sNR"/>
-                <constraint firstItem="PXn-iq-zPC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vu4-so-HgG"/>
-                <constraint firstItem="PXn-iq-zPC" firstAttribute="top" secondItem="DoA-Bh-ZmU" secondAttribute="bottom" constant="1" id="XV9-wc-8au"/>
-                <constraint firstItem="DoA-Bh-ZmU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YYx-BP-huV"/>
-                <constraint firstItem="Rci-Vq-Jby" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YfW-xc-WMJ"/>
-                <constraint firstAttribute="trailing" secondItem="EUR-dA-7ND" secondAttribute="trailing" id="g9A-aN-FTW"/>
-                <constraint firstAttribute="trailing" secondItem="PXn-iq-zPC" secondAttribute="trailing" id="mNn-0d-MjV"/>
-                <constraint firstItem="EUR-dA-7ND" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zgs-Tc-1hR"/>
-            </constraints>
             <size key="customSize" width="188" height="209"/>
             <connections>
                 <outlet property="colorLab" destination="Rci-Vq-Jby" id="c5g-FH-nsw"/>

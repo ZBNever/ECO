@@ -32,16 +32,16 @@
     [checkBtn setImage:[UIImage imageNamed:@"gou_white"] forState:UIControlStateNormal];
     [checkBtn setImage:[UIImage imageNamed:@"gou_green"] forState:UIControlStateSelected];
     [checkBtn addTarget:self action:@selector(checkBtnAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:checkBtn];
+   
     
     UIButton *messageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    messageBtn.frame = CGRectMake(CGRectGetMaxX(checkBtn.frame), 10, 200, 30);
+    messageBtn.frame = CGRectMake(10, 10, 200, 30);
     [messageBtn setTitle:@"<我已阅读并同意相关条约>" forState:UIControlStateNormal];
     [messageBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-    messageBtn.titleLabel.font = [UIFont systemFontOfSize:15.f];
+    messageBtn.titleLabel.font = [UIFont systemFontOfSize:12.f];
     [messageBtn addTarget:self action:@selector(messageBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:messageBtn];
-    
+     [self addSubview:checkBtn];
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(KWidth-130, 0.5, 130, KHeight)];
     btn.backgroundColor = [UIColor themeColor];
     [btn setTitle:@"提交回收单" forState:UIControlStateNormal];

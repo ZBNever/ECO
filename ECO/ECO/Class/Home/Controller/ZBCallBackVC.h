@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeHotProductsModel.h"
-
+#import "ZBProductListModel.h"
 
 @interface ZBCallBackVC : UIViewController
 
 @property (nonatomic, strong) HomeHotProductsModel *model;
+
+@property (nonatomic, strong) ZBProductListModel *productModel;
 
 @end

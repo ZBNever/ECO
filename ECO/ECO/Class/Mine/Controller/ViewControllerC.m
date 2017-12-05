@@ -44,6 +44,7 @@ static NSString *Cell = @"Cell";
 @property(nonatomic,assign)int rowHeight;
 @property(nonatomic,strong)UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) NSMutableArray *callBackArr;
 @property (nonatomic, strong) NSMutableArray *buyDataArr;
 @property (nonatomic, strong) NSMutableArray *collectionDataArr;
 @property (nonatomic, assign) BOOL isLogin;
@@ -74,6 +75,7 @@ static NSString *Cell = @"Cell";
     self.navigationController.navigationBar.hidden = YES;
     [self collectionDataArr];
     [self buyDataArr];
+    [self callBackArr];
     self.dataArr = [[ZFMDBTool dataArr] mutableCopy];
     [self.tableView reloadData];
     
@@ -296,7 +298,7 @@ static NSString *Cell = @"Cell";
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (_currentIndex==0) {
-        return self.dataArr.count;
+        return self.callBackArr.count;
     }else if(_currentIndex==1){
         return self.buyDataArr.count;
     }else{
@@ -330,7 +332,7 @@ static NSString *Cell = @"Cell";
     }
     if (_currentIndex==0) {
         
-        ZBProductListModel *model = [self.dataArr objectAtIndex:indexPath.row];
+        ZBProductListModel *model = [self.callBackArr objectAtIndex:indexPath.row];
         
         [cell refreshUI:model];
         
@@ -360,7 +362,8 @@ static NSString *Cell = @"Cell";
     ZBProductListModel *model;
     if (_currentIndex==0) {
         NSLog(@"第一模块：%ld",indexPath.row);
-        model = [self.dataArr objectAtIndex:indexPath.row];
+//        model = [self.dataArr objectAtIndex:indexPath.row];
+        return;
     }else if (_currentIndex==1){
         NSLog(@"第二模块：%ld",indexPath.row);
         model = [self.buyDataArr objectAtIndex:indexPath.row];
@@ -478,11 +481,20 @@ static NSString *Cell = @"Cell";
     }
     
 }
+
 - (NSMutableArray *)dataArr{
     
     _dataArr = [[ZFMDBTool dataArr] mutableCopy];
 
     return _dataArr;
+}
+
+- (NSMutableArray *)callBackArr{
+    
+    _callBackArr = [[ZFMDBTool callBackArr] mutableCopy];
+    
+    return _callBackArr;
+    
 }
 
 - (NSMutableArray *)buyDataArr{

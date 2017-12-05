@@ -139,7 +139,19 @@ static NSInteger heightForTabbar = 49;
         [self.navigationController popViewControllerAnimated:YES];
     }];
     [alertVC addAction:action1];
-     
+    //存储回收数据
+    self.productModel = [ZBProductListModel new];
+    self.productModel.type = @"0";
+    self.productModel.product_name = self.model.name;
+    self.productModel.price = self.model.topPrice;
+    self.productModel.main_pic = self.model.imgUrl;
+    self.productModel.product_id = self.model.Id;
+    
+    if (![ZFMDBTool containsData:self.productModel]) {
+
+        [ZFMDBTool insertData:self.productModel];
+    }
+    
      [self presentViewController:alertVC animated:YES completion:nil];
 }
 @end
