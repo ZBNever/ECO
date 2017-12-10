@@ -33,7 +33,7 @@
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="广西贺州市八步区芳林路147号贺州学院大学生创业基地" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9I4-Kz-yeO">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="广西贺州市西环路18号贺州学院西校区广西贺州变宝信息技术有限公司" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9I4-Kz-yeO">
                         <rect key="frame" x="16" y="40" width="343" height="52"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

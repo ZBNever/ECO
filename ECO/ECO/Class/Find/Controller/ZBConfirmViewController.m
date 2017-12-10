@@ -45,6 +45,7 @@ static NSString *TCell = @"TCell";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableHeaderView = [ZBConfirmHeadView initHeadView];
+        [ZBConfirmHeadView initHeadView].priceText = self.dataModel.price;
         _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
@@ -109,12 +110,12 @@ static NSString *TCell = @"TCell";
      [self presentViewController:alert animated:YES completion:^{
          
      }];
-//    self.productModel.type = @"1";
+    self.productModel.type = @"1";
 
-//    if (![ZFMDBTool containsData:self.productModel]) {
-//
-//        [ZFMDBTool insertData:self.productModel];
-//    }
+    if (![ZFMDBTool containsData:self.productModel]) {
+
+        [ZFMDBTool insertData:self.productModel];
+    }
 }
 - (NSArray *)paymentArr{
     

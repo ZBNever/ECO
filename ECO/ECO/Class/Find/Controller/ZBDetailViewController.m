@@ -165,8 +165,8 @@ static NSString *TCell = @"TCell";
     
     if (!_cycleScrollView) {
         //轮播图
-        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screen_width, screen_width*(230/375.0)) delegate:self placeholderImage:[UIImage imageNamed:@"viodImage"]];
-        _cycleScrollView.imageURLStringsGroup = self.bannerImgArr;
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, screen_width, screen_width*(230/375.0)) delegate:self placeholderImage:nil];//[UIImage imageNamed:@"viodImage"]
+//        _cycleScrollView.imageURLStringsGroup = self.bannerImgArr;
         _cycleScrollView.autoScrollTimeInterval = 4.0;
         _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
         _cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -211,6 +211,7 @@ static NSString *TCell = @"TCell";
     
     ZBConfirmViewController *VC = [[ZBConfirmViewController alloc] init];
     VC.dataModel = self.dataModel;
+    VC.productModel = self.productModel;
     [self.navigationController pushViewController:VC animated:YES];
     
 }

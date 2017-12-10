@@ -12,4 +12,8 @@
 
 + (instancetype)initHeadView;
 
+@property (weak, nonatomic) IBOutlet UILabel *priceLab;
+
+@property (nonatomic, strong) NSString *priceText;
+
 @end

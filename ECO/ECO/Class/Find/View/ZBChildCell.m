@@ -17,8 +17,6 @@
 
 @property (nonatomic, strong) NSMutableArray *listDataArr;
 
-
-
 @end
 
 @implementation ZBChildCell

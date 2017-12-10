@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ZBProductDetailModel.h"
+#import "ZBProductListModel.h"
 
 @interface ZBConfirmViewController : UIViewController
 
 @property (nonatomic, strong) ZBProductDetailModel *dataModel;
+
+@property (nonatomic, strong) ZBProductListModel *productModel;
 @end

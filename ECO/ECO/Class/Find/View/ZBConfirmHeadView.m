@@ -15,6 +15,9 @@
     return [[NSBundle mainBundle] loadNibNamed:@"ZBConfirmHeadView" owner:self options:nil][0];
 }
 
+- (void)setPriceText:(NSString *)priceText{
+    self.priceLab.text = [NSString stringWithFormat:@"￥%@元",priceText];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
