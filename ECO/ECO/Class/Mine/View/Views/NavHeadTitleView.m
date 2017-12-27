@@ -26,21 +26,24 @@
 //        [self.headBgView addSubview:label];
         [self addSubview:self.headBgView];
         
+        CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
+        int statusH = rectStatus.size.height;
+        NSLog(@"statusH:%d",statusH);
         self.back=[UIButton buttonWithType:UIButtonTypeCustom];
         self.back.backgroundColor=[UIColor clearColor];
-        self.back.frame=CGRectMake(5, 20, 44, 44);
+        self.back.frame=CGRectMake(5, statusH, 44, 44);
         [self.back addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.back];
         
         self.backgroundColor=[UIColor clearColor];
-        self.label=[[UILabel alloc]initWithFrame:CGRectMake(44, 20, frame.size.width-44-44, 44)];
+        self.label=[[UILabel alloc]initWithFrame:CGRectMake(44, statusH, frame.size.width-44-44, 44)];
         self.label.textAlignment=NSTextAlignmentCenter;
         self.label.font = [UIFont systemFontOfSize:18];
         [self addSubview:self.label];
         
         self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         self.rightBtn.backgroundColor = [UIColor clearColor];
-        self.rightBtn.frame = CGRectMake(self.frame.size.width-46, 30, 30, 30);
+        self.rightBtn.frame = CGRectMake(self.frame.size.width-46, statusH+10, 30, 30);
         [self.rightBtn addTarget:self action:@selector(rightBtnClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.rightBtn];
         
@@ -56,6 +59,7 @@
     }
     return self;
 }
+
 -(void)setBackTitleImage:(NSString *)backTitleImage
 {
     _backTitleImage=backTitleImage;

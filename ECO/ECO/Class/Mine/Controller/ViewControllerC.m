@@ -154,7 +154,8 @@ static NSString *Cell = @"Cell";
 //创建TableView
 -(void)createTableView{
     if (!_tableView) {
-        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT-64) style:UITableViewStylePlain];
+
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT-NavHeight) style:UITableViewStylePlain];
         _tableView.backgroundColor=[UIColor clearColor];
         _tableView.showsVerticalScrollIndicator=NO;
         _tableView.dataSource=self;
@@ -196,7 +197,12 @@ static NSString *Cell = @"Cell";
 -(HeadImageView *)headImageView{
     if (!_headImageView) {
         _headImageView=[[HeadImageView alloc]init];
-        _headImageView.frame=CGRectMake(0, 64, WIDTH, 170);
+        
+        if (isIphoneX) {
+            _headImageView.frame=CGRectMake(0, 88, WIDTH, 170);
+        }else{
+            _headImageView.frame=CGRectMake(0, 64, WIDTH, 170);
+        }
         _headImageView.backgroundColor=[UIColor clearColor];
         
         //_headImageView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"个人页背景图.png"]];
@@ -255,7 +261,12 @@ static NSString *Cell = @"Cell";
 }
 
 -(void)createNav{
-    self.NavView=[[NavHeadTitleView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 64)];
+    
+    if (isIphoneX) {
+       self.NavView=[[NavHeadTitleView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 88)];
+    }else{
+        self.NavView=[[NavHeadTitleView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 64)];
+    }
     self.NavView.title=@"个人中心";
     self.NavView.color=[UIColor whiteColor];
     self.NavView.backTitleImage=@"Mail";

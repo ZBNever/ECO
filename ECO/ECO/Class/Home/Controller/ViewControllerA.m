@@ -242,7 +242,7 @@
     if (indexPath.section == 0) {
         return CGSizeMake(screen_width, 300);
     }else{
-        return CGSizeMake(screen_width/2.0-6, 270);
+        return CGSizeMake(screen_width/2.0-6, (screen_width/2.0-6)*1.6);
     }
 }
 

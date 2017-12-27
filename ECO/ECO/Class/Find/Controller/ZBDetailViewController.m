@@ -68,11 +68,12 @@ static NSString *TCell = @"TCell";
 - (UITableView *)tableView{
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height-49) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height) style:UITableViewStylePlain];
+        
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableHeaderView = self.cycleScrollView;
-        _tableView.tableFooterView = [UIView new];
+//        _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
     
@@ -131,7 +132,17 @@ static NSString *TCell = @"TCell";
     return 180;
     
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+  
+        return 49;
+    
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    
+    UIView *footView = [[UIView alloc] init];
+    footView.backgroundColor = [UIColor clearColor];
+    return footView;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
@@ -194,7 +205,10 @@ static NSString *TCell = @"TCell";
     if (!_buttonView) {
         
         _buttonView = [[UIView alloc] initWithFrame:CGRectMake(0, screen_height-49, screen_height, 49)];
-        _buttonView.backgroundColor = [UIColor clearColor];
+        if (isIphoneX) {
+            _buttonView.frame = CGRectMake(0, screen_height-49-34, screen_height, 49+34);
+        }
+        _buttonView.backgroundColor = [UIColor whiteColor];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(10, 0, screen_width-20, 45);
         btn.backgroundColor = [UIColor greenColor];

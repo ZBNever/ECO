@@ -86,7 +86,8 @@ static NSString *ID = @"cell";
     NSArray *urlArr = @[iphone_URL,android_URL,ipad_URL,macbook_URL,watch_URL];
     [self.dataArr removeAllObjects];
     [ZBHTTPRequestManager requestGETWithURLStr:urlArr[self.type-2] paramDic:nil Api_key:nil finish:^(id responseObject) {
-        NSLog(@"responseObject:%@",responseObject);
+        NSDictionary *dic = (NSDictionary *)responseObject;
+        NSLog(@"responseObject:%@",[dic mj_JSONObject]);
         NSArray *modelArr = [ZBProductDataModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         self.dataArr  = [modelArr mutableCopy];
         [UIView animateWithDuration:1.2 animations:^{
